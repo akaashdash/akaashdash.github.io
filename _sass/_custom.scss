@@ -66,6 +66,23 @@ p.desc {
   margin-bottom: 1.5rem;
 }
 
+@media (max-width: 576px) {
+  .profile,
+  .profile.float-left,
+  .profile.float-right {
+    float: none !important;
+    width: 100% !important;
+    text-align: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    img {
+      max-width: 50%;
+      width: 50%;
+    }
+  }
+}
+
 // ── Social icons ─────────────────────────────────────────────────────────────
 
 .social .contact-icons {
