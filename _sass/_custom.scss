@@ -1,0 +1,119 @@
+/*******************************************************************************
+ * Custom overrides for a clean personal site aesthetic
+ ******************************************************************************/
+
+// ── Typography ──────────────────────────────────────────────────────────────
+
+body {
+  font-family: "et-book", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 16px;
+  line-height: 1.75;
+  // Remove footer bottom padding since footer is gone
+  padding-bottom: 2rem !important;
+}
+
+// ── Navbar ───────────────────────────────────────────────────────────────────
+
+.navbar {
+  border-bottom: none;
+  opacity: 1;
+  background-color: var(--global-bg-color);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  font-weight: 600;
+}
+
+// ── About page ───────────────────────────────────────────────────────────────
+
+// Name heading
+.post-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+// Subtitle (role / affiliation)
+p.desc {
+  font-size: 0.95rem;
+  color: var(--global-text-color-light);
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+// Bio body text
+.clearfix p {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+// Profile image — subtle rounded corners, no shadow
+.profile img.img-fluid.z-depth-1 {
+  box-shadow: none !important;
+  border-radius: 6px;
+}
+
+.profile {
+  margin-bottom: 1.5rem;
+}
+
+// ── Social icons ─────────────────────────────────────────────────────────────
+
+.social .contact-icons {
+  font-size: 1.6rem;
+
+  a {
+    margin-right: 0.15rem;
+  }
+}
+
+// ── Blog ─────────────────────────────────────────────────────────────────────
+
+// Post list entries
+.post-list li {
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.post-list h3 {
+  margin-bottom: 0.25rem;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+}
+
+// ── Colors ────────────────────────────────────────────────────────────────────
+
+:root {
+  --global-bg-color: #fffff8;
+  --global-card-bg-color: #fffff8;
+  --global-newsletter-bg-color: #fffff8;
+  --global-text-color: #111111;
+  --global-text-color-light: #555555;
+  --global-theme-color: #111111;
+  --global-hover-color: #111111;
+  --global-code-bg-color: rgba(0, 0, 0, 0.05);
+}
+
+// ── Misc ─────────────────────────────────────────────────────────────────────
+
+// Remove aggressive bottom padding from Bootstrap
+.container.mt-5 {
+  margin-top: 3rem !important;
+}

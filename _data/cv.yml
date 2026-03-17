@@ -1,189 +1,176 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Akaash Dash
+  label: Quantitative Researcher
+  email: adash37@gatech.edu
+  location: Atlanta, GA
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >
+    MS student at Georgia Tech in Quantitative and Computational Finance.
+    Incoming Quantitative Researcher at Qube Research & Technologies.
+    Interested in quantitative finance, machine learning, and software engineering.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
+      username: akaashdash
     - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: akaash-dash
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Georgia Institute of Technology
+        location: Atlanta, GA
+        area: Quantitative and Computational Finance
+        studyType: Master of Science
+        start_date: 2024-08
+        end_date: 2026-05
+        score: "4.0/4.0"
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Relevant Coursework: Stochastic Processes, Optimization, Deep Learning, Finance & Investments, Time Series Analysis"
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
+      - institution: Georgia Institute of Technology
+        location: Atlanta, GA
+        area: Computer Science
+        studyType: Bachelor of Science
+        start_date: 2020-08
+        end_date: 2024-05
+        score: "3.97/4.0"
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Relevant Coursework: Machine Learning, Probability & Statistics, Linear Algebra, Data Structures & Algorithms"
 
     Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
+      - company: "Qube Research & Technologies"
+        position: Incoming Quantitative Researcher
+        start_date: 2026-06
         highlights:
-          - Relativity
-          - Description 2.
+          - "HFT Desk - Alpha and Execution Research"
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+      - company: Bank of America
+        position: Quantitative Summer Analyst
+        location: Atlanta, GA
+        start_date: 2025-06
+        end_date: 2025-08
         highlights:
-          - Description 1.
-          - Description 2.
+          - "Improved transcript relevancy rates by 35%, generating operational savings of $150k or equivalent to 1.5 FTEs"
+          - "Formed NLP boolean models with n-grams to process thousands of call transcripts for compliance test relevancy"
+          - "Validated use of prevalence-independent performance metrics over traditional metrics for model evaluation"
+          - "Collaborated with model risk management to ensure proper model documentation, validation, and interpretability"
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+      - company: Leidos
+        position: Research Intern
+        location: Reston, VA
+        start_date: 2025-01
+        end_date: 2025-05
         highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+          - "Awarded DoD contract for GraphRAG and GNN-enabled agentic systems to perform offensive cyber capabilities"
+          - "Constructed agentic systems to conduct leakage, poisoning, and long-term degradation attacks on MCP ecosystems"
+          - "Explored efficient PII extraction attacks from embedding data without requiring full inversion pipelines"
+          - "Improved model refusal to adversarial attacks and out-of-sample task performance with RL techniques"
 
-    Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - company: Trading at Georgia Tech
+        position: Quantitative Analyst
+        location: Atlanta, GA
+        start_date: 2023-01
+        highlights:
+          - "Developing market-making strategies with stochastic control methods based on Gueant, Avellaneda-Stoikov models"
+          - "Researching statistical arbitrage opportunities using mean reversion strategies in correlated cryptocurrency tokens"
+          - "Implementing tick-level data collection and backtesting framework in Python for analysis of market microstructure"
+          - "Built event-driven crypto trading infrastructure in Java with live order book data and async execution systems"
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - company: RIB Software
+        position: AI Engineering Intern
+        location: Alpharetta, GA
+        start_date: 2024-05
+        end_date: 2024-08
+        highlights:
+          - "Developed custom GraphRAG-based copilot on proprietary master content to increase user productivity"
+          - "Deployed model to 30k+ users via a Python API using FastAPI and Uvicorn in Docker containers on Azure"
+          - "Created an LLM chatbot using RAG over a vector database of company knowledge to enhance customer support"
+          - "Evaluated LLMs and prompt engineering approaches to optimize query understanding and response generation"
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+      - company: FinTech Lab at Georgia Tech
+        position: Undergraduate Researcher
+        location: Atlanta, GA
+        start_date: 2023-01
+        end_date: 2024-05
+        highlights:
+          - "Completed research projects for three semesters in a group of four, focused on applied NLP in financial markets"
+          - "Conducted a replication study and produced two new projects, won best project presentation at GT UROP 2023"
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+      - company: Charles Schwab
+        position: Software Engineering Intern
+        location: Chicago, IL
+        start_date: 2023-06
+        end_date: 2023-08
+        highlights:
+          - "Designed a data analysis program using Python, Splunk, and SQL to track and analyze order entry system errors"
+          - "Constructed a Grafana dashboard to visualize error data patterns, frequencies, and display P95 error bounds"
+          - "Identified trends in order entry errors, enabling the team to make informed decisions and improvements"
+          - "Developed an API wrapper of internal workflows to scrape incidents and automatically create JIRA stories"
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+      - company: Georgia Tech Research Institute
+        position: Software Engineering Intern
+        location: Atlanta, GA
+        start_date: 2022-05
+        end_date: 2022-12
+        highlights:
+          - "Raised sprint throughput 34% with PowerShell automation for configuration and patching of network machines"
+          - "Designed .NET software architecture to maintain integrity and availability of critical national defense research"
+          - "Assembled computer networks for Dept. of Defense Special Access Programs across the Southeast"
+          - "Presented significant vulnerabilities and possible solutions to leadership after simulating threats in VirtualBox"
+
+      - company: RIB Software
+        position: Software Engineering Intern
+        location: Alpharetta, GA
+        start_date: 2020-06
+        end_date: 2021-08
+        highlights:
+          - "Cut required sales team work by 80% with internal Python scripts for automated client project prototyping"
+          - "Boosted sales team monthly revenue by 20% by creating a React website for streamlined client onboarding"
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Programming Languages
+        icon: fa-solid fa-code
+        keywords: "Python, SQL, Java, C++"
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - name: Libraries & Tools
+        icon: fa-solid fa-wrench
+        keywords: "PyTorch, Scikit-Learn, Pandas, NumPy, Docker, LangChain, vLLM, Matplotlib, Git"
 
-      - name: English
-        summary: "Fluent"
+      - name: Interests
+        icon: fa-solid fa-star
+        keywords: "Badminton, Food Reviewing, Board Games, Piano, Puzzle Hunts, Kayaking, National Parks"
 
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+    Awards:
+      - title: "2nd Place, Undergraduate Research Symposium 2023"
+        awarder: Georgia Tech UROP
+        date: 2023-04-01
+        summary: "Selected for oral presentation at UROP's Undergraduate Research Symposium 2023, awarded 2nd best presentation in the Scheller School of Business division."
+
+      - title: "Akuna Capital's Virtual Quant Trading Challenge 2024"
+        awarder: Akuna Capital
+        date: 2024-01-01
+        summary: "Selected participant from thousands of applicants, wrote Python market making bot to achieve a final score of 91% in the challenge."
+
+      - title: "Bloomberg's International BPuzzled"
+        awarder: Bloomberg
+        date: 2023-01-01
+        summary: "1st in Bloomberg's BPuzzled competition at the school level, competed on the international level at Bloomberg's headquarters in New York."
+
+      - title: Faculty Honors
+        awarder: Georgia Institute of Technology
+
+      - title: Dean's List
+        awarder: Georgia Institute of Technology
 
     Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+      - name: "Akuna Capital Options 201"
+        issuer: Akuna Capital
+        icon: fa-solid fa-chart-line
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
+      - name: "Akuna Capital Options 101"
+        issuer: Akuna Capital
+        icon: fa-solid fa-chart-line
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      - name: "SQL for Data Science"
+        issuer: "UC Davis (Coursera)"
+        icon: fa-solid fa-database

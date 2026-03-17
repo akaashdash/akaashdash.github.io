@@ -10,8 +10,8 @@
   --global-code-bg-color: #{v.$code-bg-color-light};
   --global-text-color: #{v.$black-color};
   --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$purple-color};
-  --global-hover-color: #{v.$purple-color};
+  --global-theme-color: #111827;
+  --global-hover-color: #111827;
   --global-hover-text-color: #{v.$white-color};
   --global-footer-bg-color: #{v.$grey-color-dark};
   --global-footer-text-color: #{v.$grey-color-light};
@@ -44,11 +44,11 @@
   --global-danger-block-title: #c00;
 
   #light-toggle-system {
-    display: inline-block;
+    display: none;
   }
 
   #light-toggle-dark {
-    display: none;
+    display: inline-block;
   }
 
   #light-toggle-light {
@@ -127,11 +127,11 @@ html[data-theme-setting="dark"] {
   }
 
   #light-toggle-dark {
-    display: inline-block;
+    display: none;
   }
 
   #light-toggle-light {
-    display: none;
+    display: inline-block;
   }
 
   #back-to-top {
@@ -146,11 +146,11 @@ html[data-theme-setting="light"] {
   }
 
   #light-toggle-dark {
-    display: none;
+    display: inline-block;
   }
 
   #light-toggle-light {
-    display: inline-block;
+    display: none;
   }
 }
 
