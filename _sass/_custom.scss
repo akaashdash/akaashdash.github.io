@@ -12,6 +12,27 @@ body {
   padding-bottom: 2rem !important;
 }
 
+// ── Heading anchors ──────────────────────────────────────────────────────────
+
+#markdown-content {
+  h1, h2, h3, h4, h5, h6 {
+    .heading-anchor {
+      opacity: 0;
+      margin-left: 0.4em;
+      font-size: 0.7em;
+      font-weight: 400;
+      color: var(--global-text-color-light);
+      text-decoration: none;
+      vertical-align: middle;
+      transition: opacity 0.15s ease;
+    }
+
+    &:hover .heading-anchor {
+      opacity: 0.5;
+    }
+  }
+}
+
 // ── Navbar ───────────────────────────────────────────────────────────────────
 
 .navbar {
@@ -126,6 +147,20 @@ p.desc {
   --global-theme-color: #111111;
   --global-hover-color: #111111;
   --global-code-bg-color: rgba(0, 0, 0, 0.05);
+}
+
+// ── MathJax display math — no vertical scrollbar ─────────────────────────────
+// overflow-x: auto (set in _utilities.scss) forces overflow-y to compute as
+// auto per CSS spec, causing a vertical scrollbar on tall equations.
+// Override it here so only horizontal overflow can scroll.
+mjx-container[jax="CHTML"][display="true"] {
+  overflow-y: hidden;
+}
+
+// ── Footnote back-link scroll offset ─────────────────────────────────────────
+// scroll-margin-top only affects these elements, not heading anchors
+sup[id^="fnref:"] {
+  scroll-margin-top: 60px;
 }
 
 // ── Misc ─────────────────────────────────────────────────────────────────────
