@@ -43,7 +43,17 @@ layout: default
     <!-- Social -->
     {% if page.social %}
       <div class="social">
-        <div class="contact-icons">{% social_links %}</div>
+        <div class="contact-icons">
+          {% if site.socials.email %}
+            <a href="mailto:{{ site.socials.email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
+          {% endif %}
+          {% if site.socials.github_username %}
+            <a href="https://github.com/{{ site.socials.github_username }}" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          {% endif %}
+          {% if site.socials.linkedin_username %}
+            <a href="https://linkedin.com/in/{{ site.socials.linkedin_username }}" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          {% endif %}
+        </div>
       </div>
     {% endif %}
   </article>
