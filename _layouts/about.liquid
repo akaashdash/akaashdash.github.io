@@ -2,18 +2,6 @@
 layout: default
 ---
 <div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        {{ site.first_name }} {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
   <article>
     {% if page.profile %}
       <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
@@ -44,14 +32,14 @@ layout: default
     {% if page.social %}
       <div class="social">
         <div class="contact-icons">
-          {% if site.socials.email %}
-            <a href="mailto:{{ site.socials.email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
+          {% if site.data.socials.email %}
+            <a href="mailto:{{ site.data.socials.email }}" title="email"><i class="fa-solid fa-envelope"></i></a>
           {% endif %}
-          {% if site.socials.github_username %}
-            <a href="https://github.com/{{ site.socials.github_username }}" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          {% if site.data.socials.github_username %}
+            <a href="https://github.com/{{ site.data.socials.github_username }}" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
           {% endif %}
-          {% if site.socials.linkedin_username %}
-            <a href="https://linkedin.com/in/{{ site.socials.linkedin_username }}" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          {% if site.data.socials.linkedin_username %}
+            <a href="https://linkedin.com/in/{{ site.data.socials.linkedin_username }}" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
           {% endif %}
         </div>
       </div>
