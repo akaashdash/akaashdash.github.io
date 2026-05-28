@@ -1,4 +1,4 @@
-let mermaidTheme = determineComputedTheme();
+let mermaidTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default';
 
 /* Create mermaid diagram as another node and hide the code block, appending the mermaid node after it
     this is done to enable retrieving the code again when changing theme between light/dark */
