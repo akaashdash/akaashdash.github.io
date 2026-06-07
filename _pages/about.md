@@ -19,6 +19,6 @@ latest_posts:
   limit: 3
 ---
 
-I'm Akaash, a master's student at Georgia Tech studying Quantitative and Computational Finance. I'm broadly interested in the intersection of mathematics, computing, and markets.
+I'm Akaash, a recent master's graduate from Georgia Tech in Quantitative and Computational Finance, currently working as a Quantitative Research Intern at Qube Research & Technologies. I'm broadly interested in the intersection of mathematics, computing, and markets.
 
-Outside of that, I enjoy badminton, board games, piano, puzzle hunts, hiking, and visiting national parks.
+Outside of that, I enjoy puzzle hunts, board games, piano, hiking, and visiting national parks.
