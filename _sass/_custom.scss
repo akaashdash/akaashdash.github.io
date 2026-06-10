@@ -114,6 +114,12 @@ p.desc {
   }
 }
 
+// ── Post content links — always underlined ───────────────────────────────────
+
+article.post-content a:not(.heading-anchor) {
+  text-decoration: underline;
+}
+
 // ── Blog ─────────────────────────────────────────────────────────────────────
 
 // Post list entries
