@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is Singapore boring?</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header class="hero">
+    <p class="kicker">An experiment</p>
+    <h1>Is Singapore boring?</h1>
+    <p class="lede">If a city has things to do, the city isn't boring &mdash; maybe <em>we</em> are. So: take a very long list of hobbies, crafts, sports and pastimes, and check which ones you can actually do here.</p>
+    <div class="headline" id="headline" aria-live="polite"></div>
+    <p class="note" id="seedline"></p>
+    <div id="stackbar" class="stackbar" role="img"></div>
+    <div class="legend" id="legend"></div>
+    <label class="strict"><input type="checkbox" id="strict"> <span id="strict-label"></span></label>
+  </header>
+
+  <section id="s-categories">
+    <h2>Where Singapore is rich (and thin)</h2>
+    <p class="note">Share of each category's activities that can be done here. Click a bar to filter everything below.</p>
+    <div id="cat-chart"></div>
+  </section>
+
+  <section id="s-treemap">
+    <h2>Every activity, one box each</h2>
+    <p class="note">Box = one activity, colored by whether Singapore can do it. Hover for the venue; click to jump to its row.</p>
+    <div id="treemap"></div>
+  </section>
+
+  <section id="s-map">
+    <h2>Where it happens</h2>
+    <p class="note">Blue dots are researched venues for specific activities. Gray points are all the sports, park, arts, craft and learning venues in OpenStreetMap &mdash; the background hum of the city. Rings are 5 km and 15 km from Raffles Place.</p>
+    <div class="map-controls" id="map-controls"></div>
+    <div id="map"></div>
+  </section>
+
+  <section id="s-grid">
+    <h2>What it costs, how far it is</h2>
+    <p class="note">Each dot is one doable activity. Most of what you can do is close and cheap. Hover a dot; click a cell to filter the table.</p>
+    <div id="grid"></div>
+  </section>
+
+  <section id="s-no">
+    <h2>What you genuinely can't do</h2>
+    <p class="note">Honest accounting. These need a mountain, snow, a desert or a law that doesn't exist here.</p>
+    <div id="nolist" class="nolist"></div>
+  </section>
+
+  <section id="s-table">
+    <h2>The full list</h2>
+    <div class="filters" id="filters"></div>
+    <div class="table-wrap"><table id="table"></table></div>
+    <p class="note" id="table-count"></p>
+  </section>
+
+  <footer>
+    <h2>How this was made</h2>
+    <p id="method"></p>
+    <p><a href="activities.csv" download>Download the data (CSV)</a> &middot; <a href="data.json" download>JSON</a></p>
+  </footer>
+</main>
+<div id="tip" class="tip" hidden></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
