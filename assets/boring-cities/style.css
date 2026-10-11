@@ -110,3 +110,20 @@ footer { margin-top: 3em; color: var(--ink-2); font-size: 0.92rem; }
 #map.dark-tiles .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9); }
 .embedded .kicker, .embedded h1, .embedded .lede { display: none; }
 .embedded main { padding-top: 0; }
+
+/* ---- multi-city ---- */
+.pills { display: flex; gap: 0.5em; flex-wrap: wrap; margin: 1em 0 0; }
+h3 { font-size: 1.15rem; font-weight: 400; margin: 2em 0 0.4em; }
+h4 { font-size: 0.95rem; font-weight: 600; margin: 0 0 0.4em; }
+.muted { color: var(--ink-2); }
+.heattable td, .heattable th { text-align: center; padding: 6px 12px; white-space: nowrap; }
+.heattable th.cityh { cursor: pointer; text-decoration: underline dotted; }
+.heattable td.rowh, .profile td.rowh, #profile td.rowh { text-align: left; background: var(--bg); }
+.heattable td.heat { font-variant-numeric: tabular-nums; }
+.heattable tr.total td { border-top: 2px solid var(--ink-3); font-weight: 600; }
+#profile td, #profile th { text-align: center; }
+#profile th:first-child, #profile td:first-child { text-align: left; }
+.diff { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 0.6em; }
+.tag { display: inline-block; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 1px 8px; margin: 0 4px 4px 0; font-size: 0.85rem; }
+.filters span { align-self: center; color: var(--ink-2); }
+#diff h4.sub { margin-top: 1em; color: var(--ink-2); font-weight: 400; }

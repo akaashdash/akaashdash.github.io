@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Is Singapore boring?</title>
+<title>Are cities boring?</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -11,8 +11,9 @@
 <main>
   <header class="hero">
     <p class="kicker">An experiment</p>
-    <h1>Is Singapore boring?</h1>
+    <h1>Is <span id="city-name">Singapore</span> boring?</h1>
     <p class="lede">If a city has things to do, the city isn't boring &mdash; maybe <em>we</em> are. So: take a very long list of hobbies, crafts, sports and pastimes, and check which ones you can actually do here.</p>
+    <div class="pills" id="city-pills" role="group" aria-label="Choose a city"></div>
     <div class="headline" id="headline" aria-live="polite"></div>
     <p class="note" id="seedline"></p>
     <div id="stackbar" class="stackbar" role="img"></div>
@@ -20,34 +21,49 @@
     <label class="strict"><input type="checkbox" id="strict"> <span id="strict-label"></span></label>
   </header>
 
+  <section id="s-compare" hidden>
+    <h2>How the cities compare</h2>
+    <div class="pills" id="cmp-pills" role="group" aria-label="Cities to compare"></div>
+    <p class="note" id="compare-note"></p>
+    <div id="heat"></div>
+    <h3>What one city has that another doesn't</h3>
+    <div class="filters" id="diff-controls"></div>
+    <div id="diff" class="diff"></div>
+    <h3>Everyday profile</h3>
+    <div class="table-wrap"><table id="profile"></table></div>
+    <h3>Venues on the map (OpenStreetMap, within 25&nbsp;km of the centre; bar length is the square root of the count)</h3>
+    <p class="note">Raw counts depend on how thoroughly each city has been mapped, so read them as a rough order of magnitude.</p>
+    <div id="density"></div>
+  </section>
+
   <section id="s-categories">
-    <h2>Where Singapore is rich (and thin)</h2>
+    <h2>Where <span class="cn">this city</span> is rich (and thin)</h2>
     <p class="note">Share of each category's activities that can be done here. Click a bar to filter everything below.</p>
     <div id="cat-chart"></div>
   </section>
 
   <section id="s-treemap">
     <h2>Every activity, one box each</h2>
-    <p class="note">Box = one activity, colored by whether Singapore can do it. Hover for the venue; click to jump to its row.</p>
+    <p class="note">Box = one activity, colored by whether it can be done here. Hover for the venue; click to jump to its row.</p>
     <div id="treemap"></div>
   </section>
 
   <section id="s-map">
     <h2>Where it happens</h2>
-    <p class="note">Blue dots are researched venues for specific activities. Gray points are all the sports, park, arts, craft and learning venues in OpenStreetMap &mdash; the background hum of the city. Rings are 5 km and 15 km from Raffles Place.</p>
+    <p class="note">Blue dots are researched venues for specific activities. Gray points are sports, park, arts, craft and learning venues in OpenStreetMap &mdash; the background hum of the city. Rings are 5 km and 15 km from <span id="centre-name">the centre</span>.</p>
     <div class="map-controls" id="map-controls"></div>
     <div id="map"></div>
   </section>
 
   <section id="s-grid">
     <h2>What it costs, how far it is</h2>
-    <p class="note">Each dot is one doable activity. Most of what you can do is close and cheap. Hover a dot; click a cell to filter the table.</p>
+    <p class="note">Each dot is one doable activity. Hover a dot; click a cell to filter the table.</p>
     <div id="grid"></div>
   </section>
 
   <section id="s-no">
-    <h2>What you genuinely can't do</h2>
-    <p class="note">Honest accounting. These need a mountain, snow, a desert or a law that doesn't exist here.</p>
+    <h2>What you genuinely can't do here</h2>
+    <p class="note">Honest accounting: these need terrain, climate, animals or a law that doesn't exist in the metro area.</p>
     <div id="nolist" class="nolist"></div>
   </section>
 
@@ -61,7 +77,7 @@
   <footer>
     <h2>How this was made</h2>
     <p id="method"></p>
-    <p><a href="activities.csv" download>Download the data (CSV)</a> &middot; <a href="data.json" download>JSON</a></p>
+    <p><a href="activities.csv" download>Download the data (CSV, all cities)</a> &middot; <a href="data.json" download>JSON</a></p>
   </footer>
 </main>
 <div id="tip" class="tip" hidden></div>
