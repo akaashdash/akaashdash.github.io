@@ -84,10 +84,12 @@ function applyStrict() {
 function renderHeadline() {
   const n = ACTS.length;
   const c = count(ACTS);
-  const todo = DATA.universe.length - ALL.length;
+  const gone = DATA.universe.length - ALL.length;
+  const nf = Math.min(gone, (CITY.notFound || []).length);
+  const todo = gone - nf;
   $("#headline").innerHTML =
     `<span class="big">${pct(c.yes, n)}%</span><span class="cap"><b>${c.yes}</b> of <b>${n}</b> activities can be done in ${esc(CITY.name)}, ` +
-    `${c.partial} more in a limited form. Only <b>${c.no}</b> can't.${todo ? ` <span class="muted">(${todo} more activities not yet researched here.)</span>` : ""}</span>`;
+    `${c.partial} more in a limited form. Only <b>${c.no}</b> can't.${gone ? ` <span class="muted">(${nf ? `${nf} more were searched for without finding a venue, so they are not counted either way` : ""}${nf && todo ? "; " : ""}${todo ? `${todo} not yet researched` : ""}.)</span>` : ""}</span>`;
   const wiki = ACTS.filter((a) => a.seed_source.startsWith("wikipedia"));
   const wc = count(wiki);
   $("#seedline").innerHTML = wiki.length
@@ -108,7 +110,8 @@ function renderCompare() {
   const avail = researched();
   $("#s-compare").hidden = avail.length < 2;
   if (avail.length < 2) return;
-  if (!cmpIds) cmpIds = avail.filter((c) => Object.keys(c.rows).length >= DATA.universe.length * 0.5).map((c) => c.id);
+  // Default: the six best-covered cities (more cities shrink the set of activities they all share); toggle others in.
+  if (!cmpIds) cmpIds = [...avail].sort((a, b) => Object.keys(b.rows).length - Object.keys(a.rows).length).slice(0, 6).map((c) => c.id);
   if (cmpIds.length < 2) cmpIds = avail.slice(0, 2).map((c) => c.id);
   const cs = avail.filter((c) => cmpIds.includes(c.id));
   const common = commonSet(cs);
