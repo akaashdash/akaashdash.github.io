@@ -36,32 +36,34 @@ The shape matters more than the percentage:
 
 ## and twelve other cities
 
-I ran the same list through Hong Kong, Tokyo, London, New York, Atlanta, Sydney, San Francisco, Paris, Chicago, Dubai, Shanghai and Beijing. This is where I have to be careful, because the research isn't equal. Singapore has all 299 activities checked. London has 277, Hong Kong 274, New York 265, Atlanta 258, Tokyo 252, San Francisco 217, Sydney 206, Paris 191, Chicago 186, Dubai 164, Shanghai 148 and Beijing 124. An activity with no result means I couldn't find evidence, which is not the same as "can't be done", and the missing ones tend to be the niche ones. So comparing each city's raw percentage would be unfair. The page only compares activities that have a result in every city you pick.
+I ran the same list through Hong Kong, Tokyo, London, New York, Atlanta, Sydney, San Francisco, Paris, Chicago, Dubai, Shanghai and Beijing. This is where I have to be careful, because the research isn't equal. Singapore has all 299 activities checked. London has 281, Hong Kong 277, New York 274, Atlanta 264, Tokyo 253, Paris 239, Chicago 238, San Francisco 238, Sydney 221, Dubai 215, Shanghai 193 and Beijing 160. An activity with no result means I couldn't find evidence, which is not the same as "can't be done", and the missing ones tend to be the niche ones. So comparing each city's raw percentage would be unfair. The page only compares activities that have a result in every city you pick.
 
-On the **163 activities with a result in all of the eight best-covered cities**:
+On the **153 activities with a result in all of the ten best-covered cities**:
 
 | | fully doable | at least partly |
 |---|---|---|
-| Singapore | 85% | 90% |
-| London | 87% | 91% |
-| Hong Kong | 84% | 92% |
-| New York | 89% | 93% |
-| Atlanta | 82% | 90% |
-| Tokyo | 79% | 90% |
-| San Francisco | 83% | 92% |
-| Sydney | 80% | 91% |
+| Singapore | 90% | 95% |
+| London | 91% | 95% |
+| Hong Kong | 88% | 97% |
+| New York | 93% | 96% |
+| Atlanta | 87% | 95% |
+| Tokyo | 83% | 95% |
+| Paris | 90% | 95% |
+| Chicago | 89% | 94% |
+| San Francisco | 88% | 96% |
+| Sydney | 84% | 96% |
 
-That's the whole story: a few points either way is noise, and nobody is meaningfully less boring than anybody else. Singapore sits in the middle. The gaps are in the same place everywhere. Every city is at 83% or above on games and learning, at 64 to 72% on sports (the long tail of obscure ones like curling or sepak takraw), and at 20% or less on the extreme end (snow, caves, canyoning, BASE jumping), because those depend on geography. What differs is mostly geography too: ocean surfing exists in Hong Kong, New York, San Francisco and Sydney but not in Singapore, London, Atlanta or Tokyo. About 38% of the 163 differ in at least one city, but most of those look like holes in my research rather than real absences. There is no reason Tokyo lacks watercolour painting.
+That's the whole story: a few points either way is noise, and nobody is meaningfully less boring than anybody else. Singapore sits in the middle. (These percentages are higher than the Singapore-only figures above because the shared set leaves out the niche activities that some cities have no evidence for.) The gaps are in the same place everywhere: sports are the weakest broad category at 70 to 78% (the long tail of obscure ones like curling), and the extreme end (snow, caves, canyoning, BASE jumping) is mostly out of reach, because it depends on geography. What differs is mostly geography too: ocean surfing exists in Hong Kong, New York, San Francisco and Sydney but not in Singapore, London, Atlanta, Tokyo, Paris or Chicago. About 41% of the 153 differ in at least one city, but most of those look like holes in my research rather than real absences. There is no reason Tokyo lacks watercolour painting.
 
-Cost and distance look alike as well. Between 62% and 85% of the doable activities in each city are within 15 km of the centre and cheap enough to try on a whim (under about US$45).
+Cost and distance look alike as well. Between 63% and 87% of the doable activities in each city are within 15 km of the centre and cheap enough to try on a whim (under about US$45).
 
-The other five cities (Paris, Chicago, Dubai, Shanghai and Beijing) are in the explorer, but I haven't researched them far enough to put in the table. Add them to the comparison and the shared set of activities shrinks, so read those percentages loosely.
+Dubai, Shanghai and Beijing are in the explorer too, but I haven't researched them far enough to put in the table. Add them to the comparison and the shared set of activities shrinks, so read those percentages loosely.
 
 ## what this doesn't show
 
 - It's not a share of all human hobbies. The list is a sample, seeded from Wikipedia lists plus my own ideas, and I built it while researching Singapore first, so it probably under-counts things only other cities have.
 - "Doable" means a venue, club or class exists within about 30 km of the city centre. It doesn't mean it's good, convenient or uncrowded. Cost and distance are rough tiers.
-- Research hit a web-search limit repeatedly, so a lot of rows rest on a single listing or aggregator page. Between just under a fifth (New York) and nearly half (Dubai) of each city's rows are low-confidence. Strict mode on the page counts only rows with a live source link that mentions the venue or activity, which keeps from about 46% (Beijing) to 76% (New York) of them.
+- Research hit a web-search limit repeatedly, so a lot of rows rest on a single listing or aggregator page. Between just under a fifth (New York) and nearly half (Shanghai) of each city's rows are low-confidence. Strict mode on the page counts only rows with a live source link that mentions the venue or activity, which keeps from about 47% (Shanghai) to 75% (New York) of them.
 - English-language search and listings find some cities far more easily than others. Beijing and Shanghai in particular are underrepresented because the sources I could reach were thin and dated, so their numbers say more about my search than about those cities.
 - "Searched, found nothing" is weaker than it sounds, and a few activities (Peranakan beadwork, Malay dance) are specific to Singapore and weren't searched elsewhere.
 - The venue haze on the map is OpenStreetMap, whose completeness differs by city. New York has roughly nine times as many tagged sports facilities as London, which says more about the mapping than the city. Only about half the cities have venue data at all.
