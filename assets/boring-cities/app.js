@@ -232,7 +232,18 @@ function renderCategories() {
     })
     .filter((r) => r.n)
     .sort((a, b) => b.yes / b.n - a.yes / a.n);
-  const W = host.clientWidth || 900, L = Math.min(190, W * 0.34), R = 56, H = 28, G = 8;
+  const W = host.clientWidth || 900, L = Math.min(190, W * 0.34), R = 56, H = 22, G = 12;
+  // Wrap a label onto at most two lines so it is never clipped by the chart edge (approximate text width: 0.56em per character).
+  const wrapLabel = (s, maxChars) => {
+    if (s.length <= maxChars) return [s];
+    const words = s.split(" ");
+    let best = [s], bestMax = Infinity;
+    for (let i = 1; i < words.length; i++) {
+      const a = words.slice(0, i).join(" "), b = words.slice(i).join(" ");
+      if (Math.max(a.length, b.length) < bestMax) { best = [a, b]; bestMax = Math.max(a.length, b.length); }
+    }
+    return best;
+  };
   const svg = d3.select(host).append("svg").attr("width", W).attr("height", rows.length * (H + G) + 4).attr("role", "img")
     .attr("aria-label", `Share of activities doable in ${CITY.name}, by category`);
   const x = d3.scaleLinear([0, 1], [L, W - R]);
@@ -242,7 +253,9 @@ function renderCategories() {
       .attr("aria-pressed", state.cat === r.cat)
       .on("click", () => toggleCat(r.cat))
       .on("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), toggleCat(r.cat)));
-    g.append("text").attr("x", L - 10).attr("y", H / 2).attr("dy", "0.35em").attr("text-anchor", "end").style("font-size", "13.5px").text(r.cat);
+    const lines = wrapLabel(r.cat, Math.floor((L - 14) / (13 * 0.56)));
+    const label = g.append("text").attr("x", L - 12).attr("text-anchor", "end").style("font-size", "13px");
+    lines.forEach((ln, k) => label.append("tspan").attr("x", L - 12).attr("y", H / 2 + (k - (lines.length - 1) / 2) * 14).attr("dy", "0.35em").text(ln));
     let acc = 0;
     ["yes", "partial", "no"].forEach((k) => {
       const w = x(r[k] / r.n) - x(0);
@@ -312,7 +325,10 @@ function initMap() {
   if (L.maplibreGL && webgl && window.makeBasemapStyle) {
     vectorBase = L.maplibreGL({ style: makeBasemapStyle(isDark() ? "dark" : "light"), attribution });
     vectorBase.addTo(map);
-  } else L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution, maxZoom: 18 }).addTo(map);
+  } else {
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution, maxZoom: 18 }).addTo(map);
+    if (!webgl) $("#map").insertAdjacentHTML("afterend", `<p class="note">Showing the standard map because WebGL is off in this browser. Turn on graphics acceleration (Chrome: Settings, System) and reload for the styled map.</p>`);
+  }
   syncMapTheme();
   ringLayer = L.layerGroup().addTo(map);
   venueGroup = L.layerGroup().addTo(map);
@@ -356,36 +372,43 @@ function renderPins() {
 }
 
 /* ---------- cost x distance grid ---------- */
+const COST_LABEL = { free: ["Free", "no cost"], "$": ["$", "under US$15"], "$$": ["$$", "US$15 to 45"], "$$$": ["$$$", "US$45 to 150"], "$$$$": ["$$$$", "over US$150"] };
+const DIST_NAME = { central: ["Central", "under 5 km"], near: ["Near", "5 to 15 km"], far: ["Far", "over 15 km"], outside: ["Outside", "beyond the metro area"] };
+const mk = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+/* Cost tier (columns) by distance (rows). Plain HTML so labels wrap and a cell grows to fit its dots instead of clipping them. */
 function renderGrid() {
-  const host = $("#grid");
-  host.innerHTML = "";
   const items = ACTS.filter((a) => a.doable !== "no" && COST.includes(a.cost_tier) && DIST.includes(a.distance_tier) && matches(a, { ignoreGrid: true }));
-  const W = host.clientWidth || 900, L = 110, T = 24, cw = (W - L) / COST.length, rh = 120;
   const dists = DIST.filter((d) => items.some((a) => a.distance_tier === d));
-  const svg = d3.select(host).append("svg").attr("width", W).attr("height", T + rh * dists.length + 4).attr("role", "img")
-    .attr("aria-label", "Doable activities by cost tier and distance from the centre");
-  COST.forEach((c, i) => svg.append("text").attr("x", L + i * cw + cw / 2).attr("y", 14).attr("text-anchor", "middle").style("font-size", "13px").text(c === "free" ? "Free" : c));
-  dists.forEach((d, j) => {
-    svg.append("text").attr("x", L - 10).attr("y", T + j * rh + rh / 2).attr("text-anchor", "end").attr("dy", "0.35em").style("font-size", "12.5px").text(DIST_LABEL[d]);
-    COST.forEach((c, i) => {
+  const table = mk("div", "gt");
+  table.setAttribute("role", "group");
+  table.setAttribute("aria-label", "Doable activities by cost tier and distance from the centre");
+  table.append(mk("div", "gt-corner"), ...COST.map((c) => mk("div", "gt-col", `<b>${COST_LABEL[c][0]}</b><span>${COST_LABEL[c][1]}</span>`)));
+  dists.forEach((d) => {
+    table.append(mk("div", "gt-row", `<b>${DIST_NAME[d][0]}</b><span>${DIST_NAME[d][1]}</span>`));
+    COST.forEach((c) => {
       const cell = items.filter((a) => a.cost_tier === c && a.distance_tier === d).sort((a, b) => a.doable.localeCompare(b.doable) || a.activity.localeCompare(b.activity));
-      const x0 = L + i * cw, y0 = T + j * rh;
-      const g = svg.append("g");
-      g.append("rect").attr("x", x0 + 2).attr("y", y0 + 2).attr("width", cw - 4).attr("height", rh - 4).attr("rx", 4)
-        .attr("fill", css("--surface")).style("cursor", "pointer")
-        .on("click", () => { Object.assign(state, { cost: c, dist: d }); renderAll(); $("#s-table").scrollIntoView({ behavior: "smooth" }); });
-      if (!cell.length) return;
-      const pad = 8, w = cw - 4 - 2 * pad, h = rh - 4 - 2 * pad - 12;
-      const s = Math.min(14, Math.max(4, Math.floor(Math.sqrt((w * h) / cell.length))));
-      const cols = Math.max(1, Math.floor(w / s));
-      cell.forEach((a, k) => {
-        g.append("circle").attr("cx", x0 + 2 + pad + (k % cols) * s + s / 2).attr("cy", y0 + 2 + pad + 12 + Math.floor(k / cols) * s + s / 2)
-          .attr("r", Math.max(1.8, s / 2 - 1.2)).attr("fill", color(a.doable)).style("cursor", "pointer")
-          .on("mousemove", (e) => showTip(actTip(a), e)).on("mouseleave", hideTip).on("click", () => focusRow(a.id));
-      });
-      g.append("text").attr("x", x0 + 2 + pad).attr("y", y0 + 2 + pad + 8).style("font-size", "11px").style("pointer-events", "none").text(cell.length);
+      const box = mk("div", "gt-cell" + (state.cost === c && state.dist === d ? " on" : ""));
+      if (cell.length) {
+        const n = mk("button", "gt-n", `${cell.length}`);
+        n.setAttribute("aria-label", `${cell.length} activities, ${COST_LABEL[c][0]}, ${DIST_NAME[d][0]}. Filter the table to these.`);
+        n.addEventListener("click", () => { Object.assign(state, { cost: c, dist: d }); renderAll(); $("#s-table").scrollIntoView({ behavior: "smooth" }); });
+        const dots = mk("div", "gt-dots");
+        cell.forEach((a) => {
+          const b = mk("button", `gdot ${a.doable}`);
+          b.setAttribute("aria-label", `${a.activity}: ${LABEL[a.doable]}`);
+          b.addEventListener("mousemove", (e) => showTip(actTip(a), e));
+          b.addEventListener("mouseleave", hideTip);
+          b.addEventListener("focus", () => { const r = b.getBoundingClientRect(); showTip(actTip(a), { clientX: r.right, clientY: r.top }); });
+          b.addEventListener("blur", hideTip);
+          b.addEventListener("click", () => focusRow(a.id));
+          dots.append(b);
+        });
+        box.append(n, dots);
+      }
+      table.append(box);
     });
   });
+  $("#grid").replaceChildren(table);
 }
 
 /* ---------- the "no" list ---------- */
