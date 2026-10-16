@@ -27,7 +27,9 @@ const researched = () => DATA.cities.filter((c) => Object.keys(c.rows).length >=
 
 /* ---------- tooltip ---------- */
 const tip = $("#tip");
+let tipOwner = null; // the element whose hover opened the tooltip
 function showTip(html, ev) {
+  tipOwner = ev.target || null;
   tip.innerHTML = html;
   tip.hidden = false;
   const r = tip.getBoundingClientRect();
@@ -37,7 +39,16 @@ function showTip(html, ev) {
   tip.style.left = Math.max(8, x) + "px";
   tip.style.top = Math.max(8, y) + "px";
 }
-const hideTip = () => (tip.hidden = true);
+const hideTip = () => { tip.hidden = true; tipOwner = null; };
+// The tooltip is positioned on the screen, so scrolling moves the page under a still pointer without firing mouseleave.
+// Hide it on any scroll, wheel or touch, on Escape and window blur, and once the pointer is no longer over the element that opened it.
+addEventListener("scroll", hideTip, { passive: true, capture: true });
+addEventListener("wheel", hideTip, { passive: true });
+addEventListener("touchstart", hideTip, { passive: true });
+addEventListener("blur", hideTip);
+addEventListener("keydown", (e) => e.key === "Escape" && hideTip());
+document.documentElement.addEventListener("mouseleave", hideTip);
+document.addEventListener("pointermove", (e) => { if (!tip.hidden && tipOwner && !tipOwner.contains(e.target)) hideTip(); });
 const actTip = (a) =>
   `<b>${esc(a.activity)}</b><br><span class="muted">${esc(a.category)} &middot; ${LABEL[a.doable]}</span>` +
   (a.venue ? `<br>${esc(a.venue)}${a.area ? ", " + esc(a.area) : ""}` : "") +
@@ -152,7 +163,7 @@ function renderHeat(cs, common) {
     }).join("") + "</tr>").join("");
   const host = $("#heat");
   host.innerHTML = `<div class="table-wrap"><table class="heattable"><thead>${head}</thead><tbody>${body}</tbody></table></div>` +
-    `<p class="note">Cell = share of activities that can be done as the real thing. Stronger blue = higher share. Small categories have few activities in common so far, so read their percentages loosely.</p>`;
+    `<p class="bnote">Cell = share of activities that can be done as the real thing. Stronger blue = higher share. Small categories have few activities in common so far, so read their percentages loosely.</p>`;
   host.querySelectorAll(".cityh").forEach((h) => h.addEventListener("click", () => { setCity(h.dataset.c); $("#s-categories").scrollIntoView({ behavior: "smooth" }); }));
   host.querySelectorAll("td.heat").forEach((td) => {
     td.addEventListener("mousemove", (e) => showTip(esc(td.dataset.tip).replace(/\n/g, "<br>"), e));
@@ -330,7 +341,7 @@ function initMap() {
     vectorBase.addTo(map);
   } else {
     L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution, maxZoom: 18 }).addTo(map);
-    if (!webgl) $("#map").insertAdjacentHTML("afterend", `<p class="note">Showing the standard map because WebGL is off in this browser. Turn on graphics acceleration (Chrome: Settings, System) and reload for the styled map.</p>`);
+    if (!webgl) $("#map").insertAdjacentHTML("afterend", `<p class="bnote">Showing the standard map because WebGL is off in this browser. Turn on graphics acceleration (Chrome: Settings, System) and reload for the styled map.</p>`);
   }
   syncMapTheme();
   ringLayer = L.layerGroup().addTo(map);

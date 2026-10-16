@@ -51,7 +51,7 @@
 .bc h2 { font-size: 1.5rem; font-weight: 400; margin: 2.4em 0 0.2em; border-top: 1px solid var(--rule); padding-top: 0.8em; }
 .bc .kicker { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; color: var(--ink-3); margin: 0; }
 .bc .lede { font-size: 1.15rem; color: var(--ink-2); max-width: 44em; }
-.bc .note { color: var(--ink-2); font-size: 0.95rem; margin: 0 0 0.8em; max-width: 46em; }
+.bc .bnote { margin: 0.3rem 0 1.1rem; max-width: 38rem; font-size: 0.9rem; line-height: 1.55; color: var(--ink-2); }
 .bc a { color: var(--yes); }
 .bc button, .bc select, .bc input { font: inherit; color: inherit; }
 .bc :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
@@ -190,3 +190,4 @@
   .bc #table th:nth-child(2), .bc #table td:nth-child(2) { display: none; }
   .bc #table th, .bc #table td { padding: 6px 7px; font-size: 0.8rem; }
 }
+.bc .pills + .bnote, .bc .pills + .headline { margin-top: 1rem; }
