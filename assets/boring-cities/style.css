@@ -90,8 +90,8 @@
 .bc table { border-collapse: collapse; width: 100%; font-size: 0.88rem; }
 .bc th, .bc td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
 .bc th { position: sticky; top: 0; background: var(--surface); cursor: pointer; white-space: nowrap; user-select: none; }
-.bc tr.row { cursor: pointer; }
-.bc tr.row:hover td, .bc tr.hl td { background: var(--surface); }
+.bc tr.arow { cursor: pointer; }
+.bc tr.arow:hover td, .bc tr.hl td { background: var(--surface); }
 .bc tr.detail td { background: var(--surface); color: var(--ink-2); }
 .bc .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; }
 .bc footer { margin-top: 3em; color: var(--ink-2); font-size: 0.92rem; }
@@ -170,3 +170,23 @@
 .bc .gdot.yes { background: var(--yes); }
 .bc .gdot.partial { background: var(--partial); }
 .bc .gdot:hover, .bc .gdot:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
+
+/* ---- Full list: aligned controls, and a row class that doesn't collide with Bootstrap's .row ---- */
+.bc .filters { align-items: center; }
+.bc .filters input, .bc .filters select, .bc .filters .chip { height: 2.25rem; font-size: 0.86rem; line-height: 1; }
+.bc .filters input { min-width: 11rem; }
+.bc td, .bc th { overflow-wrap: break-word; }
+.bc .table-wrap td:nth-child(5) { min-width: 6.5rem; }
+.bc .table-wrap td:first-child { font-weight: 500; }
+
+/* Narrow containers (e.g. a blog column): drop the Area column so the table fits without sideways scrolling. */
+.bc .table-wrap { container-type: inline-size; }
+@container (max-width: 820px) {
+  .bc #table th:nth-child(5), .bc #table td:nth-child(5) { display: none; }
+}
+.bc #table th { white-space: normal; }
+.bc #table td:first-child, .bc #table th:first-child { min-width: 5.5rem; }
+@container (max-width: 520px) {
+  .bc #table th:nth-child(2), .bc #table td:nth-child(2) { display: none; }
+  .bc #table th, .bc #table td { padding: 6px 7px; font-size: 0.8rem; }
+}

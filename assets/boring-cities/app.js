@@ -1,5 +1,6 @@
 /* Are cities boring? Interactive explorer.
    Data: data.json {categories, universe, cities[{rows}]}, venues-<city>.json (OSM points). */
+(() => {
 "use strict";
 
 const COST = ["free", "$", "$$", "$$$", "$$$$"];
@@ -465,7 +466,7 @@ function renderTable() {
     `<thead><tr>${COLS.map(([k, l]) => `<th data-k="${k}" aria-sort="${state.sort[0] === k ? (dir > 0 ? "ascending" : "descending") : "none"}">${l}${state.sort[0] === k ? (dir > 0 ? " ▲" : " ▼") : ""}</th>`).join("")}</tr></thead><tbody>` +
     rows.map((a) => {
       const open = state.open === a.id;
-      return `<tr class="row ${open ? "hl" : ""}" data-id="${a.id}" id="r-${a.id}" tabindex="0"><td>${esc(a.activity)}</td><td>${esc(a.category)}</td>` +
+      return `<tr class="arow ${open ? "hl" : ""}" data-id="${a.id}" id="r-${a.id}" tabindex="0"><td>${esc(a.activity)}</td><td>${esc(a.category)}</td>` +
         `<td><span class="dot" style="background:${color(a.doable)}"></span>${a.doable}</td><td>${esc(a.venue)}</td><td>${esc(a.area)}</td>` +
         `<td>${esc(a.cost_tier)}</td><td>${esc(a.distance_tier)}</td><td>${esc(a.beginner_friendly)}</td></tr>` +
         (open ? `<tr class="detail"><td colspan="8">${esc(a.how)}<br>` +
@@ -476,7 +477,7 @@ function renderTable() {
     state.sort = [k, state.sort[0] === k ? -state.sort[1] : 1];
     renderTable();
   }));
-  t.querySelectorAll("tr.row").forEach((tr) => {
+  t.querySelectorAll("tr.arow").forEach((tr) => {
     const toggle = () => { state.open = state.open === tr.dataset.id ? null : tr.dataset.id; renderTable(); };
     tr.addEventListener("click", toggle);
     tr.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), toggle()));
@@ -529,3 +530,4 @@ async function boot() {
 }
 
 boot();
+})();
