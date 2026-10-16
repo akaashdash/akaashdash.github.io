@@ -99,7 +99,6 @@
   .bc #map { height: 360px; }
   .bc th:nth-child(n+5), .bc td:nth-child(n+5) { display: none; }
 }
-.bc .strict { display: block; margin-top: 0.8em; font-size: 0.9rem; color: var(--ink-2); cursor: pointer; }
 .bc .leaflet-tooltip.ring { background: transparent; border: 0; box-shadow: none; color: var(--ink-3); font-size: 11px; }
 .bc #map.dark-tiles .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9); }
 .bc .pills { display: flex; gap: 0.5em; flex-wrap: wrap; margin: 1em 0 0; }
@@ -140,13 +139,13 @@
 
 /* ---- Typography: data and controls use one UI sans; headings and notes keep the page serif ---- */
 .bc { --ui: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", Roboto, system-ui, sans-serif; }
-.bc .chip, .bc .legend, .bc .strict, .bc .map-controls, .bc .filters, .bc table, .bc .tag, .bc .nolist, .bc .wcat,
+.bc .chip, .bc .legend, .bc .map-controls, .bc .filters, .bc table, .bc .tag, .bc .nolist, .bc .wcat,
 .bc .tip, .bc .gt, .bc svg text, .bc .headline, .bc button, .bc select, .bc input { font-family: var(--ui); }
 .bc .headline .big { font-weight: 600; letter-spacing: -0.035em; font-variant-numeric: normal; }
 .bc .headline .cap { font-size: 1rem; line-height: 1.45; }
 .bc .chip { font-size: 0.86rem; line-height: 1.4; padding: 5px 13px; }
 .bc .chip .muted { font-size: 0.92em; }
-.bc .legend, .bc .strict, .bc .map-controls { font-size: 0.85rem; }
+.bc .legend, .bc .map-controls { font-size: 0.85rem; }
 .bc table { font-size: 0.85rem; line-height: 1.4; }
 .bc th { font-size: 0.78rem; font-weight: 600; color: var(--ink-2); line-height: 1.25; vertical-align: bottom; }
 .bc #profile th, .bc .heattable th { white-space: normal; }

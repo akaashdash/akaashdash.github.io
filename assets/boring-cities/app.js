@@ -10,7 +10,7 @@ const LABEL = { yes: "Doable", partial: "Partly (limited / simulated)", no: "Not
 const MIN_ROWS = 50; // a city needs this many researched rows to take part in comparisons
 
 const state = { cat: null, doable: null, q: "", cost: "", dist: "", beginner: false, sort: ["category", 1], open: null };
-let DATA, CITY, ALL = [], ACTS = [], VENUES = [], strict = false;
+let DATA, CITY, ALL = [], ACTS = [], VENUES = [];
 const venueCache = {};
 const $ = (s) => document.querySelector(s);
 /* Data files and CSS variables are resolved relative to the script and the .bc wrapper, so the same code runs standalone and inline in a blog post. */
@@ -84,7 +84,7 @@ async function setCity(id) {
   ALL = rowsOf(CITY);
   Object.assign(state, { cat: null, doable: null, q: "", cost: "", dist: "", beginner: false, open: null });
   if ($("#q")) $("#q").value = "";
-  applyStrict();
+  ACTS = ALL;
   document.querySelectorAll("#city-name, .cn").forEach((e) => (e.textContent = CITY.name));
   $("#centre-name").textContent = CITY.centre;
   renderPills();
@@ -92,9 +92,6 @@ async function setCity(id) {
   await loadVenues();
   renderAll();
   renderCompare();
-}
-function applyStrict() {
-  ACTS = strict ? ALL.filter((a) => a.verified) : ALL;
 }
 
 /* ---------- headline ---------- */
@@ -139,7 +136,7 @@ function renderCompare() {
   }));
   $("#compare-note").textContent =
     `Choose the cities to compare. To keep it fair, only the ${common.length} activities researched in every chosen city are counted ` +
-    `(adding a city with less coverage shrinks that shared set). Click a city name in the table to explore it in detail.`;
+    `(adding a city with less coverage shrinks that shared set).`;
   renderHeat(cs, common);
   renderDiff(cs, common);
   renderProfile(cs, common);
@@ -507,8 +504,8 @@ function renderMethod() {
   ACTS.forEach((a) => { const k = a.seed_source.split(":")[0]; seeds[k] = (seeds[k] || 0) + 1; });
   const conf = ACTS.filter((a) => a.confidence === "high").length;
   $("#method").innerHTML =
-    `${DATA.universe.length} activities in the shared list: ${seeds.wikipedia || 0} (in ${esc(CITY.name)}) were drawn from independent Wikipedia lists and categories (sports, games, crafts, dance, collectables and more) and ${seeds.brainstorm || 0} were brainstormed, ` +
-    `which is why the Wikipedia-only figure above is the fairer one. The list was assembled while researching Singapore first, so it may under-represent things only other cities have. ` +
+    `${DATA.universe.length} activities in the shared list: ${seeds.wikipedia || 0} (in ${esc(CITY.name)}) were drawn from independent Wikipedia lists and categories (sports, games, crafts, dance, collectables and more) and ${seeds.brainstorm || 0} were brainstormed. ` +
+    `The list was assembled while researching Singapore first, so it may under-represent things only other cities have. ` +
     `Each activity was then searched for in ${esc(CITY.name)} and, where found, tied to a venue, club or class with a source link. ` +
     `${conf} rows are high-confidence (source page seen); the rest are inferred or lower confidence and flagged in the table. Research ran out of search budget in places, so ideas that couldn't be sourced were left out rather than guessed, and some categories are thin. ` +
     `Cost tiers are rough (about <US$15 / 15–45 / 45–150 / 150+ per session). ` +
@@ -521,14 +518,8 @@ function renderAll() {
 }
 async function boot() {
   DATA = await (await fetch(`${BASE}data.json${VER}`)).json();
-  $("#strict").addEventListener("change", (e) => {
-    strict = e.target.checked;
-    applyStrict();
-    renderHeadline(); renderNo(); renderMethod(); renderAll();
-  });
   const start = DATA.cities.find((c) => c.id === location.hash.slice(1)) || DATA.cities.find((c) => c.id === "singapore") || DATA.cities[0];
   CITY = start;
-  $("#strict-label").textContent = "Strict mode: only rows with a live source and medium/high confidence";
   await setCity(start.id);
   let t;
   addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => { renderCategories(); renderTreemap(); renderGrid(); renderCompare(); }, 150); });
