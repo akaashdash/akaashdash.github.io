@@ -295,18 +295,25 @@ function renderTreemap() {
 /* ---------- map ---------- */
 let map, venueLayers = {}, pinLayer, ringLayer, venueGroup;
 const isDark = () => css("color-scheme") === "dark";
+let vectorBase;
+// Vector basemap has its own light/dark style; the raster fallback is darkened with a CSS filter instead.
+function syncMapTheme() {
+  if (!map) return;
+  if (vectorBase) vectorBase.getMaplibreMap().setStyle(makeBasemapStyle(isDark() ? "dark" : "light"));
+  else $("#map").classList.toggle("dark-tiles", isDark());
+}
 function initMap() {
   map = L.map("map", { preferCanvas: true, scrollWheelZoom: false }).setView([CITY.lat, CITY.lon], 11);
-  // Vector basemap (OpenFreeMap "Liberty": soft land/park/water colours, crisp labels); fall back to raster OSM tiles if MapLibre didn't load or WebGL is unavailable.
+  // Vector basemap (Apple-Maps-style palette from basemap.js on OpenFreeMap tiles); fall back to raster OSM tiles if MapLibre didn't load or WebGL is unavailable.
   const attribution = '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> data from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
   const webgl = (() => { try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch { return false; } })();
   // The CSP build loads its worker from a same-origin file, so it works on hosts that forbid blob: workers (like the blog).
   if (window.maplibregl) maplibregl.setWorkerUrl(`${BASE}maplibre-gl-csp-worker.min.js`);
-  if (L.maplibreGL && webgl) L.maplibreGL({ style: "https://tiles.openfreemap.org/styles/liberty", attribution }).addTo(map);
-  else L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution, maxZoom: 18 }).addTo(map);
-  const syncTheme = () => $("#map").classList.toggle("dark-tiles", isDark());
-  syncTheme();
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncTheme);
+  if (L.maplibreGL && webgl && window.makeBasemapStyle) {
+    vectorBase = L.maplibreGL({ style: makeBasemapStyle(isDark() ? "dark" : "light"), attribution });
+    vectorBase.addTo(map);
+  } else L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution, maxZoom: 18 }).addTo(map);
+  syncMapTheme();
   ringLayer = L.layerGroup().addTo(map);
   venueGroup = L.layerGroup().addTo(map);
   pinLayer = L.layerGroup().addTo(map);
@@ -490,7 +497,7 @@ async function boot() {
   await setCity(start.id);
   let t;
   addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => { renderCategories(); renderTreemap(); renderGrid(); renderCompare(); }, 150); });
-  const restyle = () => { renderHeadline(); renderAll(); renderCompare(); };
+  const restyle = () => { renderHeadline(); renderAll(); renderCompare(); syncMapTheme(); };
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", restyle);
   // A host page (e.g. a blog) switches theme by setting data-theme on <html>.
   new MutationObserver(restyle).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
