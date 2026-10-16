@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Are cities boring?</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bc">
 <main>
   <header class="hero">
     <p class="kicker">An experiment</p>
@@ -44,7 +45,7 @@
 
   <section id="s-treemap">
     <h2>Every activity, one box each</h2>
-    <p class="note">Box = one activity, colored by whether it can be done here. Hover for the venue; click to jump to its row.</p>
+    <p class="note">One square per activity, grouped by category: blue = doable here, orange = partly (limited or simulated), faint grey = not possible. Hover a square for the venue and click it to jump to its row; click a heading to filter everything else to that category.</p>
     <div id="treemap"></div>
   </section>
 
@@ -83,6 +84,8 @@
 <div id="tip" class="tip" hidden></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="maplibre-gl-csp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

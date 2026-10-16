@@ -11,16 +11,7 @@ Singaporeans love to say the city is boring. I don't think that's right, and her
 
 That's testable. Make a very long list of hobbies, crafts, sports and pastimes, then check which ones can actually be done here. If "boring" were true, the list would be full of things Singapore can't offer. Then do the same for other cities, to see whether Singapore is unusual.
 
-<iframe id="boring-cities" src="{{ '/assets/boring-cities/index.html' | relative_url }}" title="Interactive explorer: which hobbies can you do in each city?" style="width:100%;height:1800px;border:0" loading="lazy"></iframe>
-<script>
-  // The embedded page reports its own height so the iframe never shows an inner scrollbar.
-  window.addEventListener("message", (e) => {
-    const frame = document.getElementById("boring-cities");
-    if (e.source === frame.contentWindow && e.data && e.data.boringCitiesHeight) {
-      frame.style.height = e.data.boringCitiesHeight + "px";
-    }
-  });
-</script>
+{% include boring-cities.liquid %}
 
 ## singapore first
 

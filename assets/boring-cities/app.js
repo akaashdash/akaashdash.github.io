@@ -12,7 +12,10 @@ const state = { cat: null, doable: null, q: "", cost: "", dist: "", beginner: fa
 let DATA, CITY, ALL = [], ACTS = [], VENUES = [], strict = false;
 const venueCache = {};
 const $ = (s) => document.querySelector(s);
-const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+/* Data files and CSS variables are resolved relative to the script and the .bc wrapper, so the same code runs standalone and inline in a blog post. */
+const BASE = document.currentScript.src.replace(/[^/]*$/, "");
+const ROOT = document.querySelector(".bc");
+const css = (v) => getComputedStyle(ROOT).getPropertyValue(v).trim();
 const color = (d) => css(`--${d}`);
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 const pct = (a, b) => (b ? Math.round((100 * a) / b) : 0);
@@ -258,32 +261,35 @@ function toggleCat(c) {
 }
 
 /* ---------- treemap ---------- */
+/* One square per activity, grouped by category and sorted doable -> partly -> not, so each group reads as a bar. */
 function renderTreemap() {
   const host = $("#treemap");
-  host.innerHTML = "";
-  const W = host.clientWidth || 900, H = Math.max(640, Math.min(980, W * 1.0));
-  const root = d3.hierarchy({
-    children: DATA.categories.map((c) => ({ name: c, children: ACTS.filter((a) => a.category === c).map((a) => ({ name: a.activity, a, value: 1 })) })).filter((c) => c.children.length),
-  }).sum((d) => d.value || 0).sort((a, b) => b.value - a.value);
-  d3.treemap().size([W, H]).paddingOuter(2).paddingTop((d) => (d.depth === 1 ? 17 : 0)).paddingInner(1.5).round(true)(root);
-  const svg = d3.select(host).append("svg").attr("width", W).attr("height", H).attr("role", "img").attr("aria-label", "Treemap of all activities colored by doability");
-  root.children.forEach((cat) => {
-    const dim = state.cat && state.cat !== cat.data.name;
-    const g = svg.append("g").attr("opacity", dim ? 0.3 : 1);
-    g.append("text").attr("x", cat.x0 + 3).attr("y", cat.y0 + 12).style("font-size", "11.5px").style("font-weight", 600)
-      .style("cursor", "pointer").text(cat.data.name).on("click", () => toggleCat(cat.data.name));
-    cat.leaves().forEach((l) => {
-      const a = l.data.a, w = l.x1 - l.x0, h = l.y1 - l.y0;
-      const cell = g.append("g").style("cursor", "pointer")
-        .on("mousemove", (e) => showTip(actTip(a), e)).on("mouseleave", hideTip).on("click", () => focusRow(a.id));
-      cell.append("rect").attr("x", l.x0).attr("y", l.y0).attr("width", w).attr("height", h).attr("rx", 2).attr("fill", color(a.doable));
-      if (w > 56 && h > 24) {
-        cell.append("clipPath").attr("id", "c-" + a.id).append("rect").attr("x", l.x0).attr("y", l.y0).attr("width", w).attr("height", h);
-        cell.append("text").attr("clip-path", `url(#c-${a.id})`).attr("x", l.x0 + 4).attr("y", l.y0 + 13).style("font-size", "10.5px")
-          .style("fill", a.doable === "no" ? "#0b0b0b" : "#fff").style("pointer-events", "none").text(a.activity);
-      }
+  const order = { yes: 0, partial: 1, no: 2 };
+  host.replaceChildren(...DATA.categories.flatMap((cat) => {
+    const items = ACTS.filter((a) => a.category === cat).sort((a, b) => order[a.doable] - order[b.doable] || a.activity.localeCompare(b.activity));
+    if (!items.length) return [];
+    const group = document.createElement("div");
+    group.className = "wcat" + (state.cat && state.cat !== cat ? " dim" : "");
+    const head = document.createElement("button");
+    head.className = "wh";
+    head.innerHTML = `<b>${esc(cat)}</b><span>${items.filter((a) => a.doable === "yes").length} of ${items.length}</span>`;
+    head.addEventListener("click", () => toggleCat(cat));
+    const cells = document.createElement("div");
+    cells.className = "cells";
+    items.forEach((a) => {
+      const c = document.createElement("button");
+      c.className = `cell ${a.doable}`;
+      c.setAttribute("aria-label", `${a.activity}: ${LABEL[a.doable]}`);
+      c.addEventListener("mousemove", (e) => showTip(actTip(a), e));
+      c.addEventListener("mouseleave", hideTip);
+      c.addEventListener("focus", (e) => { const r = c.getBoundingClientRect(); showTip(actTip(a), { clientX: r.right, clientY: r.top }); });
+      c.addEventListener("blur", hideTip);
+      c.addEventListener("click", () => focusRow(a.id));
+      cells.append(c);
     });
-  });
+    group.append(head, cells);
+    return [group];
+  }));
 }
 
 /* ---------- map ---------- */
@@ -291,9 +297,13 @@ let map, venueLayers = {}, pinLayer, ringLayer, venueGroup;
 const isDark = () => css("color-scheme") === "dark";
 function initMap() {
   map = L.map("map", { preferCanvas: true, scrollWheelZoom: false }).setView([CITY.lat, CITY.lon], 11);
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 18,
-  }).addTo(map);
+  // Vector basemap (OpenFreeMap "Liberty": soft land/park/water colours, crisp labels); fall back to raster OSM tiles if MapLibre didn't load or WebGL is unavailable.
+  const attribution = '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> data from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
+  const webgl = (() => { try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch { return false; } })();
+  // The CSP build loads its worker from a same-origin file, so it works on hosts that forbid blob: workers (like the blog).
+  if (window.maplibregl) maplibregl.setWorkerUrl(`${BASE}maplibre-gl-csp-worker.min.js`);
+  if (L.maplibreGL && webgl) L.maplibreGL({ style: "https://tiles.openfreemap.org/styles/liberty", attribution }).addTo(map);
+  else L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { attribution, maxZoom: 18 }).addTo(map);
   const syncTheme = () => $("#map").classList.toggle("dark-tiles", isDark());
   syncTheme();
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncTheme);
@@ -303,7 +313,7 @@ function initMap() {
 }
 async function loadVenues() {
   if (!(CITY.id in venueCache)) {
-    try { venueCache[CITY.id] = await (await fetch(`venues-${CITY.id}.json`)).json(); } catch { venueCache[CITY.id] = []; }
+    try { venueCache[CITY.id] = await (await fetch(`${BASE}venues-${CITY.id}.json`)).json(); } catch { venueCache[CITY.id] = []; }
   }
   VENUES = venueCache[CITY.id];
   if (!map) initMap();
@@ -320,7 +330,7 @@ async function loadVenues() {
   [...new Set(VENUES.map((v) => v[0]))].forEach((g) => {
     const pts = VENUES.filter((v) => v[0] === g);
     venueLayers[g] = L.layerGroup(pts.map((v) =>
-      L.circleMarker([v[3], v[4]], { radius: 2.2, stroke: false, fillColor: css("--no"), fillOpacity: 0.45 })
+      L.circleMarker([v[3], v[4]], { radius: 1.6, stroke: false, fillColor: css("--no"), fillOpacity: 0.3 })
         .bindTooltip(`${esc(v[2] || v[1])}<br><span style="opacity:.7">${esc(g)}</span>`)));
     const id = "g-" + g.replace(/\W/g, "");
     ctl.insertAdjacentHTML("beforeend", `<label><input type="checkbox" id="${id}" checked> ${esc(g)} (${(CITY.venueCounts[g] || pts.length).toLocaleString()})</label>`);
@@ -466,10 +476,9 @@ function renderMethod() {
 /* ---------- boot ---------- */
 function renderAll() {
   renderCategories(); renderTreemap(); renderGrid(); renderPins(); renderFilters(); renderTable();
-  if (window.reportHeight) window.reportHeight();
 }
 async function boot() {
-  DATA = await (await fetch("data.json")).json();
+  DATA = await (await fetch(`${BASE}data.json`)).json();
   $("#strict").addEventListener("change", (e) => {
     strict = e.target.checked;
     applyStrict();
@@ -481,19 +490,10 @@ async function boot() {
   await setCity(start.id);
   let t;
   addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => { renderCategories(); renderTreemap(); renderGrid(); renderCompare(); }, 150); });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { renderHeadline(); renderAll(); renderCompare(); });
+  const restyle = () => { renderHeadline(); renderAll(); renderCompare(); };
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", restyle);
+  // A host page (e.g. a blog) switches theme by setting data-theme on <html>.
+  new MutationObserver(restyle).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
 }
 
-/* ---------- embedding: follow the host blog's theme, report height for iframe auto-resize ---------- */
-if (window.self !== window.top) {
-  let theme = "light";
-  try { theme = window.parent.document.documentElement.getAttribute("data-theme") || "light"; } catch { /* cross-origin host */ }
-  document.documentElement.dataset.theme = theme;
-  document.documentElement.classList.add("embedded");
-  // Body height (not documentElement.scrollHeight, which never drops below the iframe's own height).
-  const post = () => window.parent.postMessage({ boringCitiesHeight: Math.ceil(document.body.getBoundingClientRect().height) + 32 }, "*");
-  window.reportHeight = post;
-  new ResizeObserver(post).observe(document.body);
-  addEventListener("load", post);
-}
 boot();
