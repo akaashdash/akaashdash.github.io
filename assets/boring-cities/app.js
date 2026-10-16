@@ -107,12 +107,6 @@ function renderHeadline() {
   $("#headline").innerHTML =
     `<span class="big">${pct(c.yes, n)}%</span><span class="cap"><b>${c.yes}</b> of <b>${n}</b> activities can be done in ${esc(CITY.name)}, ` +
     `${c.partial} more in a limited form. Only <b>${c.no}</b> can't.${gone ? ` <span class="muted">(${nf ? `${nf} more were searched for without finding a venue, so they are not counted either way` : ""}${nf && todo ? "; " : ""}${todo ? `${todo} not yet researched` : ""}.)</span>` : ""}</span>`;
-  const wiki = ACTS.filter((a) => a.seed_source.startsWith("wikipedia"));
-  const wc = count(wiki);
-  $("#seedline").innerHTML = wiki.length
-    ? `Fairer test: counting only the ${wiki.length} activities that came from independent Wikipedia lists (not my own ideas), ` +
-      `<b>${pct(wc.yes, wiki.length)}%</b> are fully doable and <b>${pct(wc.yes + wc.partial, wiki.length)}%</b> at least partly.`
-    : "";
   $("#stackbar").setAttribute("aria-label", `${c.yes} doable, ${c.partial} partly, ${c.no} not possible`);
   $("#stackbar").innerHTML = ["yes", "partial", "no"].map((k) => `<span style="flex:${c[k]};background:${color(k)}" title="${LABEL[k]}: ${c[k]}"></span>`).join("");
   $("#legend").innerHTML = ["yes", "partial", "no"].map((k) => `<span><i style="background:${color(k)}"></i>${LABEL[k]} (${c[k]})</span>`).join("");
