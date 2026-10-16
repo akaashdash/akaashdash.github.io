@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.css">
-<link rel="stylesheet" href="{{ '/assets/boring-cities/style.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/boring-cities/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <div class="bc in-blog tex2jax_ignore mathjax_ignore">
 <div class="pills" id="city-pills" role="group" aria-label="Choose a city"></div>
 <div class="headline" id="headline" aria-live="polite"></div>
@@ -71,7 +71,7 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="{{ '/assets/boring-cities/maplibre-gl-csp.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/boring-cities/maplibre-gl-csp.min.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
-<script src="{{ '/assets/boring-cities/basemap.js' | relative_url }}"></script>
-<script src="{{ '/assets/boring-cities/app.js' | relative_url }}"></script>
+<script src="{{ '/assets/boring-cities/basemap.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+<script src="{{ '/assets/boring-cities/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

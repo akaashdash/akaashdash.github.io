@@ -14,6 +14,8 @@ const venueCache = {};
 const $ = (s) => document.querySelector(s);
 /* Data files and CSS variables are resolved relative to the script and the .bc wrapper, so the same code runs standalone and inline in a blog post. */
 const BASE = document.currentScript.src.replace(/[^/]*$/, "");
+// The host page adds ?v=<build> to this script's URL; reuse it on the data files so a new deploy is never served from a stale browser cache.
+const VER = new URL(document.currentScript.src).search;
 const ROOT = document.querySelector(".bc");
 const css = (v) => getComputedStyle(ROOT).getPropertyValue(v).trim();
 const color = (d) => css(`--${d}`);
@@ -321,7 +323,7 @@ function initMap() {
   const attribution = '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> data from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>';
   const webgl = (() => { try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch { return false; } })();
   // The CSP build loads its worker from a same-origin file, so it works on hosts that forbid blob: workers (like the blog).
-  if (window.maplibregl) maplibregl.setWorkerUrl(`${BASE}maplibre-gl-csp-worker.min.js`);
+  if (window.maplibregl) maplibregl.setWorkerUrl(`${BASE}maplibre-gl-csp-worker.min.js${VER}`);
   if (L.maplibreGL && webgl && window.makeBasemapStyle) {
     vectorBase = L.maplibreGL({ style: makeBasemapStyle(isDark() ? "dark" : "light"), attribution });
     vectorBase.addTo(map);
@@ -336,7 +338,7 @@ function initMap() {
 }
 async function loadVenues() {
   if (!(CITY.id in venueCache)) {
-    try { venueCache[CITY.id] = await (await fetch(`${BASE}venues-${CITY.id}.json`)).json(); } catch { venueCache[CITY.id] = []; }
+    try { venueCache[CITY.id] = await (await fetch(`${BASE}venues-${CITY.id}.json${VER}`)).json(); } catch { venueCache[CITY.id] = []; }
   }
   VENUES = venueCache[CITY.id];
   if (!map) initMap();
@@ -508,7 +510,7 @@ function renderAll() {
   renderCategories(); renderTreemap(); renderGrid(); renderPins(); renderFilters(); renderTable();
 }
 async function boot() {
-  DATA = await (await fetch(`${BASE}data.json`)).json();
+  DATA = await (await fetch(`${BASE}data.json${VER}`)).json();
   $("#strict").addEventListener("change", (e) => {
     strict = e.target.checked;
     applyStrict();
