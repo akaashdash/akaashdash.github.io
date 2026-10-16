@@ -191,3 +191,5 @@
   .bc #table th, .bc #table td { padding: 6px 7px; font-size: 0.8rem; }
 }
 .bc .pills + .bnote, .bc .pills + .headline { margin-top: 1rem; }
+.bc .fine { margin: 0.1rem 0 0.9rem; font-size: 0.72rem; line-height: 1.4; color: var(--ink-2); font-family: var(--ui); }
+.bc .fine:empty { display: none; }

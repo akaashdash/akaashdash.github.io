@@ -106,7 +106,11 @@ function renderHeadline() {
   const todo = gone - nf;
   $("#headline").innerHTML =
     `<span class="big">${pct(c.yes, n)}%</span><span class="cap"><b>${c.yes}</b> of <b>${n}</b> activities can be done in ${esc(CITY.name)}, ` +
-    `${c.partial} more in a limited form. Only <b>${c.no}</b> can't.${gone ? ` <span class="muted">(${nf ? `${nf} more were searched for without finding a venue, so they are not counted either way` : ""}${nf && todo ? "; " : ""}${todo ? `${todo} not yet researched` : ""}.)</span>` : ""}</span>`;
+    `${c.partial} more in a limited form. Only <b>${c.no}</b> can't.</span>`;
+  // Activities with no verdict are left out of the percentages; say so, small, rather than in the headline.
+  $("#coverage").textContent = gone
+    ? `Not counted: ${[nf && `${nf} searched for without finding a venue`, todo && `${todo} not yet researched`].filter(Boolean).join(", ")}.`
+    : "";
   $("#stackbar").setAttribute("aria-label", `${c.yes} doable, ${c.partial} partly, ${c.no} not possible`);
   $("#stackbar").innerHTML = ["yes", "partial", "no"].map((k) => `<span style="flex:${c[k]};background:${color(k)}" title="${LABEL[k]}: ${c[k]}"></span>`).join("");
   $("#legend").innerHTML = ["yes", "partial", "no"].map((k) => `<span><i style="background:${color(k)}"></i>${LABEL[k]} (${c[k]})</span>`).join("");
@@ -177,7 +181,7 @@ function renderDiff(cs, common) {
   };
   const a = $("#diff-a"), b = $("#diff-b");
   const ka = a.value, kb = b.value;
-  fill(a, ka, CITY.id);
+  fill(a, ka, cs.some((c) => c.id === CITY.id) ? CITY.id : cs[0].id); // the open city may not be one of the compared cities
   fill(b, kb, (cs.find((c) => c.id !== a.value) || cs[0]).id);
   const A = cs.find((c) => c.id === a.value), B = cs.find((c) => c.id === b.value);
   const tags = (X, Y, items) => items.map((u) => `<span class="tag" title="${esc(u.category)}: ${esc(Y.rows[u.id].how)}">${esc(u.activity)}</span>`).join("");

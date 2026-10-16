@@ -1,6 +1,6 @@
 ---
 layout: post
-title: are cities boring?
+title: Is Singapore actually boring?
 date: 2026-10-11
 description: Singaporeans keep saying the city is boring. I made a list of 299 hobbies and checked which ones you can do in Singapore, and in twelve other cities.
 tags: [singapore, data, maps]
