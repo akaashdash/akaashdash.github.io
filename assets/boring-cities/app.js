@@ -374,11 +374,18 @@ function renderGrid() {
     table.append(mk("div", "gt-row", `<b>${DIST_NAME[d][0]}</b><span>${DIST_NAME[d][1]}</span>`));
     COST.forEach((c) => {
       const cell = items.filter((a) => a.cost_tier === c && a.distance_tier === d).sort((a, b) => a.doable.localeCompare(b.doable) || a.activity.localeCompare(b.activity));
-      const box = mk("div", "gt-cell" + (state.cost === c && state.dist === d ? " on" : ""));
+      const on = state.cost === c && state.dist === d;
+      const box = mk("div", "gt-cell" + (on ? " on" : "") + (cell.length ? " has" : ""));
       if (cell.length) {
         const n = mk("button", "gt-n", `${cell.length}`);
         n.setAttribute("aria-label", `${cell.length} activities, ${COST_LABEL[c][0]}, ${DIST_NAME[d][0]}. Filter the table to these.`);
-        n.addEventListener("click", () => { Object.assign(state, { cost: c, dist: d }); renderAll(); $("#s-table").scrollIntoView({ behavior: "smooth" }); });
+        n.setAttribute("aria-pressed", on);
+        // The whole cell is the click target (the count button just makes it keyboard-reachable); clicking it again clears the filter.
+        box.addEventListener("click", () => {
+          Object.assign(state, on ? { cost: "", dist: "" } : { cost: c, dist: d });
+          renderAll();
+          if (!on) $("#s-table").scrollIntoView({ behavior: "smooth" });
+        });
         const dots = mk("div", "gt-dots");
         cell.forEach((a) => {
           const b = mk("button", `gdot ${a.doable}`);
@@ -387,7 +394,7 @@ function renderGrid() {
           b.addEventListener("mouseleave", hideTip);
           b.addEventListener("focus", () => { const r = b.getBoundingClientRect(); showTip(actTip(a), { clientX: r.right, clientY: r.top }); });
           b.addEventListener("blur", hideTip);
-          b.addEventListener("click", () => focusRow(a.id));
+          b.addEventListener("click", (e) => { e.stopPropagation(); focusRow(a.id); });
           dots.append(b);
         });
         box.append(n, dots);
