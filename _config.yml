@@ -175,7 +175,6 @@ kramdown:
 include: ["_pages", "_scripts"]
 exclude:
   - AGENTS.md
-  - boring-cities/
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
