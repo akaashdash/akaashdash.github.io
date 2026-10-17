@@ -192,3 +192,7 @@
 .bc .pills + .bnote, .bc .pills + .headline { margin-top: 1rem; }
 .bc .fine { margin: 0.1rem 0 0.9rem; font-size: 0.72rem; line-height: 1.4; color: var(--ink-2); font-family: var(--ui); }
 .bc .fine:empty { display: none; }
+
+/* Headline: the word "interesting" labels the big percentage, with the counts underneath it. */
+.bc .headline .cap { display: flex; flex-direction: column; gap: 0.15rem; }
+.bc .headline .lbl { font-size: clamp(1.3rem, 3.2vw, 1.7rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; color: var(--ink); }

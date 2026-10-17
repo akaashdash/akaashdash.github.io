@@ -106,8 +106,8 @@ function renderHeadline() {
   const nf = Math.min(gone, (CITY.notFound || []).length);
   const todo = gone - nf;
   $("#headline").innerHTML =
-    `<span class="big">${pct(c.yes, n)}%</span><span class="cap"><b>${c.yes}</b> of <b>${n}</b> activities can be done in ${esc(CITY.name)}, ` +
-    `${c.partial} more in a limited form. Only <b>${c.no}</b> can't.</span>`;
+    `<span class="big">${pct(c.yes, n)}%</span><span class="cap"><span class="lbl">interesting</span><span><b>${c.yes}</b> of <b>${n}</b> activities can be done in ${esc(CITY.name)}, ` +
+    `${c.partial} more in a limited form. Only <b>${c.no}</b> can't.</span></span>`;
   // Activities with no verdict are left out of the percentages; say so, small, rather than in the headline.
   $("#coverage").textContent = gone
     ? `Not counted: ${[nf && `${nf} searched for without finding a venue`, todo && `${todo} not yet researched`].filter(Boolean).join(", ")}.`
