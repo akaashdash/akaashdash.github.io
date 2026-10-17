@@ -147,7 +147,6 @@ function renderCompare() {
   renderHeat(cs, common);
   renderDiff(cs, common);
   renderProfile(cs, common);
-  renderDensity(cs);
 }
 function renderHeat(cs, common) {
   const rows = DATA.categories.map((cat) => {
@@ -209,34 +208,6 @@ function renderProfile(cs, common) {
   $("#profile").innerHTML =
     `<thead><tr><th>City</th><th>Activities compared</th><th>Fully doable</th><th>At least partly</th><th>Within 15 km and under ~US$45</th><th>Beginner-friendly</th><th>Free or very cheap</th></tr></thead><tbody>${rows}</tbody>`;
 }
-function renderDensity(cs) {
-  const groups = [...new Set(cs.flatMap((c) => Object.keys(c.venueCounts || {})))];
-  const host = $("#density");
-  host.innerHTML = "";
-  if (!groups.length) return;
-  const rowH = 20, gap = 14, L = 140, W = host.clientWidth || 900, R = 60;
-  const max = d3.max(cs.flatMap((c) => groups.map((g) => (c.venueCounts || {})[g] || 0)));
-  const x = d3.scaleSqrt([0, max], [L, W - R]);
-  const H = groups.length * (cs.length * rowH + gap + 18);
-  const svg = d3.select(host).append("svg").attr("width", W).attr("height", H).attr("role", "img").attr("aria-label", "Venue counts by type and city");
-  groups.forEach((g, gi) => {
-    const y0 = gi * (cs.length * rowH + gap + 18);
-    svg.append("text").attr("x", 0).attr("y", y0 + 13).style("font-size", "13px").style("font-weight", 600).text(g);
-    cs.forEach((c, ci) => {
-      const v = (c.venueCounts || {})[g];
-      const y = y0 + 18 + ci * rowH;
-      svg.append("text").attr("x", L - 8).attr("y", y + 13).attr("text-anchor", "end").style("font-size", "12px").text(c.name);
-      if (v === undefined) {
-        svg.append("text").attr("x", L + 4).attr("y", y + 13).style("font-size", "11.5px").style("font-style", "italic").text("n/a (count not fetched)");
-        return;
-      }
-      svg.append("rect").attr("x", L).attr("y", y + 2).attr("width", Math.max(1, x(v) - L)).attr("height", rowH - 5).attr("rx", 3).attr("fill", color("yes"))
-        .on("mousemove", (e) => showTip(`<b>${esc(c.name)}</b><br>${esc(g)}: ${v.toLocaleString()}`, e)).on("mouseleave", hideTip);
-      svg.append("text").attr("x", x(v) + 6).attr("y", y + 13).style("font-size", "11.5px").text(v.toLocaleString());
-    });
-  });
-}
-
 /* ---------- category chart ---------- */
 function renderCategories() {
   const host = $("#cat-chart");

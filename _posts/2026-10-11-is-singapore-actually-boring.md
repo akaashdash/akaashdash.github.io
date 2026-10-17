@@ -15,6 +15,8 @@ So when I moved to Singapore, I made it a point not to think like that. I made a
 
 The only thing that makes a place interesting or boring, then, is the existence of opportunities, or the lack thereof. So I made a list of all the different activities and hobbies someone could have, and then set out to see which cities are truly interesting or boring.
 
+---
+
 {% include boring-cities.liquid %}
 
 ## singapore first
@@ -61,6 +63,6 @@ Dubai, Shanghai and Beijing are in the explorer too, but I haven't researched th
 - Research hit a web-search limit repeatedly, so a lot of rows rest on a single listing or aggregator page. Between just under a fifth (New York) and nearly half (Beijing) of each city's rows are low-confidence. Only about 41% (Beijing) to 75% (New York) of each city's rows clear a stricter bar: not low-confidence, a source link that still works, and a page that isn't clearly about something else.
 - English-language search and listings find some cities far more easily than others. Beijing and Shanghai in particular are underrepresented because the sources I could reach were thin and dated, so their numbers say more about my search than about those cities.
 - "Searched, found nothing" is weaker than it sounds, and a few activities (Peranakan beadwork, Malay dance) are specific to Singapore and weren't searched elsewhere.
-- The venue haze on the map is OpenStreetMap, whose completeness differs by city. New York has roughly nine times as many tagged sports facilities as London, which says more about the mapping than the city. Only about half the cities have venue data at all.
+- The grey background points on the map come from OpenStreetMap, whose completeness differs by city, so a denser haze can mean more thorough mapping rather than more going on. Only about half the cities have that data at all.
 
 If you can think of something that's missing, or something I marked doable that isn't, I want to know. Everything is in the [CSV]({{ '/assets/boring-cities/activities.csv' | relative_url }}).
