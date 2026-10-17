@@ -186,7 +186,7 @@ function renderDiff(cs, common) {
     const has = common.filter((u) => X.rows[u.id].doable === "yes");
     const no = has.filter((u) => Y.rows[u.id].doable === "no");
     const part = has.filter((u) => Y.rows[u.id].doable === "partial");
-    return `<div><h4>${esc(X.name)} has it, ${esc(Y.name)} can't (${no.length})</h4>` + (tags(X, Y, no) || `<span class="muted">Nothing.</span>`) +
+    return `<div><h4>${esc(X.name)} has it, ${esc(Y.name)} doesn't (${no.length})</h4>` + (tags(X, Y, no) || `<span class="muted">Nothing.</span>`) +
       `<h4 class="sub">${esc(Y.name)} only has a limited version (${part.length})</h4>` + (tags(X, Y, part) || `<span class="muted">Nothing.</span>`) + "</div>";
   };
   $("#diff").innerHTML = A === B ? `<p class="muted">Pick two different cities.</p>` : list(A, B) + list(B, A);
