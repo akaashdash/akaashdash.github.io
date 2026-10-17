@@ -485,7 +485,7 @@ function renderMethod() {
     `${DATA.universe.length} activities in the shared list: ${seeds.wikipedia || 0} (in ${esc(CITY.name)}) were drawn from independent Wikipedia lists and categories (sports, games, crafts, dance, collectables and more) and ${seeds.brainstorm || 0} were brainstormed. ` +
     `The list was assembled while researching Singapore first, so it may under-represent things only other cities have. ` +
     `Each activity was then searched for in ${esc(CITY.name)} and, where found, tied to a venue, club or class with a source link. ` +
-    `${conf} rows are high-confidence (source page seen); the rest are inferred or lower confidence and flagged in the table. Research ran out of search budget in places, so ideas that couldn't be sourced were left out rather than guessed, and some categories are thin. ` +
+    `${conf} rows are high-confidence (source page seen); the rest are inferred or lower confidence and flagged in the table. ` +
     `Cost tiers are rough (about &lt;US$15 / 15–45 / 45–150 / 150+ per session). ` +
     `Venue points on the map come from OpenStreetMap (ODbL). "Doable" means the real thing exists within the metro area; "partly" means an indoor, simulated or limited version.`;
 }
