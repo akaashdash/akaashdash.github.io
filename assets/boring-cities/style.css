@@ -193,6 +193,11 @@
 .bc .fine { margin: 0.1rem 0 0.9rem; font-size: 0.72rem; line-height: 1.4; color: var(--ink-2); font-family: var(--ui); }
 .bc .fine:empty { display: none; }
 
-/* Headline: the word "interesting" labels the big percentage, with the counts underneath it. */
-.bc .headline .cap { display: flex; flex-direction: column; gap: 0.15rem; }
-.bc .headline .lbl { font-size: clamp(1.3rem, 3.2vw, 1.7rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; color: var(--ink); }
+/* Headline: "interesting" labels the big percentage. It floats just above the counts line (out of flow), so the percentage
+   and the counts keep exactly the positions they had without it. On narrow screens, where the counts wrap under the
+   percentage, the label goes back into the flow. */
+.bc .headline .cap { position: relative; }
+.bc .headline .lbl { position: absolute; left: 0; bottom: 100%; margin-bottom: 0.2rem; white-space: nowrap; font-size: clamp(1.3rem, 3.2vw, 1.7rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; color: var(--ink); }
+@media (max-width: 520px) {
+  .bc .headline .lbl { position: static; display: block; margin: 0 0 0.15rem; }
+}
