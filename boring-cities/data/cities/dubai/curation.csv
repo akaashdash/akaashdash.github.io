@@ -1,0 +1,6 @@
+id,action,field,value,reason
+freshwater-fishing,drop,,,"evidence is sea-fishing charters, not freshwater fishing"
+snow-skiing,set,doable,partial,"indoor artificial-snow slope only (Ski Dubai); consistent with other cities"
+snowboarding,set,doable,partial,"indoor artificial-snow slope only (Ski Dubai); consistent with other cities"
+indoor-snow-play,set,doable,partial,"indoor artificial-snow park"
+paragliding,drop,,,"only found in Sharjah's Al Faya desert, beyond the 30 km metro radius; recorded in not_found"

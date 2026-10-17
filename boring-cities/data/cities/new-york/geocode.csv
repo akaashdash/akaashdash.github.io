@@ -1,0 +1,249 @@
+id,venue,lat,lon,matched_name
+archery,Gotham Archery,40.71774,-73.99148,Gotham Archery
+bmx,Harold Ickes Playground Skatepark,,,
+bouldering,VITAL Climbing Gym,40.72279,-73.95477,VITAL Climbing Gym
+capoeira,ABADA-Capoeira NYC,,,
+cricket,Van Cortlandt Park cricket pitches,,,
+drone-racing,DroneRush,,,
+fencing,Tim Morehouse Fencing Club,,,
+gaelic-football-hurling,Gaelic Park / New York GAA,40.88768,-73.90146,Gaelic Park
+horse-riding,Kensington Stables,40.64978,-73.97334,Kensington Stables
+ice-hockey,Chelsea Piers Sky Rink,,,
+ice-skating,Wollman Rink,40.76772,-73.97447,Wollman Rink
+rock-climbing-top-rope,Central Rock Gym Upper West Side,,,
+judo,Hoteikan Dojo,,,
+padel,Padel Haus,40.71410,-73.96677,Padel Haus Williamsburg
+pickleball,CityPickle at Wollman Rink,,,
+rugby,NYC rugby clubs,,,
+skateboarding,Pier 62 Skatepark,40.74874,-74.00943,Pier 62 Skatepark
+snowboarding,Big SNOW American Dream,,,
+taekwondo,Ahns' Taekwondo NYC,,,
+ultimate-frisbee,Manhattan Ultimate Disc / DiscNY,,,
+allotment-gardening,GreenThumb community gardens,,,
+camping,Floyd Bennett Field (Gateway NRA),40.59108,-73.89373,Floyd Bennett Field
+urban-foraging,Wildman Steve Brill walks,,,
+hydroponics-urban-farming,Brooklyn Grange,40.65924,-74.00421,Brooklyn Grange
+mushroom-foraging,Steve Brill foraging walk,,,
+dragon-boat,"Hong Kong Dragon Boat Festival, Meadow Lake",,,
+kayaking,Downtown Boathouse,40.72154,-74.01345,Downtown Boathouse
+outrigger-canoe,New York Outrigger,,,
+stand-up-paddleboarding,New York Outrigger,,,
+surfing-ocean,Rockaway Beach,40.58098,-73.82249,Rockaway Beach
+ballet,Peridance Center,,,
+aerial-silks-circus,Circus Warehouse,,,
+orchestra,The Chelsea Symphony,,,
+guitar,Greenwich House Music School,40.73216,-74.00452,Greenwich House Music School
+improv-comedy,The PIT (Peoples Improv Theater),40.71924,-73.99283,The Pit
+irish-dance,Irish Arts Center,40.76667,-73.99378,Irish Arts Center
+piano,Greenwich House Music School,40.73216,-74.00452,Greenwich House Music School
+pole-dance,Body & Pole,,,
+salsa-bachata,Nieves Latin Dance Studio,40.83375,-73.91398,Nieves Latin Dance Studio
+sitar,Chhandayan Center for Indian Music,,,
+stand-up-comedy,American Comedy Institute,,,
+swing-lindy-hop,92nd Street Y,40.69271,-73.85303,92nd Street
+tabla,Chhandayan Center for Indian Music,,,
+taiko,Soh Daiko,,,
+tap-dance,Bridge For Dance,40.79990,-73.96760,Bridge for Dance
+chinese-opera,New York Chinese Opera Society,,,
+batik-painting,Textile Arts Center,40.67681,-73.98524,Textile Arts Center
+etching,Manhattan Graphics Center,,,
+film-photography-darkroom,International Center of Photography,40.78673,-73.95628,International Center of Photography
+filmmaking,New York Film Academy,40.70535,-74.01315,New York Film Academy
+glassblowing,UrbanGlass,,,
+embroidery,Textile Arts Center,40.67681,-73.98524,Textile Arts Center
+lampworking,UrbanGlass,,,
+charcoal-life-drawing,Art Students League of New York,40.76623,-73.98060,Art Students League of New York
+lithography,Manhattan Graphics Center,,,
+macrame,New York Sewing Center,,,
+oil-painting,Art Students League of New York,40.76623,-73.98060,Art Students League of New York
+origami,OrigamiUSA,,,
+perfumery,Bios Apothecary,,,
+photography,International Center of Photography (The School at ICP),40.78673,-73.95628,International Center of Photography
+pottery-handbuilding,Greenwich House Pottery,,,
+pottery-wheel,Greenwich House Pottery,,,
+rug-tufting,Craftsman Ave,40.67120,-73.99370,Craftsman Ave
+printmaking-screenprint,Manhattan Graphics Center,,,
+clay-sculpture,Art Students League of New York,40.76623,-73.98060,Art Students League of New York
+stained-glass,UrbanGlass,,,
+watercolour-painting,Brooklyn Brainery,40.67489,-73.96694,Brooklyn Brainery
+woodworking,Craftsman Ave,40.67120,-73.99370,Craftsman Ave
+3d-printing,Fat Cat Fab Lab,40.73384,-74.00309,Fat Cat Fab Lab
+cnc-machining,Fat Cat Fab Lab,40.73384,-74.00309,Fat Cat Fab Lab
+hackerspace-electronics,NYC Resistor,40.68362,-73.98169,NYC Resistor
+laser-cutting,NYC Resistor,40.68362,-73.98169,NYC Resistor
+robotics-arduino,NYC Resistor,40.68362,-73.98169,NYC Resistor
+arcade-games,Barcade St. Marks,,,
+chess,Marshall Chess Club,40.73409,-73.99668,Marshall Chess Club
+contract-bridge,Honors Bridge Club,,,
+cosplay,New York Comic Con,,,
+dungeons-and-dragons,Twenty Sided Store,40.71305,-73.95791,Twenty Sided Store
+trading-card-games,Twenty Sided Store,40.71305,-73.95791,Twenty Sided Store
+mahjong,Mahjong social clubs (citywide),,,
+pub-trivia,Sporcle Pub Trivia,,,
+ten-pin-bowling,Brooklyn Bowl,40.72205,-73.95755,Brooklyn Bowl
+vr-gaming,Sandbox VR New York,,,
+chocolate-making,Raaka Chocolate,40.68138,-74.00718,Raaka Chocolate
+beekeeping-honey,NYC Beekeeping,,,
+homebrewing-beer,Brooklyn Brew Shop,,,
+dim-sum-making,"Buddakan dim sum class, Chelsea Market",,,
+fermentation-kombucha,Brooklyn Brew Shop,,,
+hawker-crawling,Flushing Chinatown food tours,,,
+tea-ceremony,Resobox,40.72484,-73.98784,Resobox
+latte-art,Partners Coffee,40.74759,-73.94155,Partners Coffee
+sake-making,Brooklyn Kura,40.65762,-74.00732,Brooklyn Kura
+sake-tasting,Brooklyn Kura / Sake Studies Center,40.65762,-74.00732,Brooklyn Kura
+sourdough-baking,NY Cake Academy,,,
+sushi-making,Taste Buds Kitchen,,,
+whisky-society,Scotch Malt Whisky Society NYC tastings,,,
+butterfly-watching,AMNH Butterfly Conservatory,,,
+comic-collecting,Midtown Comics,40.75485,-73.98840,Midtown Comics
+rock-fossil-collecting,Wolfe's Pond Park fossil exploration (NYC Parks),,,
+sneaker-collecting,Flight Club NYC,,,
+trading-cards,Chameleon Comics & Cards,,,
+train-spotting,New York Transit Museum,40.69052,-73.98998,New York Transit Museum
+whale-watching,Gotham Whale (American Princess),,,
+archival-research,NYC Municipal Archives,,,
+book-club,NYC Philosophy and Psychology Readers Community,,,
+creative-writing,Gotham Writers Workshop,,,
+cultural-heritage-centres,Museum of Chinese in America,40.71944,-73.99908,Museum of Chinese in America
+genealogy,NYC Municipal Archives,,,
+history-walks,Big Onion Walking Tours,,,
+japanese-language,Japan Society Language Center,,,
+spanish-language,Instituto Cervantes New York,40.75505,-73.97050,Instituto Cervantes
+philosophy-cafe,NYC Philosophy and Psychology Readers Community,,,
+poetry-slam,Nuyorican Poets Cafe,40.72204,-73.98179,Nuyorican Poets Cafe
+public-lectures,92NY,,,
+science-museum,New York Hall of Science,40.74738,-73.85161,New York Hall of Science
+heritage-trails,Municipal Art Society tours,,,
+wartime-history,"Intrepid Sea, Air & Space Museum",,,
+cold-plunge,Russian & Turkish Baths,40.72828,-73.98362,Russian & Turkish Baths
+meetups,Meetup.com New York groups,,,
+meditation,New York Insight Meditation Center,,,
+pet-adoption,Animal Care Centers of NYC,40.79246,-73.93944,Animal Care Centers of NYC
+running-club,New York Road Runners,40.81852,-73.84388,New York Road Runners
+sauna,Russian & Turkish Baths,40.72828,-73.98362,Russian & Turkish Baths
+support-groups,NAMI-NYC Metro,,,
+volunteering,New York Cares,,,
+indoor-snow-play,Big SNOW American Dream,,,
+rodeo,Madison Square Garden (PBR Buck Off at the Garden),40.75051,-73.99352,Madison Square Garden
+snow-skiing,Big SNOW American Dream,,,
+curling,CurlNYC / Brooklyn Lakeside Curling,,,
+dinghy-sailing,Hudson River Community Sailing,40.86837,-73.93204,Hudson River Community Sailing
+disc-golf,Highland Park Disc Golf Course,,,
+freshwater-fishing,Harlem Meer,40.79620,-73.95109,Harlem Meer
+geocaching,Cunningham Park caches,,,
+nature-guided-walks,NYC Parks Urban Park Rangers,,,
+hiking,Staten Island Greenbelt,,,
+mountain-biking,Cunningham Park mountain bike trails,,,
+fishing,Harlem Meer,40.79620,-73.95109,Harlem Meer
+rowing,Row New York / Paerdegat Basin Community Dock,,,
+sailing,Offshore Sailing School (North Cove Marina),,,
+scuba-diving,Scuba Network NYC,,,
+sup-yoga,Manhattan Kayak Company,40.76406,-74.00163,Manhattan Kayak Company
+acting,HB Studio,,,
+tango,NY Tango School,,,
+bharatanatyam,Aalokam NY,,,
+chinese-orchestra,Chinese Music Ensemble of New York,,,
+choir,Everybody Sing New York,,,
+dj-turntablism,Scratch DJ Academy,,,
+erhu,Chinese Music Ensemble of New York,,,
+flamenco,Ballet Hispanico School of Dance,,,
+gamelan,Gamelan Kusuma Laras,,,
+guzheng,China Institute,,,
+lion-dance,W.O.W. Project Lions,,,
+music-production,Garnish Music Production School,,,
+bookbinding,Brooklyn Craft Company,40.73043,-73.95311,Brooklyn Craft Company
+jewellery-silversmithing,Ayaka Nishi Jewelry Design School,,,
+leatherwork,Manifesto,,,
+amateur-radio,Hall of Science Amateur Radio Club,,,
+ctf-security,Anarcho-Tech NYC CTF team,,,
+coding-meetups,OWASP New York City,,,
+hackathons,NYC Tech Week hackathons,,,
+board-games,Hex & Co.,40.77038,-73.95378,Hex & Co
+escape-rooms,The Escape Game NYC,40.75182,-73.97976,The Escape Game New York City
+esports-gaming,Waypoint,40.71728,-73.98990,Waypoint Cafe NYC
+artisan-bread-baking,NY Cake Academy,,,
+pasta-and-general-cooking-classes,CocuSocial,,,
+birdwatching,Central Park Ramble / Jamaica Bay Wildlife Refuge,,,
+vinyl-records,Academy Records,40.72977,-73.98266,Academy Records
+art-gallery,Museum of Modern Art (MoMA),,,
+museums,Metropolitan Museum of Art,40.77944,-73.96338,The Metropolitan Museum of Art
+dog-parks,Tompkins Square Park dog run,,,
+australian-rules-football,New York Magpies,,,
+lacrosse,Volo Sports,,,
+lawn-bowls,Central Park Lawn Bowling Green,,,
+netball,Manhattan International Netball Club (MINC),,,
+horse-polo,MeadowBrook Polo Club,,,
+outdoor-rock-climbing,Rat Rock (Central Park),,,
+stargazing,Carl Schurz Park (Amateur Astronomers Association),40.77517,-73.94353,Carl Schurz Park
+trail-running,Palisades Running Club,,,
+keelboat-yachting,North Cove Sailing,40.71440,-74.01719,North Cove Sailing
+kitesurfing,New York Kiteboarding School,,,
+pedal-boating,LeFrak Center at Lakeside,40.65702,-73.96420,LeFrak Center at Lakeside
+rc-aircraft,Pennsylvania Avenue Radio Control Society (Floyd Bennett Field),,,
+bagpipes,Introduction to the Highland Bagpipes (CourseHorse),,,
+breakdancing,Peridance Capezio Center,,,
+harp,Irish Arts Center,40.76667,-73.99378,Irish Arts Center
+kathak,Kathak Legacy Project / Leela NY,,,
+animation-2d,Noble Desktop,,,
+blacksmithing,Brandr Forge,,,
+candle-making,Nose Best,,,
+chinese-calligraphy,Celestial Calligraphy,,,
+ikebana,Ikebana Flowers New York,,,
+kintsugi,Yuko Gunji kintsugi workshop,,,
+knitting-crochet,New York City Crochet Guild,,,
+stone-carving,New York School of the Arts,,,
+urban-sketching,Weekend Urban Sketch,,,
+game-development-jams,GameMaker Meetup Group,,,
+watchmaking-horology,Horological Society of New York,,,
+go-weiqi,Gotham Go Group (pinkFROG cafe),,,
+wargaming-warhammer,"Warhammer (Games Workshop), 55 E 8th St",,,
+paintball,Area 53,40.71257,-73.92244,Area 53
+poker,New York Poker Club,,,
+butchery,Dickson's Farmstand Meats,40.74235,-74.00542,Dickson's Farmstand Meats
+cheese-making,Murray's Cheese,40.73100,-74.00303,Murray's Cheese
+mixology,J. Bespoke,40.74245,-73.98357,J. Bespoke
+coffee-roasting,Joe Coffee,40.68085,-73.97568,Joe Coffee
+whisky-tasting,Kings County Distillery,,,
+wine-tasting-wset,Astor Center,,,
+stamp-collecting,Collectors Club of New York,,,
+watch-collecting,Horological Society of New York,,,
+language-exchange,Langroops NYC Language Exchange,,,
+french-language,French Institute Alliance Francaise,,,
+german-language,ABC Languages,,,
+korean-language,COEI,,,
+sign-language,Sign Language Center,,,
+moocs,Coursera (online),,,
+toastmasters,Bryant Park Toastmasters,,,
+animal-shelter-volunteering,Animal Care Centers of NYC,40.79246,-73.93944,Animal Care Centers of NYC
+coastal-cleanup,Rockaway Beach (Jamaica Bay-Rockaway Parks Conservancy),40.58098,-73.82249,Rockaway Beach
+community-gardening,NYC Parks GreenThumb,,,
+massage,Spa Castle,40.78752,-73.83691,Spa Castle
+onsen,Spa Castle,40.78752,-73.83691,Spa Castle
+parkour,92NY,,,
+pilates,Power Pilates,,,
+qigong,Qigong NYC,,,
+tai-chi,Taiji Form & Qigong Manhattan,,,
+temple-activities,Sri Maha Vallabha Ganapati Devasthanam (Ganesh Temple),,,
+urban-exploration,5 BORO Exploration,,,
+yoga,Bryant Park Yoga,,,
+high-ropes-course,Alley Pond Adventure Course,,,
+indoor-skydiving,iFLY Yonkers,,,
+zip-lining,Adventures at Governors Island,,,
+silat,Brooklyn Pride Center (Queer Martial Arts),40.67998,-73.94656,Brooklyn Community Pride Center
+intertidal-walking,Orchard Beach (Pelham Bay Park),40.86577,-73.79332,Orchard Beach
+control-line-aeromodelling,Garden State Circle Burners,,,
+drone-flying,Calvert Vaux Park (Seaview Rotary Wings),40.58504,-73.99440,Calvert Vaux Park
+ski-simulator,NRTHRN Strong,,,
+snow-sculpture,Governors Island Arts ice sculpture show,,,
+kite-flying,Brooklyn Bridge Park kite festival,,,
+magic,Jeremy the Magician class,,,
+airsoft,Area 53 (Airsoft Brooklyn),40.71257,-73.92244,Area 53
+billiards-snooker,Space Billiards,,,
+larp,Scapegoat / Project Ascension LARPs,,,
+speedcubing,LaGuardia Community College (New York Championship 2026),40.74415,-73.93793,LaGuardia Community College
+coin-collecting,American Numismatic Society,,,
+debate,NYC Debate,,,
+mentoring,Big Brothers Big Sisters of New York City,,,
+chinese-ink-painting,Resobox East Village,,,
+tattooing,Three Kings Tattoo,,,

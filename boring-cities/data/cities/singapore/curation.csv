@@ -1,0 +1,54 @@
+id,action,field,value,reason
+cricket,set,source_url,https://www.scc.org.sg,Singapore Cricket Club site fetched; lists a cricket section
+cricket,set,venue,Singapore Cricket Club,
+cricket,set,area,Downtown Core,
+cricket,set,confidence,high,
+rugby,set,source_url,https://www.singaporerugby.com,Singapore Rugby Union site fetched
+rugby,set,venue,Singapore Rugby Union,
+rugby,set,confidence,high,
+wakeboarding-cable,drop,,,duplicate of wakeboarding (stronger source)
+antique-collecting,drop,,,no source or venue found
+aquascaping,drop,,,no source or venue found
+plane-spotting,drop,,,no source or venue found
+ghost-hunting,drop,,,no source found
+mutual-aid,drop,,,no source or venue found
+alcoholics-anonymous,drop,,,no source verified
+alpine-skiing,drop,,,duplicate of snow-skiing
+skydiving,drop,,,duplicate of outdoor-skydiving
+parachuting-base-jumping,drop,,,duplicate of base-jumping
+whitewater-rafting,drop,,,duplicate of white-water-rafting
+winemaking,drop,,,'no' not established: only 'nothing found'
+fruit-picking,drop,,,'no' not established: only 'nothing found'
+wild-swimming,drop,,,'no' not established: only 'nothing found'
+beekeeping,drop,,,'no' not established: only 'nothing found'
+ice-climbing,drop,,,'no' not established: only 'nothing found'
+falconry,drop,,,'no' not established: only 'nothing found'
+theremin,drop,,,'no' not established: only 'nothing found'
+throat-singing,drop,,,'no' not established: not searched
+alphorn,drop,,,'no' not established: only 'nothing found'
+morris-dancing,drop,,,'no' not established: not searched
+kabuki,drop,,,'no' not established: not searched
+roller-derby,drop,,,'no' not established: only 'nothing found'
+chinlone,drop,,,'no' not established: only 'nothing found'
+beach-tennis,drop,,,'no' not established: only 'nothing found'
+bossaball,drop,,,'no' not established: only 'nothing found'
+dambe,drop,,,'no' not established: only 'nothing found'
+sumo,drop,,,'no' not established: only 'nothing found'
+ice-carving,drop,,,'no' not established: only 'nothing found'
+beach-volleyball,drop,,,no source found
+gliding,drop,,,'no' not established: only 'nothing found'
+velodrome-track-cycling,drop,,,'no' not established: status of facilities unclear
+surf-simulator,set,how,"Wave House Sentosa (the FlowRider venue) closed in October 2019; no replacement was found.",
+cricket,set,how,"Singapore Cricket Club at the Padang fields cricket sides; other leagues exist.",
+rugby,set,how,"Singapore Rugby Union and clubs such as the Singapore Cricket Club field rugby sides.",
+curling,set,how,"A curling lane at Kallang Ice World was reported by one source but not confirmed on an official page.",
+rc-aircraft,set,how,"Flying fields exist but are scarce; no public club field was confirmed.",
+spanish-language,set,how,"University language centres and private schools offer Spanish courses; no specific current class was verified.",
+mentoring,set,how,"Social service agencies and schools recruit volunteer mentors; no specific programme was verified.",
+support-groups,set,how,"Peer-support volunteering exists via NCSS and Silver Ribbon, and Samaritans of Singapore runs a 24h hotline; open public support meetings were not found.",
+yoga,set,how,"Many studios and community-club classes exist; no single specific class was verified.",
+foraging,drop,,,duplicate of urban-foraging
+astronomy-stargazing,drop,,,duplicate of stargazing
+fpv-drone-racing,drop,,,duplicate of drone-racing
+bull-wrestling,drop,,,duplicate of rodeo
+archaeology-dig,drop,,,duplicate of ancient-ruins-excavation theme; keep the 'no' for real ruins and the dig as a tour elsewhere

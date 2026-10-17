@@ -1,0 +1,14 @@
+id,name,country,cc,lat,lon,radius_km,centre_name
+singapore,Singapore,Singapore,sg,1.2842,103.8510,25,Raffles Place
+hong-kong,Hong Kong,Hong Kong,cn,22.2819,114.1582,25,Central
+tokyo,Tokyo,Japan,jp,35.6812,139.7671,25,Tokyo Station
+london,London,United Kingdom,gb,51.5133,-0.0890,25,Bank
+new-york,New York,United States,us,40.7069,-74.0113,25,Wall Street
+atlanta,Atlanta,United States,us,33.7540,-84.3915,25,Five Points
+sydney,Sydney,Australia,au,-33.8731,151.2065,25,Town Hall
+paris,Paris,France,fr,48.8566,2.3522,25,Hôtel de Ville
+chicago,Chicago,United States,us,41.8819,-87.6278,25,The Loop
+san-francisco,San Francisco,United States,us,37.7955,-122.3937,25,Ferry Building
+dubai,Dubai,United Arab Emirates,ae,25.1972,55.2744,25,Burj Khalifa
+shanghai,Shanghai,China,cn,31.2304,121.4737,25,People's Square
+beijing,Beijing,China,cn,39.9087,116.3975,25,Tiananmen Square

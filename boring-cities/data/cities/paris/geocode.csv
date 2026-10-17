@@ -1,0 +1,250 @@
+id,venue,lat,lon,matched_name
+archery,Paris Arc Club,48.82612,2.42638,Arc Club Paris 12
+bmx,Bercy Skatepark,,,
+bouldering,Arkose Nation,48.85139,2.40226,Arkose Nation
+cricket,Paris Universite Club (PUC) Cricket,,,
+dinghy-sailing,Base de plein air et de loisirs de Saint-Quentin-en-Yvelines,,,
+fencing,Racing Club de France,48.84909,2.31427,Racing Club de France
+gaelic-football-hurling,Paris Gaels GAA,,,
+horse-riding,Saint-Quentin-en-Yvelines leisure base,,,
+ice-skating,Patinoire Sonja-Henie,48.83829,2.37857,Patinoire Sonja Henie
+rock-climbing-top-rope,Arkose Chevaleret,48.83350,2.36861,Arkose Chevaleret
+judo,Paris Universite Club (PUC),,,
+rugby,Paris Universite Club (PUC) Rugby,,,
+skateboarding,Bercy Skatepark,,,
+camping,Camping Indigo Paris,,,
+nature-guided-walks,Plein air Paris,48.84734,2.36115,Jardin Tino Rossi - Musée de la Sculpture en Plein Air
+hiking,Paris Hiking,,,
+outdoor-rock-climbing,Fontainebleau Forest,,,
+dragon-boat,Lac de Creteil dragon boat club,,,
+kayaking,Lac de Creteil kayak clubs,,,
+rowing,Lac de Creteil rowing clubs,,,
+sailing,Base de plein air et de loisirs de Saint-Quentin-en-Yvelines,,,
+tango,Danse a Paris cours et soirees,,,
+guitar,Meetup guitar class group,,,
+improv-comedy,Improvibes,,,
+music-production,SuperSample Paris,,,
+piano,Meetup piano initiation group,,,
+salsa-bachata,The Paris Salsa Bachata Kizomba,,,
+stand-up-comedy,Green Mic Comedy,,,
+chinese-calligraphy,A2Z Atelier,,,
+leatherwork,Lekrea,,,
+charcoal-life-drawing,Life Drawing Montmartre,,,
+oil-painting,Initiation a la peinture a l'huile,,,
+photography,Take a Photo Walk Paris,,,
+pottery-handbuilding,Faubourg du Temple ceramic classes,,,
+printmaking-screenprint,La Fourche-Guy Moquet,,,
+urban-sketching,The Art Club (Le Bistrot des Artistes),,,
+watercolour-painting,The Wild Watercolor Workshop,,,
+australian-rules-football,Paris Cockerels,,,
+capoeira,ANGA Capoeira Paris,,,
+curling,Curling Club Viry-Chatillon,,,
+ice-hockey,Les Francais Volants,,,
+padel,Padel Ladoumegue,,,
+pickleball,4PADEL Paris 20,48.85290,2.41527,4padel Paris XX (Montreuil)
+taekwondo,Taekwondo Club Saint-Germain Paris,,,
+ultimate-frisbee,PUC Ultimate,,,
+freshwater-fishing,Union des Pecheurs de Paris et de la Seine,,,
+stargazing,Societe astronomique de France,48.85810,2.28747,Société astronomique de France
+fishing,Quai de la Tournelle (Seine),48.85027,2.35396,Quai de la Tournelle
+scuba-diving,Fosse de plongee de Villeneuve-la-Garenne,,,
+ballet,Gymnase Vaugirard-Littre,,,
+bharatanatyam,Shantam (Anusha Cherer),,,
+breakdancing,Breakin'13,,,
+aerial-silks-circus,Paris Anim' Wangari Maathai,,,
+choir,Choeur de la Cite internationale,,,
+dj-turntablism,DJ Network,48.83778,2.34584,DJ Network
+flamenco,Flamenco en France,,,
+kathak,Triwat International,,,
+pole-dance,Pole Dance Paris (Avron),48.85191,2.40223,Pole dance Paris
+swing-lindy-hop,Swing Cotton at Studio Breguet,,,
+candle-making,Atelier bougie (Paris 13e),,,
+glassblowing,Atelier Thomas Segaud,,,
+embroidery,Boutique Flanelle,,,
+jewellery-silversmithing,925 Silver Atelier,,,
+knitting-crochet,Une Maille a l'Endroit,48.88474,2.31158,Une maille à l'endroit
+perfumery,Molinard (Odeon),48.85158,2.33280,Molinard
+pottery-wheel,Atelier Setsuko,48.85469,2.37725,Atelier Setsuko
+rug-tufting,Tufting Studio,,,
+stained-glass,Atelier d'initiation au vitrail (Paris 17e),,,
+coding-meetups,Rust Paris,,,
+game-development-jams,Paris Indie Games Developers (PIGD),,,
+board-games,Jovial Bar a Jeux de Societe,,,
+chess,Rencontres d'echecs (Cafe Cayo),,,
+dungeons-and-dragons,English-speaking Roleplayers of Paris,,,
+chocolate-making,Musee du Chocolat,,,
+mixology,Parisian Cocktail Club,,,
+pasta-and-general-cooking-classes,Le Labo Culinaire,,,
+sushi-making,Le Labo Culinaire,,,
+allotment-gardening,Jardins familiaux du Fort d'Aubervilliers,,,
+cosplay,Japan Expo Paris (Paris-Nord Villepinte),,,
+escape-rooms,Escape Game Le Bureau des Legendes,,,
+paintball,Paintball Neuilly-sur-Marne,,,
+ten-pin-bowling,Bowling Front de Seine,48.84921,2.28435,Bowling Front de Seine
+vr-gaming,Virtual Room Paris,48.85800,2.37083,Virtual Room
+artisan-bread-baking,"Atelier croissants et pains au chocolat, Paris 2e",,,
+beekeeping-honey,Rucher-Ecole du Jardin du Luxembourg,,,
+fermentation-kombucha,"Atelier fermentation kimchi, Paris 11e",,,
+latte-art,"Atelier latte art, Paris 9e",,,
+whisky-tasting,Atelier assemblage de whisky,,,
+wine-tasting-wset,Les Caves du Louvre,48.86092,2.34260,Les Caves du Louvre
+archival-research,Archives nationales (Pierrefitte-sur-Seine),48.86018,2.35862,Archives Nationales
+art-gallery,Centre Pompidou,48.86050,2.35242,Centre Pompidou
+book-club,English-speaking Book Club in Paris,,,
+creative-writing,Paris Lit Up Writers' Group,,,
+cultural-heritage-centres,Institut du monde arabe,48.84892,2.35715,Institut du Monde arabe
+history-walks,Visite guidee Le Paris du crime,,,
+language-exchange,Denfert Polyglottes,,,
+japanese-language,Maison de la culture du Japon a Paris (MCJP),48.85474,2.28978,Maison de la Culture du Japon
+spanish-language,Instituto Cervantes de Paris,,,
+museums,Musee du Louvre,,,
+philosophy-cafe,Cosy Cave Conversations (Cafe Philo in English),,,
+poetry-slam,Paris Lit Up (PLU Open Mic),,,
+public-lectures,College de France,,,
+science-museum,Cite des sciences et de l'industrie,48.89568,2.38797,Cité des Sciences et de l'Industrie
+toastmasters,Paris La Defense Toastmasters,,,
+wartime-history,Musee de la Liberation de Paris,,,
+massage,"Hammam and massage, Paris 13e",,,
+meditation,Meditation Sahaj Paris 17e,,,
+pilates,The Pilates Project,,,
+running-club,Paris Running Club,,,
+sauna,Hotel Este spa,,,
+support-groups,Alcooliques Anonymes France,,,
+yoga,Paris yoga studios (Funbooker listings),,,
+hot-air-ballooning,Ballon de Paris,48.84137,2.27400,Ballon de Paris
+horse-polo,Polo de Paris,48.86752,2.23617,Polo de Paris
+pedal-boating,Lac Daumesnil boat rental,,,
+film-photography-darkroom,Centre Verdier-Photo,,,
+kintsugi,Ceramicafe Genevieve,,,
+clay-sculpture,Atelier modelage (Funbooker),,,
+woodworking,Atelier d'initiation a la menuiserie (Funbooker),,,
+3d-printing,Volumes,48.87960,2.39221,Volumes
+cnc-machining,Volumes,48.87960,2.39221,Volumes
+laser-cutting,Volumes,48.87960,2.39221,Volumes
+arcade-games,La Tete dans les Nuages,48.87168,2.33937,La Tête dans les Nuages
+contract-bridge,Bridge Club des Buttes-Chaumont,,,
+esports-gaming,Espot,48.86086,2.34143,Espot
+go-weiqi,Club de Go d'Antony,,,
+wargaming-warhammer,French Wargame Cafe,48.88046,2.36595,French Wargame Café
+whisky-society,Pro Degustation,,,
+birdwatching,"LPO Ile-de-France, Bois de Boulogne walk",,,
+stamp-collecting,Rue Drouot philatelic shops,,,
+cold-plunge,Paris Ice Club,,,
+parkour,Culture Parkour (Centr'Halles Park),,,
+pet-adoption,SPA refuge de Gennevilliers,,,
+tai-chi,Association Atout Chine,,,
+geocaching,Les Geofranciliens,,,
+trail-running,Team Trail Paris,,,
+acting,La Fabrique du Comedien,,,
+orchestra,Orchestre Impromptu,,,
+harp,Academie Musicale du 5e,,,
+irish-dance,Association irlandaise de Paris (ceili),,,
+lion-dance,"Lion dance groups (Aubervilliers, Noisy-le-Grand)",,,
+tabla,Nishad Kawa (private tabla teacher),,,
+taiko,Tsunagari Taiko Center,,,
+tap-dance,Centre Paris Anim' Arras,,,
+filmmaking,Local Enac (Atelier cinema ENAC),,,
+ikebana,Association Art Levant,,,
+ctf-security,DaVinciCode / DigiTeam (Pole Leonard de Vinci),,,
+hackerspace-electronics,La Paillasse,48.89627,2.34605,La Paillasse
+hackathons,"Adopt AI Hackathons, Grand Palais",,,
+robotics-arduino,FabLab Sorbonne Universite (Jussieu),48.84513,2.35724,FabLab Sorbonne Université
+trading-card-games,MEiSiA,48.86938,2.35698,Meisia 2.0 - Boardgame Café
+mahjong,Magic Mahjong Social Pung,,,
+poker,Club Pierre Charron,48.86954,2.30371,Club Pierre Charron
+pub-trivia,The Paris Quiz Mistress,,,
+homebrewing-beer,La Beer Fabrique,48.86320,2.37991,La Beer Fabrique
+coffee-roasting,Atelier de torréfaction (Cap Adrenaline listing),48.85462,2.37066,L'atelier de torréfaction
+dim-sum-making,Mama Ly,,,
+tea-ceremony,Maison Jugetsudo / atelier chanoyu,,,
+sake-tasting,Caves du Louvre,48.86096,2.34261,Les Caves du Louvre
+sourdough-baking,"Atelier pain au levain, rue Montgallet",,,
+trading-cards,MEiSiA,48.86938,2.35698,Meisia 2.0 - Boardgame Café
+german-language,Goethe-Institut Paris,48.86617,2.29439,Institut Goethe
+animal-shelter-volunteering,SPA refuge de Gennevilliers,,,
+volunteering,Serve the City Paris,,,
+disc-golf,"Disc golf course, Île de loisirs de Jablines-Annet",,,
+drone-racing,"FPV Racing SQY, Île de loisirs de Saint-Quentin-en-Yvelines",,,
+lacrosse,Paris Lacrosse (Paris Phoenix),,,
+netball,Netball Paris,,,
+silat,"Sport Culture Ed La Star, Gymnase de la Cour des Lions",,,
+urban-foraging,"Balade botanique Vagabondes, Père-Lachaise",,,
+orienteering,Raid Orientation Paris,,,
+hydroponics-urban-farming,Aéromate (RATP rooftop farm),,,
+mushroom-foraging,Société Mycologique de France,,,
+cable-skiing,"Téléski nautique, Île de loisirs de Cergy-Pontoise",,,
+freediving,"Subaqua Club de Paris, Piscine des Amiraux",,,
+kite-flying,Cerf-Volant Club de France / Les Amis du Cerf-Volant,,,
+fishing-pond,Lakes of the Bois de Vincennes and Bois de Boulogne,,,
+rc-aircraft,Centre Paris Anim' Dunois,,,
+wakeboarding,"Téléski nautique, Île de loisirs de Cergy-Pontoise",,,
+water-skiing,"Téléski nautique, Île de loisirs de Cergy-Pontoise",,,
+windsurfing,Île de loisirs de Saint-Quentin-en-Yvelines,,,
+bagpipes,Bagad Pariz,,,
+magic,Musée de la Magie,48.85312,2.36117,Musée de la Magie
+sitar,Centre Mandapa,48.82762,2.34518,Centre Mandapa
+animation-2d,"GOBELINS, l'école de l'image",,,
+chinese-ink-painting,Institut Feibai,,,
+etching,Ateliers Beaux-Arts de Paris (Atelier 43),48.85768,2.36388,Ateliers des beaux-arts de la ville de Paris - Centre Sévigné
+lithography,Ateliers Beaux-Arts Glacière,,,
+macrame,Patronage Laïque Jules-Vallès,48.84014,2.28508,Patronage Laïque. Jules Vallès
+stone-carving,Ateliers Beaux-Arts Glacière,,,
+tattooing,"Le Mondial du Tatouage, Grande Halle de la Villette",,,
+airsoft,Airsoft 75,,,
+billiards-snooker,Billard Club Parisien,48.86306,2.34373,BIllard Club Parisien
+larp,Le Secret de l'Île,48.88139,2.32825,Le Secret de Paris
+speedcubing,"Palais Open (WCA), Palaiseau",,,
+butterfly-watching,"Maison Paris Nature, Parc Floral",,,
+coin-collecting,"Société française de numismatique, BnF Richelieu",,,
+vinyl-records,Dizonord,48.89516,2.34178,Dizonord
+debate,Centre Paris Anim' Beaujon,,,
+genealogy,Archives de Paris,48.87910,2.40686,Archives de Paris
+french-language,Alliance Française Paris Île-de-France,48.84646,2.32899,Alliance française
+korean-language,Centre Culturel Coréen,48.87420,2.31671,Centre Culturel Coréen
+sign-language,IVT - International Visual Theatre,,,
+tamil-language,INALCO,48.82722,2.37603,INaLCO (Institut des langues et civilisations orientales)
+moocs,FUN MOOC,,,
+heritage-trails,Parcours Libération de Paris (app Détour),,,
+coastal-cleanup,Île de loisirs de Créteil,,,
+community-gardening,Jardins partagés (Main Verte network),,,
+dog-parks,"Parc canin, Paris 10e",,,
+mentoring,Nos Quartiers ont du Talent (NQT),,,
+qigong,Centre Paris Anim' Beaujon,,,
+temple-activities,Pagode de Vincennes,48.82849,2.41536,Pagode de Vincennes
+treetop-walk,Ecopark Adventures Creteil,,,
+control-line-aeromodelling,Club modeliste de Cachan,,,
+kitesurfing,Base de loisirs de Saint-Quentin-en-Yvelines (AKIF outings),,,
+drone-flying,Sport Decouverte (drone initiation),,,
+erhu,Centre culturel de Chine a Paris,48.86194,2.31061,Centre culturel de Chine à Paris
+lampworking,Paris Ateliers / Funbooker atelier verre a la flamme,48.87169,2.36752,Paris Ateliers
+origami,Funbooker origami workshop,,,
+weaving,Funbooker weaving workshop,,,
+watchmaking-horology,Cap Adrenaline horlogerie workshop,,,
+cheese-making,"Sport Decouverte workshop, passage Brady",,,
+comic-collecting,Album Comics,48.85060,2.34563,Album Comics
+sneaker-collecting,Larry Deadstock,,,
+watch-collecting,Hotel Drouot / Collector Square,,,
+urban-exploration,Catacombes de Paris,,,
+surf-simulator,Ile de loisirs de Cergy-Pontoise (vague a surf),,,
+bungee-jumping,Ile de loisirs de Cergy-Pontoise (Benji ejection),,,
+cable-wakeboarding,Ile de loisirs de Cergy-Pontoise (teleski nautique),,,
+cave-exploring,Catacombs of Paris,48.83374,2.33229,Catacombs of Paris
+high-ropes-course,Ile de loisirs de Cergy-Pontoise (accrobranche),,,
+indoor-skydiving,Aerokart,,,
+white-water-rafting,Ile de loisirs de Cergy-Pontoise (stade d'eau vive),,,
+zip-lining,Ile de loisirs de Cergy-Pontoise (accrobranche),,,
+onsen,Hôtel Hana,,,
+outdoor-skydiving,"Parachutisme Île-de-France (Meaux, Pontoise)",,,
+paragliding,Parapente baptism (Évry / Bassevelle),,,
+ski-simulator,Crazy Park,,,
+mountain-biking,Sevres Chaville VTT (Foret de Meudon),,,
+snorkeling,Espace Sportif Pontoise (nage avec palmes),,,
+rock-fossil-collecting,Saphir'Art (Sceaux) mineral and fossil sale,,,
+meetups,Meetup Paris groups,,,
+indoor-snow-play,Crazy Park,,,
+stand-up-paddleboarding,Base Nautique de la Villette,48.88768,2.37899,Base Nautique de la Villette
+guzheng,Superprof guzheng teachers (Paris area),,,
+blacksmithing,Wecandoo forging introduction (Saint-Denis),,,
+bookbinding,Centre Paris Anim' Mercoeur,,,
+sake-making,Atelier de dégustation de saké (Paris 16e),,,
+toy-collecting,Lulu Berlu,48.86462,2.36944,Lulu Berlu

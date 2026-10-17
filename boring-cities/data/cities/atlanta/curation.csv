@@ -1,0 +1,14 @@
+id,action,field,value,reason
+kayaking,drop,,,"evidence is Lake Lanier (~80 km), outside the 30 km metro definition; not verified within it"
+rowing,drop,,,"evidence is Lake Lanier (~80 km), outside the 30 km metro definition; not verified within it"
+stand-up-paddleboarding,drop,,,"evidence is Lake Lanier (~80 km), outside the 30 km metro definition; not verified within it"
+cable-wakeboarding,drop,,,"evidence is Lake Lanier (~80 km), outside the 30 km metro definition"
+hunting,set,doable,no,"licensed hunting exists only in state wildlife areas 60-70 km out"
+hunting,set,distance_tier,outside,
+hunting,set,confidence,low,
+wakeboarding,drop,,,"venue beyond the 30 km metro radius (Lake Lanier); recorded in not_found"
+cable-skiing,drop,,,"venue beyond the 30 km metro radius; recorded in not_found"
+water-skiing,drop,,,"venue beyond the 30 km metro radius (Lake Lanier); recorded in not_found"
+windsurfing,drop,,,"venue beyond the 30 km metro radius (Lake Lanier); recorded in not_found"
+keelboat-yachting,drop,,,"venue beyond the 30 km metro radius (Lake Lanier); recorded in not_found"
+dragon-boat,drop,,,"venue beyond the 30 km metro radius (Acworth ~40 km); recorded in not_found"

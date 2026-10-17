@@ -1,0 +1,719 @@
+{{Short description|none}}
+
+{{dynamic list}}
+This is a '''list of cooking techniques''' commonly used in [[cooking]] and [[food preparation]].
+
+[[Cooking]] is the practice of preparing [[food]] for [[ingestion]], commonly with the application of differentiated heating. Cooking techniques and ingredients vary widely across the world, reflecting unique environments, economics, cultural traditions, and trends. The way that cooking takes place also depends on the skill and type of training of an individual cook as well as the resources available to cook with, such as [[Butter|good butter]] which heavily impacts the meal.
+
+{{Compact TOC|center=yes|align=center|seealso=yes|notesfirst=|further=yes|extlinks=yes|refs=yes|sep=·}}
+
+==A==
+{{glossary}}
+{{term|[[acidulated water|acidulate]]}}
+{{defn|To use an acid (such as that found in citrus juice, vinegar, or wine) to prevent {{gli|browning}}, alter flavour, or make an item safe for canning.<ref name="NLGacidulate">{{cite book |last=Montagné |first=Prosper |date=1977 |title=The New Larousse Gastronomique |url=https://archive.org/details/newlaroussegastr00mont_0/page/3 |publisher=The Hamlyn Publishing Group Ltd |page=[https://archive.org/details/newlaroussegastr00mont_0/page/3 3] |isbn=0-517-53137-2 }}</ref>}}
+
+{{term|''[[al dente]]''}}
+{{defn|To cook food (typically pasta) to the point where it is tender but not mushy.}}
+
+{{term|[[Amandine (culinary term)|amandine]]}}
+{{defn|A culinary term indicating a {{gli|garnish}} of [[almond]]s. A dish served amandine is usually cooked with butter and seasonings, then sprinkled with whole or flaked, toasted almonds.}}
+
+{{term|[[amylolytic process]]}}
+{{defn|Used in the brewing of alcohol from grains.}}
+
+{{term|[[anti-griddle]]}}
+{{defn|A [[Small appliance|kitchen appliance]] that [[flash freeze]]s or semi-freezes foods placed on its chilled metal top.<ref name="Chef2010">{{cite book|author=The Creators of Top Chef|title=How to Cook Like a Top Chef|url=https://books.google.com/books?id=41rS3dSy8KQC&pg=PA157|access-date=13 December 2012|date=14 July 2010|publisher=Chronicle Books|isbn=978-0-8118-7486-1|page=157}}</ref>}}
+
+{{term|[[aspic]]}}
+{{defn|A savoury gelatin made from meat stock or {{gli|consommé}}, and often shaped in a mold.<ref name="NLGaspic">{{cite book |last=Montagné |first=Prosper |date=1977 |title=The New Larousse Gastronomique |url=https://archive.org/details/newlaroussegastr00mont_0/page/55 |publisher=The Hamlyn Publishing Group Ltd |page=[https://archive.org/details/newlaroussegastr00mont_0/page/55 55] |isbn=0-517-53137-2 }}</ref> Foods served in aspic are suspended in or on top of the gelatin.}}
+
+{{term|''[[au gratin]]''}}
+{{defn|Prepared in the {{gli|gratin}} style. Foods served ''au gratin'' are topped with breadcrumbs or cheese then {{gli|browning|browned}} under a broiler.<ref name="NLGgratin">{{cite book |last=Montagné |first=Prosper |date=1977 |title=The New Larousse Gastronomique |url=https://archive.org/details/newlaroussegastr00mont_0/page/296 |publisher=The Hamlyn Publishing Group Ltd |page=[https://archive.org/details/newlaroussegastr00mont_0/page/296 296] |isbn=0-517-53137-2 }}</ref>}}
+
+{{term|''[[au jus]]''}}
+{{defn|Foods served ''au jus'', typically meat or sandwiches, are served with an unthickened sauce made from roast meat drippings, commonly in a separate side dish.}}
+
+{{term|''au poivre''}}
+{{defn|Foods served ''au poivre'', typically steak, are crusted with ground [[black pepper]] prior to cooking.}}
+{{glossaryend}}
+
+==B==
+{{glossary}}
+[[File:Cornish Pasties in the Oven.jpg|thumb|[[Cornwall|Cornish]] [[Pasty|pasties]] being {{gli|baking|baked}} in an [[oven]]]]
+[[File:blanching.jpg|thumb|The first step in {{gli|blanching}} [[green bean]]s]]
+{{term|[[backwoods cooking]]}}
+{{defn|A method of cooking without the use of [[kitchen utensils|utensils]] that commonly takes place in remote areas, often in combination with wild or conventional [[camping]].}}
+
+{{term|[[baghaar]]}}
+{{defn|A cooking technique used in [[Pakistani cuisine]] and [[Indian cuisine]] in which cooking oil is heated and spices are added to fry. The oil is then added to a dish for flavoring.}}
+
+{{term|[[bain-marie]]}}
+{{defn|A method of cooking where a container of food is placed in or above boiling water in order to heat gradually or to keep warm.<ref name="NLGbainmarie">{{cite book |last=Montagné |first=Prosper |date=1977 |title=The New Larousse Gastronomique |url=https://archive.org/details/newlaroussegastr00mont_0/page/70 |publisher=The Hamlyn Publishing Group Ltd |page=[https://archive.org/details/newlaroussegastr00mont_0/page/70 70] |isbn=0-517-53137-2 }}</ref>}}
+
+{{term|[[baking]]}}{{anchor|bake}}
+{{defn|}}
+
+{{term|barding}}
+{{defn|Wrapping meat in fat prior to {{gli|roasting}}.<ref name="NLGbard">{{cite book |last=Montagné |first=Prosper |date=1977 |title=The New Larousse Gastronomique |url=https://archive.org/details/newlaroussegastr00mont_0/page/84 |publisher=The Hamlyn Publishing Group Ltd |page=[https://archive.org/details/newlaroussegastr00mont_0/page/84 84] |isbn=0-517-53137-2 }}</ref>}}
+
+{{term|[[barbecuing]]}}{{anchor|barbecue}}
+{{defn|Cooking meat or fish slowly over a [[barbecue]] grill with indirect heat and smoke.}}
+
+{{term|[[Basting (cooking)|basting]]}}{{anchor|baste}}
+{{defn|Periodically pouring liquid over food as it roasts.<ref name="NLGbaste">{{cite book |last=Montagné |first=Prosper |date=1977 |title=The New Larousse Gastronomique |url=https://archive.org/details/newlaroussegastr00mont_0/page/88 |publisher=The Hamlyn Publishing Group Ltd |page=[https://archive.org/details/newlaroussegastr00mont_0/page/88 88] |isbn=0-517-53137-2 }}</ref>}}
+
+{{term|[[Blanching (cooking)|blanching]]}}
+{{defn|A technique by which a fresh food such as a vegetable or fruit is briefly immersed in boiling water, removed after a timed interval, and then plunged into iced water or rinsed with cold running water (shocking or refreshing) to halt the cooking process.}}
+
+{{term|[[Boiling in cooking|boiling]]}}{{anchor|boil}}
+{{defn|}}
+
+{{term|[[braising]]}}
+{{defn|A combination-cooking method that uses both wet and dry heats: typically, the food is first seared at a high temperature, then finished in a covered pot at a lower temperature while sitting in some (variable) amount of liquid (which may also add flavor).}}
+
+{{term|[[bricolage]]}}
+{{defn|The preparation of a meal from whatever ingredients happen to be on hand.}}
+
+{{term|[[brine]]}}{{anchor|brining}}
+{{defn|To soak a food item in salted water.}}
+
+{{term|[[broasting]]}}{{anchor|broast}}
+{{defn|A method of cooking [[Chicken (food)|chicken]] and other foods using a [[pressure fryer]] and condiments.}}
+
+{{term|[[Browning (partial cooking)|browning]]}}{{anchor|brown}}
+{{defn|The process of partially cooking the surface of [[meat]] to help remove excessive [[fat]] and to give the meat a brown color crust and flavor through various [[browning (chemical process)|browning reactions]].}}
+{{glossaryend}}
+
+==C==
+{{glossary}}
+[[File:Ryan Berley Pouring Candy Molds CHF-First-Friday-December-2012-011.JPG|thumb|upright|Hot liquid candy being poured into candy molds by a {{gli|candy making|candymaker}}]]
+[[File:Charbroiler-operations-cooking 1.JPG|thumb|Hamburgers cooking on a {{gli|charbroiler}}]]
+{{term|[[candy making]]}}
+{{defn|The preparation of [[Candy|candies]] and [[Sugar confectionery|sugar confections]] by dissolving [[sugar]] in water or milk to form a [[syrup]], which is boiled until it reaches the desired concentration or starts to {{gli|caramelization|caramelize}}.}}
+
+{{term|[[caramelization]]}}
+{{defn|The {{gli|browning}} of [[sugar]], a process used extensively in cooking for the resulting nutty flavor and brown color.}}
+
+{{term|[[carryover cooking]]}}
+{{defn|The phenomenon by which food retains heat and continues to cook even after being removed from the source of heat.<ref name=cookclar>{{cite web|last=Turner|first=Danielle|title=Carryover Cooking|url=http://www.cookingclarified.com/2011/01/carryover-cooking/|publisher=Cooking Clarified|access-date=27 November 2012}}</ref>}}
+
+{{term|[[cartouche (cooking)|cartouche]]}}
+{{defn|A parchment paper lid used to trap some steam during cooking.<ref>{{Cite web |title=Using a Parchment Cartouche Instead of a Lid |url=https://www.americastestkitchen.com/cooksillustrated/how_tos/9037-using-a-parchment-cartouche-instead-of-a-lid |url-status=live |archive-url=https://archive.today/20230723132531/https://www.americastestkitchen.com/cooksillustrated/how_tos/9037-using-a-parchment-cartouche-instead-of-a-lid |archive-date=23 July 2023 |access-date=9 May 2025 |website=[[America's Test Kitchen]]}}</ref>
+}}
+
+{{term|[[casserole]]}}
+{{defn|Food cooked and served in a casserole dish.}}
+
+{{term|[[charbroiler]]}}
+{{defn|A cooking device consisting of a series of grates or ribs that can be heated using a variety of means, and is used in both residential and commercial applications for a variety of cooking operations.}}
+
+{{term|[[cheesemaking]]}}
+{{defn|The craft of making [[cheese]].}}
+
+{{term|[[chiffonade]]}}
+{{defn|To cut leaves into long thin strips.}}
+
+{{term|Chinese cooking techniques}}
+{{defn|A set of methods and techniques traditionally used in [[Chinese cuisine]].<ref>{{citation|year=2008|last=傅 |first=培梅|title=培梅食譜 |publisher=旗林文化|volume=1 |isbn=978-986-6655-25-8 |trans-title=Pei Mei's Chinese Cookbook |language=chinese}}</ref> The cooking techniques can either be grouped into ones that use a single cooking method or a combination of wet and dry cooking methods.}}
+
+{{term|red cooking}}
+{{ghat|Also called '''Chinese stewing''', '''red stewing''', '''red braising''', and '''flavour potting'''.}}
+{{defn|A slow {{gli|braising}} technique that imparts a red color to the prepared food, frequently used in Chinese cuisine.}}
+
+{{term|clay pot cooking}}
+{{defn|A process of cooking food in a pot made from unglazed and natural clay.}}
+
+{{term|[[coddling]]}}
+{{defn|Heating food in water kept just below the [[boiling point]].<ref>{{cite book|last=Kipfer|first=Barbara Ann|title=The Culinarian: a Kitchen Desk Reference|year=2012|publisher=John Wiley & Sons|location=Hoboken, N.J.|isbn=9780470554241|page=137}}</ref> [[Coddled egg]] may be prepared using this method.}}
+
+{{term|[[concasse]]}}
+{{defn|To rough chop any ingredient, especially vegetables. The term is particularly applied to [[tomato]]es, where ''tomato concasse'' is a tomato that has been peeled, seeded (seeds and skins removed), and chopped to specified dimensions.}}
+
+{{term|conche}}
+{{defn|A surface-scraping mixer and agitator that evenly distributes [[cocoa butter]] within [[chocolate]], and may act as a "polisher" of the [[wiktionary:Particle|particle]]s.}}
+
+{{term|[[confit]]}}
+{{defn|A generic term for various kinds of food that have been cooked in grease, oil, or sugar water (syrup).}}
+
+{{term|[[consommé]]}}
+{{defn|A type of clear soup made from richly flavored {{gli|stock}} or {{gli|bouillon}} that has been clarified.}}
+
+{{term|[[cooking with alcohol]]}}
+{{defn|Many dishes incorporate [[alcoholic beverage]]s into the food itself.}}
+
+{{term|[[cream]]}}
+{{defn|The butterfat-heavy portion of whole milk that, due to its fat content, separates from the milk and rises to the top.}}
+
+{{term|[[Creaming (food)|creaming]]}}
+{{defn|no=1|Combining ingredients (typically butter and sugar) into a smooth paste.}}
+{{defn|no=2|Cooking meat or vegetables in a thick dairy-based sauce.}}
+{{defn|no=3|Mixing {{gli|purée|puréed}} corn kernels with whole corn kernels in the preparation of [[creamed corn]].}}
+
+{{term|[[croquette]]}}
+{{defn|A small roll made of finely chopped meat and/or vegetables that is breaded and fried.}}
+
+{{term|[[culinary triangle]]}}
+{{defn|A concept described by anthropologist [[Claude Lévi-Strauss]] involving three types of cooking: [[boiling]], [[roasting]], and [[Smoking (food)|smoking]], usually done to meat.}}
+
+{{term|[[curdling]]}}
+{{defn|The breaking of an [[emulsion]] or [[colloid]] into large parts of different composition through the physico-chemical processes of [[flocculation]], [[creaming (chemistry)|creaming]], and [[coalescence (chemistry)|coalescence]]. Curdling is intentional and desirable in making cheese and tofu, but may be unintentional and undesirable in making other foods such as sauces and custards.}}
+
+{{term|cured fish}}
+{{defn|Fish preserved by [[Fermented fish|fermentation]], {{gli|pickling}}, [[Smoked fish|smoking]], or some combination of these techniques.}}
+
+{{term|[[curing (food preservation)|curing]]}}{{anchor|cure}}
+{{defn|Any of a wide variety of food preservation and flavoring processes used for foods such as meat, fish, and vegetables, by the addition of a combination of salt, nitrates, nitrite, or sugar. Many curing processes also involve {{gli|smoking}}, the process of flavoring, or cooking. The use of food dehydration was the earliest form of food curing.}}
+
+<gallery class="center" caption="" widths="140px" heights="200px">
+File:Fromagerie gruyères-égouttage-4.jpg|The production of [[Gruyère cheese]] at the [[cheesemaking]] factory of Gruyères, Canton of Fribourg, Switzerland
+File:Svadbarski Kupus.jpg|Cooking of Svadbarski Kupus (wedding cabbage) in [[Clay pot cooking|clay pots]], Serbia
+File:Coddled Egg on hash.jpg|A [[coddled egg]] atop hash
+File:Creaming butter - step 3.JPG|Butter being [[Creaming (food)|creamed]] using electric beaters
+</gallery>
+{{glossaryend}}
+
+==D==
+{{glossary}}
+[[File:Boeuf mode.JPG|thumb|A beef [[stew]] being cooked in a {{gli|Dutch oven}}]]
+{{term|[[deep frying]]}}
+{{defn|A technique by which a food is completely submerged in hot fat or oil (as opposed to ordinary {{gli|frying}}, which involves placing the food in a shallow pool of oil).}}
+
+{{term|[[Deglazing (cooking)|deglazing]]}}{{anchor|deglaze}}
+{{defn|}}
+
+{{term|[[degreasing]]}}
+{{defn|}}
+
+{{term|[[dough sheeting]]}}
+{{defn|A technique used in industrial [[bakery|bakeries]] that involves rolling out [[dough]] into a (consistent) dough sheet with a desired even thickness prior to baking.}}
+
+{{term|[[Dredging (cooking)|dredging]]}}{{anchor|dredge}}
+{{defn|Coating the exterior of a food with a dry material (such as breadcrumbs) prior to cooking.}}
+
+{{term|[[dry roasting]]}}
+{{defn|}}
+
+{{term|[[food drying|drying]]}}
+{{defn|Any of a variety of processes by which a food is preserved by removing moisture, often by the use of a modern [[food dehydrator]] or by the traditional method of allowing sunlight and fresh air to evaporate moisture.}}
+
+{{term|[[dum pukht]]}}
+{{ghat|Also called '''slow oven cooking'''.}}
+{{defn|A cooking technique associated with the [[Awadh]] region of India, in which meat and vegetables are cooked over a extremely low flame, generally in containers that are sealed.}}
+
+{{term|[[Dutch oven#Use in cooking|Dutch oven cooking]]}}
+{{defn|A [[Dutch oven]] is well suited for long, slow cooking, such as in making roasts, stews, and {{gli|casserole|casseroles}}. Virtually any recipe<ref>{{cite web|title=Dutch Oven Recipes|url=http://www.theironflame.com/dutch-oven/dutch-oven-recipes|publisher=The Iron Flame|access-date=1 May 2014}}</ref> that can be cooked in a conventional oven can be cooked in a Dutch oven. They are often used in outdoor cooking, such as when camping.}}
+{{glossaryend}}
+
+==E==
+{{glossary}}
+[[File:Turducken quartered cross-section.jpg|thumb|{{gli|engastration|Engastration}}: the interior of a sausage-stuffed [[turducken]]]]
+{{term|[[earth oven]]}}
+{{defn|A shallow pit in the ground used to trap heat and bake, smoke, or steam food.}}
+
+{{term|[[egg wash]]}}
+{{defn|A preparation of beaten [[egg (food)|eggs]], sometimes mixed with another liquid such as [[water]] or [[milk]], which is brushed onto the surface of a pastry before baking for a golden crisp finish.}}
+
+{{term|[[emulsify]]}}
+{{defn|To combine two liquids that have a natural tendency to separate (such as oil and vinegar) into one homogeneous mass.}}
+
+{{term|''[[en papillote]]''}}
+{{defn|A technique by which a food is put into a folded pouch or parcel and then baked.}}
+
+{{term|''[[en vessie]]''}}
+{{defn|A cooking method by which a meat or other dish is cooked inside an animal [[bladder]], often a pig bladder.}}
+
+{{term|[[engastration]]}}
+{{defn|A cooking method by which the cook stuffs the remains of one animal into another animal.}}
+
+{{term|[[engine cooking]]}}
+{{defn|Cooking food from the excess heat of an [[internal combustion engine]], typically the engine of a car or a truck.}}
+
+{{term|[[escagraph]]}}
+{{defn|Writing made out of food.}}
+{{glossaryend}}
+
+==F==
+{{glossary}}
+[[Image:Banana flambé - by Jenene.jpg|thumb|right|[[Bananas Foster]] being {{gli|flambé|flambéed}}]]
+{{term|[[fermentation in food processing|fermentation]]}}
+{{defn|}}
+
+{{term|[[fish fillet|fillet]]}}
+{{defn|To remove bones from meat or fish.}}
+
+{{term|[[flambé]]}}
+{{defn|To pour alcohol over food and then ignite.}}
+
+{{term|[[flattop grill]]}}
+{{defn|}}
+ 
+{{term|[[Foam (culinary)|foam]]}}
+{{defn|A gelling or stabilizing agent in which air is suspended, creating a light, "fluffy" edible substance, e.g. [[whipped cream]], [[meringue]], and [[mousse]].}}
+ 
+{{term|[[food preservation]]}}
+{{defn|}}
+
+{{term|[[canning]]}}
+{{defn|Involves the cooking of foods in sealed cans, among other processes.}}
+
+{{term|[[fondue]]}}
+{{defn|}}
+ 
+{{term|[[fricassee]]}}
+{{defn|}}
+
+{{term|[[Icing (food)|frosting]]}}
+{{defn|no=1|(v.) The act of applying icing to the exterior of a baked good (such as a cake or cookie).}}
+{{defn|no=2|(n.) The icing itself.}}
+
+{{term|[[fruit preserves]]}}
+{{defn|}}
+
+{{term|[[frying]]}}
+{{defn|To cook food in oil.}}
+
+{{term|[[Chicken fried steak|chicken frying]]}}
+{{defn|Battering and pan-frying a piece of beefsteak.}}
+{{glossaryend}}
+
+==G==
+{{glossary}}
+[[File:Cooking yakitori.jpg|thumb|upright|[[Yakitori]] being {{gli|grilling|grilled}}]]
+{{term|[[Garnish (food)|garnish]]}}
+{{defn|no=1|(v.) To add a (typically edible) decorative element to a plate of food prior to serving.}}
+{{defn|no=2|(n.) The edible decorative element itself. [[Parsley]] is a common garnish.}}
+
+{{term|gentle frying}}
+{{defn|}}
+
+{{term|[[Glaze (cooking technique)|glazing]]}}{{anchor|glaze}}
+{{defn|}}
+
+{{term|[[gratin]]}}
+{{defn|}}
+
+{{term|[[grilling]]}}{{anchor|grill}}
+{{defn|}}
+{{glossaryend}}
+
+==H==
+{{glossary}}
+{{term|[[Hāngī]]}}
+{{defn|A traditional [[New Zealand]] [[Māori people|Māori]] method of [[cooking]] food using heated rocks buried in a [[pit oven]] still used for special occasions.}}
+
+{{term|[[hibachi]]}}
+{{defn|}}
+
+{{term|[[high-altitude cooking]]}}
+{{defn|The process of cooking a food or beverage at altitudes well above sea level, where lower atmospheric pressure causes most foods to cook more slowly and may necessitate the use of special cooking techniques.}}
+ 
+{{term|[[Milk#Creaming and homogenization|homogenization]]}}
+{{defn|}}
+
+{{term|[[hot salt frying]]}}
+{{defn|}}
+
+{{term|[[huff paste]]}}
+{{defn|}}
+{{glossaryend}}
+
+==I==
+{{glossary}}
+[[File:Salmon Steaks (4199035705).jpg|thumb|One method of {{gli|indirect grilling}} involves plank cooking, such as the salmon fillets here]]
+{{term|[[indirect grilling]]}}
+{{defn|}}
+
+{{term|infusion}}
+{{defn|The process of extracting chemical compounds or flavors from plant material in a solvent such as water, [[edible oil|oil]], or [[ethanol|alcohol]], by allowing the material to remain suspended in the solvent over time (a process often called {{gli|steeping}}). A common example of an infusion is [[tea]], and many [[herbal tea]]s are prepared in the same way.}}
+{{glossaryend}}
+
+==J==
+{{glossary}}
+{{term|jugging}}
+{{defn|The process of {{gli|stewing}} whole animals, mainly [[game (food)|game]] or [[Fish (food)|fish]], for an extended period in a tightly covered container such as a {{gli|casserole}} dish or an [[earthenware]] jug.}}
+
+{{term|[[juicing]]}}
+{{defn|}}
+
+{{term|[[Julienning|Julienne]]}}
+{{defn|A culinary knife cut which involves cutting food (typically vegetables) into long thin strips.}}
+{{glossaryend}}
+
+==K==
+[[File:Bo Kho (cropped).jpg|thumb|Bo [[Kho (cooking technique)|Kho]] (beef stew)]]
+{{glossary}}
+{{term|[[kalua]]}}
+{{defn|A traditional [[Hawaii]]an cooking method that utilizes an imu, a type of {{gli|earth oven|underground oven}}.}}
+
+{{term|[[karaage]]}}
+{{defn|A [[Japanese cuisine|Japanese cooking technique]] in which various foods — most often chicken, but also other meat and fish — are {{gli|deep frying|deep fried}} in oil, similar to the preparation of ''{{gli|tempura}}'', but with a dredge in starch, rather than a liquid batter.}}
+
+{{term|[[Kho (cooking technique)|kho]]}}
+{{defn|A cooking technique in [[Vietnamese cuisine]]<ref>[https://www.latimes.com/archives/la-xpm-2002-feb-06-fo-kho6-story.html "The Taste of Tet; It wouldn't be the New Year without kho, the ultimate Vietnamese comfort food"], by Andrea Q. Nguyen</ref> in which a protein source such as fish, [[shrimp]], [[poultry]], [[pork]], [[beef]], or fried [[tofu]] is {{gli|braising|braised}} on low heat in a mixture of [[fish sauce]], [[sugar]], and water or a water substitute such as young [[coconut juice]]. It is similar to stew.}}
+
+{{term|[[kinpira]]}}
+{{defn|A Japanese cooking style that can be summarized as a technique of "{{gli|sautéing|sauté}} and {{gli|simmer}}". It is commonly used to cook [[root vegetable]]s and other foods.}}
+{{glossaryend}}
+
+==L==
+{{glossary}}
+{{term|[[Lardon#Larding|larding]]}}
+{{defn|The act of threading strips of chilled pork fat through a roast.}}
+
+{{term|[[low-temperature cooking]]}}
+{{defn|}}
+{{glossaryend}}
+
+==M==
+{{glossary}}
+[[Image:Mongolianbbq.jpg|thumb|Food cooking on a {{gli|Mongolian barbecue}} [[griddle]]]]
+{{term|[[Maceration (food)|maceration]]}}
+{{defn|}}
+ 
+{{term|[[marination]]}}
+{{defn|The technique of soaking a food in a seasoned, often acidic, liquid (known as a ''marinade'') prior to cooking. Marination is generally used as a means of adding or enhancing flavor or {{gli|tenderize|tenderizing}} tough cuts of meat, and the process can vary greatly in duration. It is similar to but distinct from {{gli|brining}} and {{gli|pickling}}.}}
+ 
+{{term|[[Meat#Cooking|meat cooking techniques]]}}
+{{defn|}}
+
+{{term|[[Microwave oven|microwave cooking]]}}
+{{defn|The cooking of food in a [[microwave oven]].}}
+
+{{term|[[mincing]]}}
+{{defn|}}
+
+{{term|[[Mongolian barbecue]]}}
+{{defn|}}
+
+{{term|[[Sauce#French cuisine|mother sauces]]}}
+{{defn|In French cuisine, the five "fundamental" sauces: [[Sauce béchamel|béchamel]], [[Sauce espagnole|espagnole]], [[Sauce velouté|velouté]], [[Sauce hollandaise|hollandaise]], and [[Sauce tomate|tomate]], as defined by [[Auguste Escoffier]].}}
+{{glossaryend}}
+
+ 
+{{term|[[maliard]]}}
+{{defn|}}
+
+==N==
+{{glossary}}
+{{term|[[nappage]]}}
+{{defn|}}
+
+{{term|[[nixtamalization]]}}
+{{defn|A process for the preparation of [[maize]] (corn) or other [[grain]] in which the grain is soaked and cooked in an [[alkaline]] solution, usually [[limewater]], and then [[hulling|hulled]].}}
+{{glossaryend}}
+
+==O==
+{{glossary}}
+{{term|[[once-a-month cooking]] (OAMC)}}
+{{defn|Preparing and cooking all the meals you need for an entire month in a single day.}}
+
+{{term|outdoor cooking}}
+{{defn|Cooking in outdoor environments, which often demand specialized techniques and equipment for preparing food. Equipment used includes [[mess kit]]s and [[portable stove]]s, among others.}}
+{{glossaryend}}
+
+==P==
+{{glossary}}
+[[File:Pan frying sausages.jpg|thumb|[[Sausage]]s being {{gli|pan frying|pan fried}} in a [[frying pan]]]]
+[[File:Big pig roast.jpg|thumb|A {{gli|pig roast}} in Wittlich, Germany]]
+{{term|[[pan frying]]}}
+{{defn|Characterized by the use of minimal [[cooking oil]] or [[fat]] (as opposed to {{gli|shallow frying}} or {{gli|deep frying}}), typically using just enough oil to lubricate the pan.}}
+
+{{term|[[parbaking]]}}
+{{defn|}}
+
+{{term|[[parboiling]]}}{{anchor|parboil}}
+{{ghat|Also called '''leaching'''.}}
+{{defn|Partially or incompletely {{gli|boiling}} a food, especially as the first step in a longer cooking process. Parboiling involves cooking a food in boiling water only until it begins to soften, removing the food before it is fully cooked. The cooking is then often finished by a different method, such as {{gli|braising}} or {{gli|grilling}}.}}
+ 
+{{term|[[pascalization]]}}
+{{defn|}}
+
+{{term|[[paste (food)|paste]]}}
+{{defn|}}
+
+{{term|[[pasteurization]]}}
+{{defn|}}
+
+{{term|[[flash pasteurization]]}}
+{{defn|}}
+
+{{term|[[pellicle (cooking)|pellicle]]}}
+{{defn|A skin or coating of proteins on the surface of meat, fish, or poultry, which allows smoke to better adhere to the surface of the meat during the {{gli|smoking}} process.}}
+
+{{term|[[pickling]]}}
+{{defn|}}
+ 
+{{term|[[pig roast]]}}
+{{defn|}}
+
+{{term|[[Poaching (cooking)|poaching]]}}{{anchor|poach}}
+{{defn|}}
+
+{{term|[[pre-ferment]]}}
+{{defn|}}
+
+{{term|[[pressure cooking]]}}
+{{defn|The process of cooking food, using water or other cooking liquid, in a sealed vessel known as a ''pressure cooker'', which does not permit air or liquids to escape below a pre-set [[pressure]].}}
+
+{{term|[[pressure frying]]}}
+{{defn|}}
+
+{{term|[[Proofing (baking technique)|proofing]]}}
+{{defn|}}
+
+{{term|pulling}}
+{{defn|}}
+
+{{term|[[purée]]}}
+{{defn|}}
+{{glossaryend}}
+
+==R==
+{{glossary}}
+[[Image:Reducing the sauce.jpg|right|thumb|Stock being {{gli|reduction|reduced}} in a pan]]
+{{term|[[Reconstituted meat|reconstitution]]}}
+{{defn|The process of assembling a palatable food product from processed sources (for example, adding water to concentrated juice or forming meat slurry into chicken nuggets).}}
+
+{{term|[[red cooking]]}}
+{{defn|}}
+
+{{term|[[Reduction (cooking)|reduction]]}}
+{{defn|}}
+
+{{term|[[Rendering (culinary)|rendering]]}}
+{{defn|}}
+ 
+{{term|[[Ricing (cooking)|ricing]]}}
+{{defn|}}
+
+{{term|[[rillettes]]}}
+{{defn|}}
+
+{{term|[[roasting]]}}
+{{defn|}}
+
+{{term|[[robatayaki]]}}
+{{defn|}}
+
+{{term|[[rotisserie]]}}
+{{ghat|Also called '''spit-roasting'''.}}
+{{defn|}}
+
+{{term|[[roux]]}}
+{{defn|A paste-like thickening agent made of equal quantities of flour and fat cooked together to a sandy texture.}}
+{{glossaryend}}
+
+==S==
+{{glossary}}
+{{multiple image
+| align = right
+| image1 = Littlechief.JPG
+| width1 = 150
+| alt1 = 
+| caption1 = 
+| image2 = Smokedhalibut.JPG
+| width2 = 150
+| alt2 = 
+| caption2 = 
+| footer = A home [[Smoking (cooking)|smoker]] and racks with hot smoked [[Pacific halibut]]
+}}
+[[Image:Wok cooking.jpg|thumb|right|''Bao'' {{gli|stir frying}} involves high heat combined with continuous tossing. This keeps juices from flowing out of the ingredients and keeps the food crispy.]]
+[[File:Steamed milk.jpg|thumb|Milk being {{gli|steaming|steamed}}]]
+{{term|[[sautéing]]}}
+{{defn|}}
+
+{{term|score}}
+{{defn|To cut shallow grooves, often in a diamond pattern, into a cut of meat.<ref name="OCFscore">{{cite book |last=Davidson |first=Alan |date=2006 |title=The Oxford Companion to Food |publisher=Oxford University Press |page=703 |isbn=0-19-280681-5 }}</ref>}}
+
+{{term|[[Schwenker]]}}
+{{defn|}}
+
+{{term|[[searing]]}}
+{{defn|A technique used in {{gli|grilling}}, {{gli|baking}}, {{gli|braising}}, {{gli|roasting}}, {{gli|sautéing}}, etc., in which the surface of the food (usually meat, poultry, or fish) is cooked at high temperature until a crust forms from {{gli|browning}}.}}
+
+{{term|[[seasoning]]}}
+{{defn|}}
+
+{{term|[[separating eggs]]}}
+{{defn|}}
+
+{{term|[[shallow frying]]}}
+{{defn|}}
+
+{{term|[[shirred eggs]]}}
+{{defn|}}
+
+{{term|[[shrivelling]]}}
+{{defn|}}
+
+{{term|[[wikt:shuck#Verb|shuck]]}}
+{{defn|To remove the outer casing of a food item, such as an ear of corn or the shell of an oyster.}}
+
+{{term|[[simmering]]}}{{anchor|simmer}}
+{{defn|}}
+
+{{term|[[skimmer (utensil)|skimming]]}}{{anchor|skim}}
+{{defn|}}
+
+{{term|[[slow cooker]]}}
+{{defn|}}
+
+{{term|[[smoking (cooking)|smoking]]}}{{anchor|smoke}}
+{{defn|}}
+
+{{term|[[smothering (food)|smothering]]}}{{anchor|smother}}
+{{defn|}}
+
+{{term|[[souring]]}}
+{{defn|}}
+
+{{term|[[sous-vide]]}}
+{{defn|}}
+
+{{term|[[thermal immersion circulator]]}}
+{{defn|}}
+
+{{term|spatchcock}}
+{{defn|Poultry or [[Game (food)|game]] that has been prepared for roasting or grilling by removing the backbone (and sometimes the sternum) and flattening it out before cooking.<ref>[http://www.knorr.co.uk/cooking-tips/Tips/How-to-spatchcock-a-chicken.aspx How to spatchcock that chicken] {{Webarchive|url=https://web.archive.org/web/20130603202022/http://www.knorr.co.uk/cooking-tips/Tips/How-to-spatchcock-a-chicken.aspx |date=2013-06-03 }}, [[Knorr (brand)|Knorr]]</ref>}}
+
+{{term|[[spherification]]}}
+{{defn|}}
+
+{{term|[[steaming]]}}{{anchor|steam}}
+{{defn|}}
+
+{{term|[[food steamer]]}}
+{{defn|}}
+
+{{term|[[steeping]]}}{{anchor|steeping}}
+{{defn|}}
+
+{{term|[[stewing]]}}{{anchor|stew}}
+{{defn|}}
+
+{{term|[[stir frying]]}}{{anchor|stir fry}}
+{{defn|}}
+
+{{term|[[straight dough]]}}
+{{defn|}}
+
+{{term|[[stuffing]]}}
+{{defn|An edible food mixture, often a [[starch]], used to fill a [[wikt:cavity|cavity]] in another food item.}}
+
+{{term|[[sugar panning]]}}
+{{defn|}}
+
+{{term|[[Supreme (cookery)|supreme]]}}
+{{defn|}}
+
+{{term|[[Sweating (cooking)|sweating]]}}
+{{defn|The gentle heating of [[vegetable]]s in a little oil or butter, which usually results in tender, sometimes translucent, pieces.}}
+
+{{term|[[Swiss steak|Swissing]]}}
+{{defn|}}
+
+{{term|[[syringe]]}}
+{{defn|For injecting {{gli|stuffing|fillings}} in foods.}}
+{{glossaryend}}
+
+==T==
+{{glossary}}
+[[File:TurkeyFryer (cropped).jpg|thumb|upright|A {{gli|turkey fryer}}]]
+{{term|[[tandoor]]}}
+{{defn|A cylindrical clay or metal [[oven]] used in cooking and baking in [[South Asia|Southern]], [[Central Asia|Central]], and [[Western Asia]],<ref name="nytimes.com">{{cite news| url=https://www.nytimes.com/2011/05/11/dining/a-tandoor-oven-brings-indias-heat-to-the-backyard.html?pagewanted=all&_r=0 | work=The New York Times | first=Steven | last=Raichlen | title=A Tandoor Oven Brings India's Heat to the Backyard | date=2011-05-10}}</ref> as well as in the [[Caucasus]].<ref name="Raichlen">{{cite news|last=Raichlen|first=Steven|title=A Tandoori Oven brings India's heat to the backyard|url=https://www.nytimes.com/2011/05/11/dining/a-tandoor-oven-brings-indias-heat-to-the-backyard.html|newspaper=New York Times|access-date=2011-05-09|date=2011-05-10}}</ref>}}
+
+{{term|[[Tataki]]}}
+{{defn|}}
+
+{{term|tempering}}
+{{defn|no=1|[[Tempering chocolate|Tempering (chocolate)]], a method of increasing the shine and durability of chocolate couverture.}}
+{{defn|no=2|Tempering (cooking), bringing meat to room temperature before cooking; or bringing food up to temperature slowly as in {{gli|sous vide}}.}}
+{{defn|no=3|[[Tempering (spices)]], a cooking technique and garnish used in the cuisines of [[Indian cuisine|India]], [[Cuisine of Bangladesh|Bangladesh]], and [[Cuisine of Pakistan|Pakistan]], in which whole [[spice]]s (and sometimes also other ingredients such as minced [[ginger]] root or sugar) are fried briefly in oil or [[ghee]] to liberate essential oils from cells and thus enhance their flavours, before being poured, together with the oil, into a dish.}}
+
+{{term|tenderizing}}{{anchor|tenderize}}
+{{defn|A process to break down [[collagen]]s in meat to make it more palatable for consumption.}}
+
+{{term|[[teriyaki]]}}
+{{defn|}}
+
+{{term|thermal cooking}}
+{{defn|Uses the concept of the [[haybox]] whereby placing hay or straw around a cooking pot of heated food the meal continues to cook without fuel.}}
+
+{{term|thermization}}
+{{defn|A method of [[Sterilization (microbiology)|sterilizing]] [[raw milk]] with heat.}}
+
+{{term|[[thickening]]}}
+{{defn|}}
+
+{{term|transglutaminase}}
+{{defn|A protein binder, called meat glue.}}
+
+{{term|truss}}
+{{defn|To tie the legs and wings of poultry in a way that promotes even cooking.<ref name="NLGtruss">{{cite book |last=Montagné |first=Prosper |date=1977 |title=The New Larousse Gastronomique |url=https://archive.org/details/newlaroussegastr00mont_0/page/940 |publisher=The Hamlyn Publishing Group Ltd |page=[https://archive.org/details/newlaroussegastr00mont_0/page/940 940] |isbn=0-517-53137-2 }}</ref>}}
+
+{{term|turbo cooking}}
+{{defn|}}
+
+{{term|[[turkey fryer]]}}
+{{defn|}}
+{{glossaryend}}
+
+==V==
+{{glossary}}
+{{term|[[velveting]]}}
+{{defn|A technique which involves coating pieces of raw meat or poultry in a mixture of cornstarch and liquid prior to cooking, frequently used in Chinese cuisine.}}
+
+{{term|[[Vietnamese cuisine#Cooking techniques|Vietnamese cooking techniques]]}}
+{{defn|Many common [[culinary]] terms exist that are unique to Vietnam.}}
+{{glossaryend}}
+
+==W==
+{{glossary}}
+{{term|whip}}
+{{defn|}}
+
+{{term|[[Wok chi|wok cooking]]}}
+{{defn|The [[wok]] is used in a significant amount of cooking methods.}}
+{{glossaryend}}
+
+==Z==
+{{glossary}}
+{{term|[[Zest (ingredient)|zest]]}}
+{{defn|The colourful outer layer of citrus fruits, often scraped off and used as a flavouring ingredient.}}
+{{glossaryend}}
+
+==See also==
+{{portal|Cooking|Food|Technology|Lists}}
+{{div col|colwidth=30em}}
+* [[Lists of food and beverage topics]]
+* [[Culinary arts]]
+* [[Glossary of historical culinary terms]]
+* [[Food science]]
+** [[Molecular gastronomy]]
+** [[Molecular mixology]]
+** [[Note by Note cuisine]]
+* [[Food processing]]
+* [[Meal preparation]]
+* [[Outline of food preparation]]
+{{div col end}}
+
+==References==
+{{reflist}}
+
+==Further reading==
+* {{cite web | url=http://www.bhg.com/recipes/how-to/cooking-techniques/ | title=Cooking Techniques | publisher=[[Better Homes and Gardens (magazine)|Better Homes and Gardens]] | access-date=11 October 2014}}
+* {{cite web | url=http://www.mayoclinic.org/healthy-living/nutrition-and-healthy-eating/in-depth/healthy-cooking/art-20049346 | title=Healthy cooking techniques: Boost flavor and cut calories | publisher=[[Mayo Clinic]] | access-date=11 October 2014}}
+* {{cite news | url=https://www.nytimes.com/video/cooking-techniques/ | title=Cooking Techniques | newspaper=[[The New York Times]] | date=20 August 2014 | access-date=11 October 2014}}
+
+==External links==
+{{Cookbook|Cooking Techniques}}
+* [http://culinaryarts.about.com/od/culinaryfundamentals/u/thebasics.htm Culinary Arts Basics: The Fundamentals of Cooking] {{Webarchive|url=https://web.archive.org/web/20141017075923/http://culinaryarts.about.com/od/culinaryfundamentals/u/thebasics.htm |date=2014-10-17 }}. About.com.
+*[https://cookinginstructions.top/ Cooking Instruction]
+{{Cooking techniques|state=collapsed}}
+{{Barbecue}}
+{{Food preservation}}
+
+{{DEFAULTSORT:Cooking techniques}}
+[[Category:Cooking techniques]]
+[[Category:Food- and drink-related lists]]
+[[Category:Glossaries of food and drink]]

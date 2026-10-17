@@ -1,0 +1,8 @@
+id,action,field,value,reason
+big-wall-climbing,set,confidence,low,agent gave no confidence; structural no from general knowledge
+base-jumping,set,confidence,low,agent gave no confidence; structural no from general knowledge
+outdoor-skydiving,set,confidence,low,agent gave no confidence; structural no from general knowledge
+cave-diving,set,confidence,low,agent gave no confidence; structural no from general knowledge
+cave-exploring,set,confidence,low,agent gave no confidence; structural no from general knowledge
+luge,set,confidence,low,agent gave no confidence; structural no from general knowledge
+white-water-rafting,set,confidence,low,agent gave no confidence; structural no from general knowledge

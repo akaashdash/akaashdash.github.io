@@ -1,0 +1,229 @@
+id,venue,lat,lon,matched_name
+archery,"Mushrif Range Shooting, Mushrif Park",,,
+australian-rules-football,Dubai Dingoes (AFL Middle East),,,
+bmx,Adventure Zone (Galleria Mall),,,
+bouldering,Rock Republic,24.98007,55.17415,Rock Republic
+camel-racing,Nad Al Sheba Camel Racetrack,,,
+cricket,ICC Academy,,,
+dinghy-sailing,Dubai Offshore Sailing Club,25.17489,55.21729,Dubai Offshore Sailing Club
+fencing,Dubai Fencing Club,,,
+gaelic-football-hurling,Dubai Celts GAA,,,
+horse-riding,Dubai Polo & Equestrian Club,25.03872,55.25651,Dubai Polo & Equestrian Club
+ice-hockey,"Dubai Ice Rink, The Dubai Mall",,,
+ice-skating,"Dubai Ice Rink, The Dubai Mall",,,
+rock-climbing-top-rope,Mountain Extreme,25.16300,55.23868,Mountain Extreme
+judo,The Warrior Academy,25.14568,55.22335,The Warrior Academy
+padel,Padel Nation (Meetup),,,
+rugby,Dubai Exiles RFC,,,
+skateboarding,XDubai Skatepark,,,
+snowboarding,Ski Dubai,25.11739,55.19814,Ski Dubai
+taekwondo,WTTU Moo Duk Taekwondo,,,
+camping,Dubai Municipality permitted camping areas,,,
+nature-guided-walks,Ras Al Khor Wildlife Sanctuary,25.19288,55.32576,Ras Al Khor Wildlife Sanctuary
+hiking,Alpine Trekkers (Meetup),,,
+stargazing,"Al Thuraya Astronomy Centre, Mushrif Park",,,
+dragon-boat,Dubai Paddle Club,,,
+fishing,Dubriani Deep Sea Fishing,,,
+mangrove-sea-kayaking,Hydro Water Sports,,,
+kayaking,Hydro Water Sports,,,
+keelboat-yachting,Dubai Offshore Sailing Club,25.17489,55.21729,Dubai Offshore Sailing Club
+sailing,Dubai Offshore Sailing Club,25.17489,55.21729,Dubai Offshore Sailing Club
+scuba-diving,Bermuda Diving Center,,,
+stand-up-paddleboarding,IGNITE Water Sports,,,
+surfing-ocean,Surf House Dubai,25.14843,55.19738,Surf House Dubai
+tango,Tempo Dance Academy,,,
+ballet,The Ballet Centre Dubai,,,
+bharatanatyam,Laasya Performing Arts,,,
+aerial-silks-circus,Studio Republik,,,
+choir,One Day Choir Dubai,,,
+dj-turntablism,Dancemania Music Studio,,,
+guitar,Prime Symphony Music Centre,,,
+improv-comedy,Courtyard Playhouse,,,
+kathak,Laasya Performing Arts,,,
+music-production,Dancemania Music Studio,,,
+piano,Melodica Music Academy,25.21005,55.25560,Melodica Music Academy- Wasl Road
+pole-dance,Pole Fit Dubai,,,
+salsa-bachata,VR DanceWorld,,,
+stand-up-comedy,Dubomedy Arts School,,,
+tabla,Tharangini Music Centre,,,
+candle-making,Studio Kinza,,,
+filmmaking,SAE Institute Dubai,,,
+knitting-crochet,Solandis Crochet,,,
+leatherwork,Fuse DXB,,,
+charcoal-life-drawing,The Jamjar,,,
+oil-painting,The Palette Art,,,
+perfumery,Oo La Lab,,,
+photography,Gulf Photo Plus,,,
+pottery-handbuilding,Yadawei Ceramic Studio,,,
+pottery-wheel,The Mud House Studio,,,
+rug-tufting,Tufting Time,,,
+watercolour-painting,Dubai International Art Centre,,,
+capoeira,Afro-Ritmo Capoeira Dubai,,,
+pickleball,Picklers,,,
+ultimate-frisbee,United Arabian Ultimate,,,
+breakdancing,Tempo Dance Center,,,
+irish-dance,The Ballet Centre,,,
+swing-lindy-hop,"Lindy Hop Dubai (Speakeasy Bar, Ramada Plaza)",,,
+taiko,Shoten Taiko Drummers,,,
+tap-dance,The Ballet Centre,,,
+bookbinding,Tashkeel,25.26454,55.29931,tashkeel@SIKKA
+film-photography-darkroom,Tashkeel,25.26454,55.29931,tashkeel@SIKKA
+embroidery,Craft Land,,,
+ikebana,Ohara School of Ikebana UAE,,,
+jewellery-silversmithing,Tashkeel,25.26454,55.29931,tashkeel@SIKKA
+printmaking-screenprint,The Workshop DXB,,,
+urban-sketching,Urban Sketchers Dubai,,,
+woodworking,The Makers Society,,,
+3d-printing,Origin Base,25.15899,55.23785,Origin Base Makerspace
+amateur-radio,Emirates Amateur Radio Society,,,
+cnc-machining,FabLab UAE,,,
+hackerspace-electronics,Origin Base,25.15899,55.23785,Origin Base Makerspace
+laser-cutting,Origin Base,25.15899,55.23785,Origin Base Makerspace
+arcade-games,Sega Republic,,,
+board-games,Dubai Board Gamers,,,
+chess,Dubai Chess and Culture Club,,,
+dungeons-and-dragons,Gulf Roleplaying Community,,,
+escape-rooms,NoWayOut,25.06419,55.13827,NoWayOut Escape Room Dubai HDS Business Centre
+mahjong,Mahjong Dubai (Riichi),,,
+wargaming-warhammer,Battlezone,25.23041,55.26258,battlezone
+paintball,Singo Paintball,,,
+ten-pin-bowling,Dubai International Bowling Centre,25.28916,55.35091,Dubai International Bowling Centre
+vr-gaming,VR Park Dubai,25.25420,55.30300,Take Off VR Park
+dim-sum-making,Shiba (Meydan Hotel),25.27587,55.31091,Al Shiba
+pasta-and-general-cooking-classes,Culinary Boutique,25.22044,55.25505,Culinary Boutique
+latte-art,ICCA Dubai,25.10226,55.16165,ICCA Dubai
+sushi-making,SUSHISAMBA Dubai,,,
+wine-tasting-wset,The Tasting Class,,,
+art-gallery,Alserkal Avenue,25.14187,55.22558,Alserkal Avenue
+language-exchange,The Language Society,,,
+museums,Museum of the Future,25.21915,55.28187,Museum Of The Future
+science-museum,Museum of the Future,25.21915,55.28187,Museum Of The Future
+toastmasters,Dubai Internet City Toastmasters Club,,,
+netball,NISAA Fitness (Meetup),,,
+pub-trivia,Quiz & Chill (Meetup),,,
+chocolate-making,Mirzam Chocolate Makers Factory & Store,,,
+birdwatching,Ras Al Khor Wildlife Sanctuary,25.19288,55.32576,Ras Al Khor Wildlife Sanctuary
+book-club,Bookends Dubai (Meetup),,,
+philosophy-cafe,Practical Philosophy Club - Dubai (Meetup),,,
+poetry-slam,Dubai Bibliophiles Book Club (Meetup),,,
+public-lectures,Curious Pickle (Meetup),,,
+animal-shelter-volunteering,K9 Friends,,,
+coastal-cleanup,Emirates Environmental Group,,,
+meetups,Meetup.com Dubai groups,,,
+meditation,Dubai Mindful Circle (Meetup),,,
+parkour,XPark (XDubai),25.16435,55.20890,XPark
+pet-adoption,K9 Friends,,,
+pilates,JBR Run & Pilates Club,,,
+running-club,Founders Running Club Dubai (Meetup),,,
+temple-activities,"Hindu Temple, Jebel Ali",,,
+volunteering,Volunteers.ae,,,
+yoga,Dubai Outdoor Yoga & Meditation Community (Meetup),,,
+indoor-snow-play,Ski Dubai Snow Park,,,
+outdoor-skydiving,Skydive Dubai Palm Dropzone,,,
+safari,Dubai Safari Park,25.17932,55.45157,Dubai Safari Zoo Park
+sandboarding-desert,Arabian Adventures,24.98295,55.18705,Arabian Adventures
+snow-skiing,Ski Dubai,25.11739,55.19814,Ski Dubai
+zip-lining,XLine Dubai Marina (XDubai),,,
+horse-polo,Dubai Polo & Equestrian Club,25.03872,55.25651,Dubai Polo & Equestrian Club
+hot-air-ballooning,Hero Balloon Flights (Dubai desert),,,
+surf-simulator,Wild Wadi Waterpark,25.13965,55.18943,Wild Wadi Waterpark
+coding-meetups,AI Tinkerers Dubai,,,
+hackathons,AI Tinkerers Dubai,,,
+cosplay,Middle East Film and Comic Con,,,
+esports-gaming,Esport Arena,,,
+trading-card-games,Back to Games,25.21486,55.25164,Back To Games
+mixology,ICCA Dubai,25.10226,55.16165,ICCA Dubai
+tea-ceremony,Urasenke Dubai Tea Study Group,,,
+sourdough-baking,The Bread Basket,,,
+whisky-tasting,Bulgari Hotel Yacht Club (Le Clos),25.21016,55.23308,Bulgari Hotel Yacht Club
+stamp-collecting,Emirates Philatelic Association,25.26480,55.30011,Emirates Philatelic Association
+trading-cards,PokeMENA,,,
+vinyl-records,The Flip Side,,,
+german-language,Goethe-Institut Dubai,25.25203,55.28937,Goethe-Institut German Language Centre Dubai
+japanese-language,Berlitz Dubai,25.22036,55.25500,Berlitz Language Institute
+spanish-language,UCAM Espanol Institute Dubai,,,
+tai-chi,South Ridge Park group,,,
+ski-simulator,Ski Dubai,25.11739,55.19814,Ski Dubai
+mountain-biking,Mushrif National Park,25.21730,55.45350,Mushrif National Park
+kitesurfing,Kitesurfing.ae,,,
+pedal-boating,SeaYou Watersport Center,,,
+windsurfing,SeaYou Watersport Center,,,
+acting,Courtyard Playhouse,,,
+animation-2d,SAE University College Dubai,,,
+etching,Tashkeel Printmaking Studio,,,
+lithography,Tashkeel Printmaking Studio,,,
+macrame,Tashkeel (Makerspace / Nad Al Sheba),25.26454,55.29931,tashkeel@SIKKA
+clay-sculpture,The Mud House Studio,,,
+game-development-jams,SAE University College Dubai,,,
+robotics-arduino,Star Geeks Robotics Smart Playground,,,
+billiards-snooker,Brass Monkey,25.20749,55.26162,Brass Monkey
+artisan-bread-baking,Piehaus (Alserkal Avenue),,,
+coffee-roasting,RAW Coffee Company,25.15087,55.22719,Raw Coffee Company
+hawker-crawling,Frying Pan Adventures,,,
+butterfly-watching,Dubai Butterfly Garden,25.06206,55.24625,Dubai Butterfly Garden
+rock-fossil-collecting,Dubai Natural History Group,,,
+creative-writing,The Dubai Writers' Group,,,
+cultural-heritage-centres,Sheikh Mohammed Centre for Cultural Understanding,25.26414,55.30072,Sheikh Mohammed Centre For Cultural Understanding
+history-walks,Sheikh Mohammed Centre for Cultural Understanding,25.26414,55.30072,Sheikh Mohammed Centre For Cultural Understanding
+french-language,Alliance Francaise Dubai,,,
+heritage-trails,Al Fahidi Historical Neighbourhood,25.26423,55.30017,Al Fahidi Historical Neighbourhood
+cold-plunge,Banya Forrest,,,
+dog-parks,Dubai Islands Beach,,,
+massage,Banya Forrest,,,
+sauna,Banya Forrest,,,
+support-groups,The LightHouse Arabia,,,
+geocaching,Safa Park geocaches,,,
+hydroponics-urban-farming,Greenoponics,,,
+freediving,Deep Dive Dubai,25.12780,55.29505,Deep Dive Dubai
+kite-flying,Kite Beach,25.16300,55.20672,Kite Beach
+drone-flying,Sanad Academy,,,
+snorkeling,"Atlantis The Palm, Ultimate Snorkel Experience",,,
+sup-yoga,Sup Yoga Dubai,,,
+wakeboarding,Wake Surf Dubai,,,
+harp,MyPrivateTutor harp tutors,,,
+magic,MyPrivateTutor magic tutors,,,
+sitar,MyPrivateTutor sitar tutors,,,
+kintsugi,Dubai Watch Week kintsugi workshop,,,
+origami,"Studio13, Alserkal Avenue",,,
+watchmaking-horology,"L'ECOLE Middle East, Van Cleef & Arpels",,,
+contract-bridge,Dubai Ladies Bridge Club,,,
+beekeeping-honey,"Terra, Expo City Dubai",,,
+debate,Dubai Toastmasters Club,,,
+korean-language,Eton Institute,25.10458,55.16485,Block 3 - Eton Institute & Innovative HR Solutions
+sign-language,Rasis Business Centre sign language course,,,
+community-gardening,Slow Food Dubai rooftop garden,,,
+qigong,South Ridge Park tai chi and qigong community,,,
+allotment-gardening,"Community Farm, Dubai Silicon Oasis",,,
+orienteering,Dubai Sports World,,,
+control-line-aeromodelling,Sky Hub RC Club,,,
+water-skiing,Blue Safari Water Sports,,,
+lion-dance,Expo City Dubai (Chinese New Year parade),24.97311,55.14762,Expo Road
+tattooing,Tattoo Lovers Studio,,,
+ctf-security,Dubai Police Capture the Flag,,,
+model-rocketry,Space and Rocketry Academy UAE (Compass International),,,
+fermentation-kombucha,Jossa by Alserkal (The Table Project),,,
+sake-tasting,Zuma Dubai,,,
+coin-collecting,Numisbing / Currency Fair,,,
+comic-collecting,Comicave,,,
+sneaker-collecting,Youbetterfly,25.19540,55.24657,YouBetterFly
+toy-collecting,Comicave,,,
+watch-collecting,Emirates Watch Club,,,
+archival-research,Historical Documents Centre,,,
+mentoring,Global Shapers Dubai Hub,,,
+base-jumping,Burj Khalifa,25.19703,55.27413,Burj Khalifa
+high-ropes-course,Aventura Parks,25.22312,55.44813,Aventura Parks
+indoor-skydiving,iFLY Dubai,,,
+bungee-jumping,Gravity Zone Dubai,,,
+clay-shooting,JA Shooting Club,,,
+urban-foraging,Desert and wadi areas of Dubai,,,
+rc-aircraft,SkyHub RC campus (Al Lisaili),,,
+orchestra,National Youth Orchestra - Dubai,,,
+chinese-opera,Dubai Opera,25.19566,55.27195,Dubai Opera
+larp,tabletop.me convention,,,
+ancient-ruins-excavation,Jumeirah Archaeological Site,25.19660,55.24159,Jumeirah Archaeological Site
+moocs,Dubai Culture e-Learning with LinkedIn,,,
+wartime-history,Al Mahatta Museum,,,
+onsen,Hammam spas (Dubai hotels and spas),,,
+trail-running,Mirdif Milers (Mushrif Park),,,
+rowing,Monty's Rowing School (Riva Beach Club),25.11933,55.13302,Monty's Rowing School
+bagpipes,Dubai Pipe Band,,,

@@ -1,0 +1,2 @@
+id,activity,category,subcategory,seed_source,doable,how,venue,area,lat,lon,distance_tier,cost_tier,beginner_friendly,equipment,source_url,confidence
+community-gardening,Community gardening,Community & Wellness,Gardening,brainstorm,partial,"Tokyo has dozens of citizen allotment and experience farms (shimin noen) surveyed by MAFF, plus community-garden projects such as Rokucho Eco Petit Terrace in Adachi.",Tokyo citizen allotment and experience farms,Tokyo,,,near,$$,y,rent,https://www.maff.go.jp/kanto/chiikinet/tokyo/nouen_survey/attach/pdf/nouen_survey-2.pdf,low

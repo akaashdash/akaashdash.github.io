@@ -1,0 +1,178 @@
+{{Short description|Materials used to create works of art}}
+{{TOC right}}
+{{Wiktionary|medium}}
+
+In art, a '''medium''', '''form''', or '''format''' is the material used by an [[artist]] to create a [[work of art]].<ref>{{Cite web|url=https://www.tate.org.uk/art/art-terms/m/medium|title=Medium|website=Tate|access-date=2026-04-07}}</ref> The term may also refer more broadly to the material and technical means used in a particular art form, such as paint in painting, stone in sculpture, or ink in drawing. In art history and criticism, the plural '''media''' is often used for groups of artistic materials.
+
+This article lists common art media by artistic field.
+
+==Drawing==
+{{Main|Drawing}}
+
+===Common drawing media===
+{{colbegin}}
+* [[Charcoal (art)|Charcoal]]
+* [[Chalk#Uses|Chalk]]
+* [[Colored pencil]]
+* [[Conté]]
+* [[Crayon]]
+* [[Graphite]]
+* [[Ink]]
+* [[Pastel]]
+* [[Silverpoint]]
+{{colend}}
+
+===Common drawing supports===
+{{colbegin}}
+* [[Card stock]]
+* [[Paper]]
+* [[Papyrus]]
+* [[Parchment]]
+* [[Scratchboard]]
+* [[Vellum]]
+* [[Wood]]
+{{colend}}
+
+==Painting==
+{{Main|Painting}}
+
+===Common paint media===
+{{colbegin}}
+* [[Acrylic paint]]
+* [[Encaustic painting|Encaustic]]
+* [[Fresco]]
+* [[Gouache]]
+* [[Ink wash painting|Ink wash]]
+* [[Oil paint]]
+* [[Tempera]]
+* [[Watercolor]]
+{{colend}}
+
+===Common painting supports===
+{{colbegin}}
+* [[Canvas]]
+* [[Ceramic]]
+* [[Cloth]]
+* [[Glass]]
+* [[Metal]]
+* [[Paper]]
+* [[Paperboard]]
+* [[Vellum]]
+* [[Wall]]
+* [[Wood]]
+{{colend}}
+
+==Printmaking==
+{{Main|Printmaking}}
+
+===Common printmaking media===
+{{colbegin}}
+* [[Aquatint]]
+* [[Collotype]]
+* [[Engraving]]
+* [[Etching]]
+* [[Intaglio (printmaking)|Intaglio]]
+* [[Linocut]]
+* [[Lithography]]
+* [[Mezzotint]]
+* [[Monotype]]
+* [[Screen-printing]]
+* [[Wood engraving]]
+* [[Woodcut]]
+{{colend}}
+
+==Sculpture==
+{{Main|Sculpture}}
+
+===Common sculptural media===
+{{colbegin}}
+* [[Bone carving|Bone]]
+* [[Bronze]]
+* [[Ceramic]]
+* [[Clay]]
+* [[Glass]]
+* [[Granite]]
+* [[Ice]]
+* [[Ivory]]
+* [[Marble]]
+* [[Metal]]
+* [[Papier-mâché]]
+* [[Plaster]]
+* [[Stone]]
+* [[Synthetic resin]]
+* [[Wax]]
+* [[Wood]]
+{{colend}}
+
+==Ceramics==
+{{Main|Ceramic art}}
+{{colbegin}}
+* [[Bone china]]
+* [[Clay]]
+* [[Ceramic glaze|Glaze]]
+* [[Porcelain]]
+* [[Pottery]]
+* [[Terracotta]]
+{{colend}}
+
+==Textiles==
+{{Main|Textile arts}}
+{{colbegin}}
+* [[Cotton]]
+* [[Felt]]
+* [[Flax]]
+* [[Textile]]
+* [[Wool]]
+* [[Yarn]]
+{{colend}}
+
+==Photography==
+{{Main|Photography}}
+
+===Photographic media===
+{{colbegin}}
+* [[Image sensor]]
+* [[Photographic film]]
+* [[Silver nitrate]]
+{{colend}}
+
+==Digital art==
+{{Main|Digital art}}
+Digital art uses electronic and computational media, including software, digital images, and display or print output. Common digital tools include [[graphic art software]], [[3D computer graphics]] software, [[graphics tablet]]s, and [[digital printing]] systems.
+
+==Installation art==
+{{Main|Installation art}}
+[[Installation art]] may incorporate a wide range of media, including sculptural materials, sound, light, video, found objects, and architectural space.
+
+==Sound art==
+{{Main|Sound art}}
+Sound art uses [[sound]] as its primary medium and may incorporate recorded audio, electronic sound, speech, or musical instruments.
+
+==See also==
+{{Portal|Arts}}
+{{colbegin}}
+* [[Medium specificity]]
+* [[Mixed media]]
+* [[Multimedia]]
+* [[New materials in 20th-century art]]
+{{colend}}
+
+==References==
+{{Reflist}}
+
+==External links==
+* [http://www.getty.edu/vow/AATFullDisplay?find=media&logic=AND&note=&english=N&prev_page=1&subjectid=300163343 Media (artists' materials)] at the Getty Art & Architecture Thesaurus
+* [http://www.iep.utm.edu/art-medi/ Artistic Medium] at the ''Internet Encyclopedia of Philosophy''
+
+{{commonscat-multi|Art by material|Art by medium}}
+
+{{Branches of the visual arts}}
+{{art world}}
+{{Authority control}}
+
+{{DEFAULTSORT:Art media}}
+[[Category:Visual arts media]]
+[[Category:Visual arts materials]]
+[[Category:Arts-related lists]]
+[[Category:Painting materials]]
+[[Category:Sculpture materials]]
