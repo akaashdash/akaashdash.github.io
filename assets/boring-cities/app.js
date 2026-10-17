@@ -78,8 +78,12 @@ function renderPills() {
     .map((c) => `<button class="chip" data-c="${c.id}" aria-pressed="${c.id === CITY.id}">${esc(c.name)}</button>`).join("");
   document.querySelectorAll("#city-pills .chip").forEach((b) => b.addEventListener("click", () => setCity(b.dataset.c)));
 }
+let lastCityId = null;
 async function setCity(id) {
   CITY = DATA.cities.find((c) => c.id === id) || DATA.cities[0];
+  // If the new city was one of the comparison cities, swap the previous city into its place so the comparison keeps its size.
+  if (cmpIds && lastCityId && lastCityId !== CITY.id && cmpIds.includes(CITY.id)) cmpIds = cmpIds.map((x) => (x === CITY.id ? lastCityId : x));
+  lastCityId = CITY.id;
   history.replaceState(null, "", "#" + CITY.id);
   ALL = rowsOf(CITY);
   Object.assign(state, { cat: null, doable: null, q: "", cost: "", dist: "", beginner: false, open: null });
@@ -117,25 +121,28 @@ function renderHeadline() {
 function commonSet(cities) {
   return DATA.universe.filter((u) => cities.every((c) => c.rows[u.id]));
 }
-let cmpIds = null;
+let cmpIds = null; // the other cities compared against the open city
 function renderCompare() {
   const avail = researched();
-  $("#s-compare").hidden = avail.length < 2;
-  if (avail.length < 2) return;
-  // Default: the six best-covered cities (more cities shrink the set of activities they all share); toggle others in.
-  if (!cmpIds) cmpIds = [...avail].sort((a, b) => Object.keys(b.rows).length - Object.keys(a.rows).length).slice(0, 6).map((c) => c.id);
-  if (cmpIds.length < 2) cmpIds = avail.slice(0, 2).map((c) => c.id);
-  const cs = avail.filter((c) => cmpIds.includes(c.id));
+  const others = avail.filter((c) => c.id !== CITY.id);
+  const show = avail.includes(CITY) && others.length >= 1;
+  $("#s-compare").hidden = !show;
+  if (!show) return;
+  // Default: the five best-covered other cities (more cities shrink the set of activities they all share); toggle others in or out.
+  if (!cmpIds) cmpIds = [...others].sort((a, b) => Object.keys(b.rows).length - Object.keys(a.rows).length).slice(0, 5).map((c) => c.id);
+  cmpIds = cmpIds.filter((id) => others.some((c) => c.id === id));
+  if (!cmpIds.length) cmpIds = [others[0].id];
+  const cs = [CITY, ...others.filter((c) => cmpIds.includes(c.id))]; // the open city is always the first column
   const common = commonSet(cs);
-  $("#cmp-pills").innerHTML = avail.map((c) =>
+  $("#cmp-pills").innerHTML = others.map((c) =>
     `<button class="chip" data-c="${c.id}" aria-pressed="${cmpIds.includes(c.id)}">${esc(c.name)} <span class="muted">(${Object.keys(c.rows).length} researched)</span></button>`).join("");
   document.querySelectorAll("#cmp-pills .chip").forEach((b) => b.addEventListener("click", () => {
     const id = b.dataset.c;
     const next = cmpIds.includes(id) ? cmpIds.filter((x) => x !== id) : [...cmpIds, id];
-    if (next.length >= 2) { cmpIds = next; renderCompare(); }
+    if (next.length >= 1) { cmpIds = next; renderCompare(); }
   }));
   $("#compare-note").textContent =
-    `Choose the cities to compare. To keep it fair, only the ${common.length} activities researched in every chosen city are counted ` +
+    `Pick other cities to compare with ${CITY.name}. To keep it fair, only the ${common.length} activities researched in every chosen city are counted ` +
     `(adding a city with less coverage shrinks that shared set).`;
   renderHeat(cs, common);
   renderDiff(cs, common);
