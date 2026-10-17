@@ -1,9 +1,10 @@
 # Activity data schema
 
-Each city has `data/cities/<city>/research/*.csv` (raw batches, identical 17-column header, source of
-truth), plus optional `curation.csv` (audited manual drops/edits), `geocode.csv`, `url_check.csv`,
-`venues.csv`/`venue_counts.csv` (OpenStreetMap). `scripts/build.py` merges, dedupes, curates,
-validates and writes `data/cities/<city>/activities.csv`, `data/universe.csv` and `site/data.json`.
+The evidence is `data/research.csv`: the 17 columns below, preceded by `city` and `batch` (the research
+round a row came from). Alongside it: `not_found.csv` (city, batch, id, note), `curation.csv` (audited manual
+drops/edits), `geocode.csv`, `url_check.csv` and the OpenStreetMap tables `osm_venues.csv`/`osm_counts.csv`;
+every table with a `city` column holds all cities. `scripts/build.py` merges, dedupes, curates, validates
+and writes `data/universe.csv` and the explorer's files in `assets/boring-cities/` (`data.json`, `activities.csv`).
 Cities are listed in `data/cities.csv` (centre coordinates, 25 km radius for the venue map).
 `data/RESEARCH_BRIEF.md` is the brief given to research agents.
 
@@ -27,7 +28,7 @@ shown as "not researched", never assumed.
 | `beginner_friendly` | `y` / `n` | can a total novice join a class/session? |
 | `equipment` | `none` / `rent` / `own` | `rent` = can rent/borrow on site |
 | `source_url` | URL | page evidencing the offering (required for `yes`/`partial`) |
-| `confidence` | `high` / `medium` / `low` | high = source page seen confirming it; medium = strong listing, or OpenStreetMap tag (`research/osm.csv`); low = inferred, aggregator or dated |
+| `confidence` | `high` / `medium` / `low` | high = source page seen confirming it; medium = strong listing, or OpenStreetMap tag (rows in batch `osm`); low = inferred, aggregator or dated |
 
 For `no` rows: leave `venue`, `area`, `lat`, `lon` blank; use `distance_tier` = `outside` when it can be
 done somewhere beyond the metro area and name the nearest place and travel time in `how`.

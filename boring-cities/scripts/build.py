@@ -1,6 +1,6 @@
-"""Build every city: data/cities/<id>/research/*.csv -> activities.csv -> assets/boring-cities/data.json.
+"""Build every city: data/research.csv (+ curation, geocode, url_check) -> assets/boring-cities/data.json.
 
-Pipeline per city: load batches -> dedupe -> curation.csv -> geocode.csv -> tiers from coordinates ->
+Pipeline per city: load rows -> dedupe -> curation -> geocode -> tiers from coordinates ->
 validate -> link status. The shared activity universe is the union of ids across cities; a city that
 has no row for an id is `unknown` (not researched yet), never assumed.
 
@@ -9,13 +9,11 @@ Run: uv run scripts/build.py   (exits non-zero on validation errors)
 
 import csv
 import json
-import math
 import sys
 from collections import Counter
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-SITE = ROOT.parent / "assets" / "boring-cities"  # the explorer (index.html, app.js, data.json, ...), served by the blog
+from common import DATA, SITE, city_rows, cities, km, table
+
 COLUMNS = (
     "id activity category subcategory seed_source doable how venue area lat lon "
     "distance_tier cost_tier beginner_friendly equipment source_url confidence"
@@ -51,41 +49,26 @@ def slug(s):
     return "".join(c if c.isalnum() else "-" for c in s.lower()).strip("-")
 
 
-def km(lat1, lon1, lat2, lon2):
-    p = math.pi / 180
-    a = (
-        math.sin((lat2 - lat1) * p / 2) ** 2
-        + math.cos(lat1 * p) * math.cos(lat2 * p) * math.sin((lon2 - lon1) * p / 2) ** 2
-    )
-    return 12742 * math.asin(math.sqrt(a))
-
-
 def tier(d):
     return "central" if d < 5 else "near" if d < 15 else "far"
 
 
-def read(path):
-    with open(path, newline="") as f:
-        return list(csv.DictReader(f))
-
-
-def load(city_dir):
-    rows, errors = [], []
-    for path in sorted((city_dir / "research").glob("*.csv")):
-        with open(path, newline="") as f:
-            reader = csv.DictReader(f)
-            if reader.fieldnames != COLUMNS:
-                errors.append(f"{path.name}: header mismatch {reader.fieldnames}")
-                continue
-            for i, r in enumerate(reader, 2):
-                r = {k: (v or "").strip() for k, v in r.items()}
-                r["id"] = r["id"] or slug(r["activity"])
-                if r["doable"] == "no" and not r["confidence"]:
-                    r["confidence"] = (
-                        "low"  # structural 'no' from general knowledge, no page
-                    )
-                r["_src"] = f"{path.name}:{i}"
-                rows.append(r)
+def load(city_id):
+    rows, errors, line = [], [], {}
+    for r in city_rows("research", city_id):
+        batch = r.pop("batch")
+        line[batch] = (
+            line.get(batch, 1) + 1
+        )  # row number within its batch, like the old file line numbers
+        if set(r) != set(COLUMNS):
+            errors.append(f"{batch}: header mismatch {sorted(r)}")
+            break
+        r = {k: (v or "").strip() for k, v in r.items()}
+        r["id"] = r["id"] or slug(r["activity"])
+        if r["doable"] == "no" and not r["confidence"]:
+            r["confidence"] = "low"  # structural 'no' from general knowledge, no page
+        r["_src"] = f"{batch}:{line[batch]}"
+        rows.append(r)
     return rows, errors
 
 
@@ -105,13 +88,10 @@ def dedupe(rows):
     return [r for _, r in best.values()]
 
 
-def curate(rows, city_dir):
-    """Apply curation.csv (drop / set field) so manual decisions stay auditable."""
-    path = city_dir / "curation.csv"
-    if not path.exists():
-        return rows
+def curate(rows, city_id):
+    """Apply data/curation.csv (drop / set field) so manual decisions stay auditable."""
     by_id = {r["id"]: r for r in rows}
-    for c in read(path):
+    for c in city_rows("curation", city_id):
         row = by_id.get(c["id"])
         if row is None:
             print(f"  curation: unknown id {c['id']}")
@@ -122,10 +102,9 @@ def curate(rows, city_dir):
     return list(by_id.values())
 
 
-def apply_geocode(rows, city_dir):
-    """Fill blank lat/lon from geocode.csv (Nominatim matches accepted by scripts/geocode.py)."""
-    path = city_dir / "geocode.csv"
-    geo = {r["id"]: r for r in read(path) if r["lat"]} if path.exists() else {}
+def apply_geocode(rows, city_id):
+    """Fill blank lat/lon from data/geocode.csv (Nominatim matches accepted by scripts/geocode.py)."""
+    geo = {r["id"]: r for r in city_rows("geocode", city_id) if r["lat"]}
     for r in rows:
         g = geo.get(r["id"])
         r["geo"] = ""
@@ -142,10 +121,9 @@ def apply_tiers(rows, city):
             )
 
 
-def apply_link_status(rows, city_dir):
-    """Mark `verified`: link alive, page mentions the venue (url_check.csv), confidence not low."""
-    path = city_dir / "url_check.csv"
-    check = {r["id"]: r for r in read(path)} if path.exists() else {}
+def apply_link_status(rows, city_id):
+    """Mark `verified`: link alive, page mentions the venue (data/url_check.csv), confidence not low."""
+    check = {r["id"]: r for r in city_rows("url_check", city_id)}
     for r in rows:
         c = check.get(r["id"], {})
         s = c.get("status", "")
@@ -196,24 +174,23 @@ def validate(rows, city):
 
 
 def build_city(city):
-    city_dir = ROOT / "data/cities" / city["id"]
-    rows, errors = load(city_dir)
-    rows = curate(dedupe(rows), city_dir)
-    apply_geocode(rows, city_dir)
+    rows, errors = load(city["id"])
+    rows = curate(dedupe(rows), city["id"])
+    apply_geocode(rows, city["id"])
     apply_tiers(rows, city)
     errors += validate(rows, city)
-    apply_link_status(rows, city_dir)
+    apply_link_status(rows, city["id"])
     return rows, errors
 
 
 def main():
-    cities = [
-        {**c, "lat": float(c["lat"]), "lon": float(c["lon"])}
-        for c in read(ROOT / "data/cities.csv")
+    all_cities = [
+        {**c, "lat": float(c["lat"]), "lon": float(c["lon"])} for c in cities()
     ]
+    has_research = {r["city"] for r in table("research")}
     built, all_errors, universe = {}, [], {}
-    for city in cities:
-        if not (ROOT / "data/cities" / city["id"] / "research").exists():
+    for city in all_cities:
+        if city["id"] not in has_research:
             continue
         print(city["name"])
         rows, errors = build_city(city)
@@ -230,26 +207,17 @@ def main():
     uni = sorted(
         universe.values(), key=lambda u: (order[u["category"]], u["activity"].lower())
     )
-    with open(ROOT / "data/universe.csv", "w", newline="") as f:
+    with open(DATA / "universe.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=UNIVERSE_COLS)
         w.writeheader()
         w.writerows(uni)
     site = SITE
-    site.mkdir(exist_ok=True)
+    site.mkdir(parents=True, exist_ok=True)
     out_cities, long_rows = [], []
-    for city in cities:
+    for city in all_cities:
         rows = built.get(city["id"])
         if rows is None:
             continue
-        by_id = {r["id"]: r for r in rows}
-        with open(
-            ROOT / "data/cities" / city["id"] / "activities.csv", "w", newline=""
-        ) as f:
-            w = csv.DictWriter(f, fieldnames=COLUMNS, extrasaction="ignore")
-            w.writeheader()
-            for u in uni:
-                if u["id"] in by_id:
-                    w.writerow({**by_id[u["id"]], **u})
         acts = {}
         for r in rows:
             d = {k: r[k] for k in COLUMNS if k not in UNIVERSE_COLS}
@@ -260,23 +228,18 @@ def main():
             d["geo"] = r.get("geo", "")
             acts[r["id"]] = d
             long_rows.append({"city": city["id"], **{k: r[k] for k in COLUMNS}})
-        venues = ROOT / "data/cities" / city["id"] / "venues.csv"
-        nv = 0
-        if venues.exists():
-            v = [
-                [r["group"], r["kind"], r["name"], float(r["lat"]), float(r["lon"])]
-                for r in read(venues)
-            ]
+        v = [
+            [r["group"], r["kind"], r["name"], float(r["lat"]), float(r["lon"])]
+            for r in city_rows("osm_venues", city["id"])
+        ]
+        if v:
             (site / f"venues-{city['id']}.json").write_text(
                 json.dumps(v, separators=(",", ":"))
             )
-            nv = len(v)
-        counts_file = ROOT / "data/cities" / city["id"] / "venue_counts.csv"
-        venue_counts = (
-            {r["group"]: int(r["count"]) for r in read(counts_file)}
-            if counts_file.exists()
-            else {}
-        )
+        nv = len(v)
+        venue_counts = {
+            r["group"]: int(r["count"]) for r in city_rows("osm_counts", city["id"])
+        }
         out_cities.append(
             {
                 "id": city["id"],
@@ -290,10 +253,7 @@ def main():
                 "notFound": sorted(
                     {
                         r["id"]
-                        for p in (ROOT / "data/cities" / city["id"] / "not_found").glob(
-                            "*.csv"
-                        )
-                        for r in read(p)
+                        for r in city_rows("not_found", city["id"])
                         if r["id"] not in acts
                     }
                 ),

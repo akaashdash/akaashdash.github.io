@@ -6,14 +6,17 @@ Writes data/sources/wikipedia/seed_candidates.csv (title, source) for later cura
 import csv
 import json
 import re
-import urllib.parse
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
 API = "https://en.wikipedia.org/w/api.php"
-OUT = Path(__file__).resolve().parent.parent / "data/sources/wikipedia"
+OUT = (
+    Path(__file__).resolve().parent.parent / "data/sources/wikipedia"
+)  # raw page dumps; git-ignored, rebuilt by this script
+OUT.mkdir(parents=True, exist_ok=True)
 LISTS = [
     "List of sports",
     "List of hobbies",

@@ -1,4 +1,4 @@
-"""Geocode venue names for one city via OSM Nominatim -> data/cities/<city>/geocode.csv.
+"""Geocode venue names for one city via OSM Nominatim -> data/geocode.csv (rows for that city).
 
 A hit is accepted only if it lies near the city centre AND its (English) name shares a significant
 word with the venue string. Misses are recorded so reruns are cheap. build.py uses accepted
@@ -6,14 +6,13 @@ coordinates for rows whose own lat/lon is blank. Nominatim policy: max 1 request
 Run: uv run scripts/geocode.py <city>
 """
 
-import csv
 import json
 import re
 import time
 import urllib.parse
 import urllib.request
 
-from common import city_arg, km, read
+from common import city_activities, city_arg, city_rows, km, save_city_rows
 
 STOP = {
     "the",
@@ -65,10 +64,9 @@ def lookup(q, city):
 
 
 def main():
-    city, cdir = city_arg()
-    out = cdir / "geocode.csv"
-    done = {r["id"]: r for r in read(out)} if out.exists() else {}
-    rows = [r for r in read(cdir / "activities.csv") if r["venue"] and not r["lat"]]
+    city = city_arg()
+    done = {r["id"]: r for r in city_rows("geocode", city["id"])}
+    rows = [r for r in city_activities(city["id"]) if r["venue"] and not r["lat"]]
     for r in rows:
         if r["id"] in done and done[r["id"]]["venue"] == r["venue"]:
             continue
@@ -106,10 +104,7 @@ def main():
             hit[2] if hit else "",
             flush=True,
         )
-        with open(out, "w", newline="") as f:
-            w = csv.DictWriter(f, fieldnames=FIELDS)
-            w.writeheader()
-            w.writerows(done.values())
+        save_city_rows("geocode", city["id"], list(done.values()), FIELDS)
 
 
 if __name__ == "__main__":

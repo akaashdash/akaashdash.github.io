@@ -1,2 +1,0 @@
-id,activity,category,subcategory,seed_source,doable,how,venue,area,lat,lon,distance_tier,cost_tier,beginner_friendly,equipment,source_url,confidence
-fencing,Fencing,Sports & Fitness,Combat sports,wikipedia:List of sports (Academic fencing),yes,Listed in OpenStreetMap: TOKYO FENCING (nearest of 1 tagged venues within 20 km); not checked for current opening.,TOKYO FENCING,,35.71820,139.71467,,,,,https://www.openstreetmap.org/node/5011797425,medium

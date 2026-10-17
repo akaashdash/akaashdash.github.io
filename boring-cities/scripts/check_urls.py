@@ -1,4 +1,4 @@
-"""Check every source_url of one city -> data/cities/<city>/url_check.csv (id, url, status, match).
+"""Check every source_url of one city -> data/url_check.csv (id, url, status, match; rows for that city).
 
 status: HTTP code after redirects, `blocked` for 403/429 (page probably exists but refuses bots),
 000 when unreachable. match: is the fetched page actually about this row?
@@ -10,13 +10,12 @@ status: HTTP code after redirects, `blocked` for 403/429 (page probably exists b
 Run after build.py: uv run scripts/check_urls.py <city>, then build.py again to apply the results.
 """
 
-import csv
 import html
 import re
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
-from common import city_arg, read
+from common import city_activities, city_arg, save_city_rows
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/124 Safari/537.36"
 STOP = {
@@ -105,15 +104,19 @@ def check(row):
 
 
 def main():
-    _, cdir = city_arg()
-    rows = [r for r in read(cdir / "activities.csv") if r["source_url"]]
+    city = city_arg()
+    rows = [r for r in city_activities(city["id"]) if r["source_url"]]
     with ThreadPoolExecutor(16) as ex:
         results = list(ex.map(check, rows))
-    with open(cdir / "url_check.csv", "w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["id", "url", "status", "match"])
-        for r, (s, m) in zip(rows, results):
-            w.writerow([r["id"], r["source_url"], s, m])
+    save_city_rows(
+        "url_check",
+        city["id"],
+        [
+            {"id": r["id"], "url": r["source_url"], "status": s, "match": m}
+            for r, (s, m) in zip(rows, results)
+        ],
+        ["id", "url", "status", "match"],
+    )
     ok = sum(s.startswith("2") for s, _ in results)
     blocked = sum(s == "blocked" for s, _ in results)
     n = sum(m == "n" for _, m in results)

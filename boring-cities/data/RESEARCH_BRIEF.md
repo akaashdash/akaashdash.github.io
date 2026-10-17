@@ -2,7 +2,7 @@
 
 Goal: for a blog post testing "is <city> boring?", record for each activity in `data/universe.csv`
 whether it can be done in <city>, with evidence. Singapore is already done
-(`data/cities/singapore/activities.csv`); read it first to see the expected style and level of detail.
+(its rows in `data/research.csv`, or `assets/boring-cities/activities.csv` where `city` is singapore); read it first to see the expected style and level of detail.
 Column definitions and enums: `data/SCHEMA.md`. Output uses the same 17 columns.
 
 ## Chunks (by `category` in universe.csv)
@@ -13,7 +13,9 @@ Column definitions and enums: `data/SCHEMA.md`. Output uses the same 17 columns.
 
 ## Output
 
-Write `data/cities/<city-id>/research/<chunk>.csv` (header exactly as SCHEMA.md). One row per
+Write a CSV for your chunk in your own scratch folder (header exactly the 17 columns in SCHEMA.md, without
+`city` or `batch`; the coordinator adds it to `data/research.csv` with `scripts/add_batch.py <city> <batch> <file>`).
+One row per
 universe activity in your chunk: copy `id, activity, category, subcategory, seed_source` verbatim from
 universe.csv. **Write incrementally**: save the file after every ~10 activities so partial work
 survives. Do not add activities that are not in universe.csv. Skip an activity (no row) rather than guess:
@@ -72,9 +74,9 @@ Budget: the search limit is shared with other researchers, so spend about **one 
 activities** (e.g. "ballet OR contemporary dance classes <city>"), reading all listed operators from the one
 result. WebFetch/curl on known pages does not use the search budget, so prefer it for confirmation.
 
-Input: `data/cities/<city>/gaps.csv` (activities still missing; ids already covered by OpenStreetMap
-evidence in `research/osm.csv` are excluded). Your slice is given by row range in your prompt. Output:
-`data/cities/<city>/research/gaps-<n>.csv`, same 17-column schema, written incrementally. All other
+Input: the output of `uv run scripts/gaps.py <city> --all --priority` (activities still missing; ids already
+covered by OpenStreetMap evidence in batch `osm` are excluded unless `--all`). Your slice is given by row range in
+your prompt. Output: your own CSV as above, same 17-column schema, written incrementally. All other
 definitions above still apply (metro area within ~30 km of the centre, tiers, `how` neutral and third person).
 Fill `cost_tier`, `beginner_friendly`, `equipment` where you can (the user wants full metadata).
 
@@ -83,7 +85,7 @@ Fill `cost_tier`, `beginner_friendly`, `equipment` where you can (the user wants
 For every activity in your slice you must end up with exactly one of:
 
 1. a row in your research CSV (evidence found), or
-2. a row in `data/cities/<city>/not_found/<your-file-name>.csv` with header `id,note`, where `note` says in
+2. a row in a second CSV with header `id,note` (added with `add_batch.py --not-found`), where `note` says in
    a few words what you tried (e.g. `searched "tango classes Atlanta"; only a 2013 post`).
 
 This separates "looked and found nothing" from "never looked". It is NOT a claim that the activity is

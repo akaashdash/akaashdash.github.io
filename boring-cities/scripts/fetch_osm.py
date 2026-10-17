@@ -1,18 +1,17 @@
 """Pull venue points for one city from OpenStreetMap (Overpass) within radius_km of its centre.
 
-Writes data/cities/<city>/venues.csv (group, kind, name, lat, lon; at most MAX_POINTS per group,
-evenly sampled) and venue_counts.csv (the true count per group, for cross-city comparison).
+Writes the city's rows in data/osm_venues.csv (group, kind, name, lat, lon; at most MAX_POINTS per group,
+evenly sampled) and data/osm_counts.csv (the true count per group, for cross-city comparison).
 Run: uv run scripts/fetch_osm.py <city>
 """
 
-import csv
 import json
 import sys
 import time
 import urllib.parse
 import urllib.request
 
-from common import city_arg
+from common import city_arg, city_rows, save_city_rows
 
 ENDPOINTS = [
     "https://overpass-api.de/api/interpreter",
@@ -72,7 +71,7 @@ def main():
         len(sys.argv) < 2
     ):  # never default to a city: a stray argument-less run must not overwrite data
         sys.exit("usage: uv run scripts/fetch_osm.py <city> [group ...]")
-    city, cdir = city_arg()
+    city = city_arg()
     around = f"(around:{int(city['radius_km'] * 1000)},{city['lat']},{city['lon']})"
     rows, counts = [], []
     only = sys.argv[
@@ -121,25 +120,27 @@ def main():
         rows += pts
         print(group, total, f"({len(pts)} points)", flush=True)
         time.sleep(5)
-    cdir.mkdir(parents=True, exist_ok=True)
-    if only and (cdir / "venues.csv").exists():
-        with open(cdir / "venues.csv", newline="") as f:
-            keep = [
-                r for r in csv.reader(f) if r and r[0] != "group" and r[0] not in only
-            ]
-        rows = [tuple(r[:3]) + (float(r[3]), float(r[4])) for r in keep] + rows
-        with open(cdir / "venue_counts.csv", newline="") as f:
-            counts = [
-                (g, int(c)) for g, c in list(csv.reader(f))[1:] if g not in only
-            ] + counts
-    with open(cdir / "venues.csv", "w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["group", "kind", "name", "lat", "lon"])
-        w.writerows(rows)
-    with open(cdir / "venue_counts.csv", "w", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["group", "count"])
-        w.writerows(counts)
+    if only:  # keep the groups we did not refetch
+        keep = [
+            r for r in city_rows("osm_venues", city["id"]) if r["group"] not in only
+        ]
+        rows = [
+            (r["group"], r["kind"], r["name"], float(r["lat"]), float(r["lon"]))
+            for r in keep
+        ] + rows
+        counts = [
+            (r["group"], int(r["count"]))
+            for r in city_rows("osm_counts", city["id"])
+            if r["group"] not in only
+        ] + counts
+    cols = ["group", "kind", "name", "lat", "lon"]
+    save_city_rows("osm_venues", city["id"], [dict(zip(cols, r)) for r in rows], cols)
+    save_city_rows(
+        "osm_counts",
+        city["id"],
+        [{"group": g, "count": c} for g, c in counts],
+        ["group", "count"],
+    )
     print(len(rows), "points written;", sum(c for _, c in counts), "venues counted")
 
 
