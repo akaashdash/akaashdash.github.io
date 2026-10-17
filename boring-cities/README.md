@@ -7,14 +7,14 @@ Kong, Tokyo, London, New York, Atlanta, Sydney, Paris, Chicago, San Francisco, D
 Beijing.
 
 This folder lives inside the blog repo. It holds the data and the scripts; the interactive explorer
-it generates is the blog's `assets/boring-cities/` folder (one level up), and the post that embeds it
-is `_posts/2026-10-11-is-where-you-live-actually-boring.md`. Jekyll does not publish this folder
-(it is in `exclude` in `_config.yml`).
+they generate is the blog's `assets/boring-cities/` folder (one level up), drawn into the post by
+`_includes/boring-cities.liquid`. The post is `_posts/2026-10-11-is-where-you-live-actually-boring.md`;
+there is no standalone page. Jekyll does not publish this folder (it is in `exclude` in `_config.yml`).
 
-Open the explorer on its own through any static server, from the blog repo root:
+To rebuild the explorer's data after changing anything here, from the blog repo root:
 
 ```sh
-uv run python -m http.server 8765 --directory assets/boring-cities   # http://localhost:8765
+uv run boring-cities/scripts/build.py
 ```
 
 ## Layout
@@ -38,7 +38,7 @@ scripts/
   build.py             merge, dedupe, curate, geocode, tiers, validate -> activities.csv + ../assets/boring-cities/data.json
   fetch_wikipedia_seed.py, fetch_osm.py, geocode.py, check_urls.py, osm_evidence.py,
   gaps.py, review.py, coverage.py, stats.py, compare_stats.py, post_numbers.py, common.py
-../assets/boring-cities/   the explorer: index.html, app.js, basemap.js, style.css, MapLibre files,
+../assets/boring-cities/   the explorer: app.js, basemap.js, style.css, MapLibre files,
                            and the generated data.json, activities.csv, venues-<city>.json
 ```
 
