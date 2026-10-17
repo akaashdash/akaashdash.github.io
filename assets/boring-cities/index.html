@@ -29,20 +29,17 @@
     <h3>What one city has that another doesn't</h3>
     <div class="filters" id="diff-controls"></div>
     <div id="diff" class="diff"></div>
+    <div id="profile-wrap" hidden>
     <h3>Everyday profile</h3>
     <div class="table-wrap"><table id="profile"></table></div>
+    </div>
   </section>
 
   <section id="s-categories">
     <h2>What you can do in <span class="cn">this city</span>, by category</h2>
     <p class="bnote">Share of each category's activities that can be done here. Click a bar to filter everything below.</p>
     <div id="cat-chart"></div>
-  </section>
-
-  <section id="s-treemap">
-    <h2>Every activity, one box each</h2>
-    <p class="bnote">One square per activity, grouped by category: blue = doable here, orange = partly (limited or simulated), faint grey = not possible. Hover a square for the venue and click it to jump to its row; click a heading to filter everything else to that category.</p>
-    <div id="treemap"></div>
+<div id="treemap"></div>
   </section>
 
   <section id="s-map">
@@ -58,7 +55,7 @@
     <div id="grid"></div>
   </section>
 
-  <section id="s-no">
+  <section id="s-no" hidden>
     <h2>What you genuinely can't do here</h2>
     <p class="bnote">Honest accounting: these need terrain, climate, animals or a law that doesn't exist in the metro area.</p>
     <div id="nolist" class="nolist"></div>

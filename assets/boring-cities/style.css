@@ -200,3 +200,7 @@
 .bc .headline .cap { display: flex; flex-direction: column; gap: 0.1rem; }
 .bc .headline .lbl { font-size: clamp(1.2rem, 3vw, 1.5rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.1; color: var(--ink); }
 .bc .headline { margin-bottom: 1.1rem; }
+
+/* Hidden-but-kept sections must stay hidden whatever the host theme styles; the squares sit directly under the bars. */
+.bc [hidden] { display: none !important; }
+.bc #cat-chart + #treemap { margin-top: 2rem; }
