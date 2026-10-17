@@ -158,7 +158,7 @@ function renderHeat(cs, common) {
     }).join("") + "</tr>").join("");
   const host = $("#heat");
   host.innerHTML = `<div class="table-wrap"><table class="heattable"><thead>${head}</thead><tbody>${body}</tbody></table></div>` +
-    `<p class="bnote">Cell = share of activities that can be done as the real thing. Stronger blue = higher share. Small categories have few activities in common so far, so read their percentages loosely.</p>`;
+    `<p class="bnote">Each cell shows the share of activities that can be done as the real thing, and the stronger the blue, the higher that share.</p>`;
   host.querySelectorAll(".cityh").forEach((h) => h.addEventListener("click", () => { setCity(h.dataset.c); $("#s-categories").scrollIntoView({ behavior: "smooth" }); }));
   host.querySelectorAll("td.heat").forEach((td) => {
     td.addEventListener("mousemove", (e) => showTip(esc(td.dataset.tip).replace(/\n/g, "<br>"), e));
